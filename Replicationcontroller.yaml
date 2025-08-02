@@ -1,10 +1,9 @@
-
-GROUP:      batch
-KIND:       Job
+KIND:       ReplicationController
 VERSION:    v1
 
 DESCRIPTION:
-    Job represents the configuration of a single job.
+    ReplicationController represents the configuration of a replication
+    controller.
     
 FIELDS:
   apiVersion	<string>
@@ -38,43 +37,11 @@ FIELDS:
     resourceVersion	<string>
     selfLink	<string>
     uid	<string>
-  spec	<JobSpec>
-    activeDeadlineSeconds	<integer>
-    backoffLimit	<integer>
-    backoffLimitPerIndex	<integer>
-    completionMode	<string>
-    enum: Indexed, NonIndexed
-    completions	<integer>
-    managedBy	<string>
-    manualSelector	<boolean>
-    maxFailedIndexes	<integer>
-    parallelism	<integer>
-    podFailurePolicy	<PodFailurePolicy>
-      rules	<[]PodFailurePolicyRule> -required-
-        action	<string> -required-
-        enum: Count, FailIndex, FailJob, Ignore
-        onExitCodes	<PodFailurePolicyOnExitCodesRequirement>
-          containerName	<string>
-          operator	<string> -required-
-          enum: In, NotIn
-          values	<[]integer> -required-
-        onPodConditions	<[]PodFailurePolicyOnPodConditionsPattern>
-          status	<string> -required-
-          type	<string> -required-
-    podReplacementPolicy	<string>
-    enum: Failed, TerminatingOrFailed
-    selector	<LabelSelector>
-      matchExpressions	<[]LabelSelectorRequirement>
-        key	<string> -required-
-        operator	<string> -required-
-        values	<[]string>
-      matchLabels	<map[string]string>
-    successPolicy	<SuccessPolicy>
-      rules	<[]SuccessPolicyRule> -required-
-        succeededCount	<integer>
-        succeededIndexes	<string>
-    suspend	<boolean>
-    template	<PodTemplateSpec> -required-
+  spec	<ReplicationControllerSpec>
+    minReadySeconds	<integer>
+    replicas	<integer>
+    selector	<map[string]string>
+    template	<PodTemplateSpec>
       metadata	<ObjectMeta>
         annotations	<map[string]string>
         creationTimestamp	<string>
@@ -1221,25 +1188,16 @@ FIELDS:
             storagePolicyID	<string>
             storagePolicyName	<string>
             volumePath	<string> -required-
-    ttlSecondsAfterFinished	<integer>
-  status	<JobStatus>
-    active	<integer>
-    completedIndexes	<string>
-    completionTime	<string>
-    conditions	<[]JobCondition>
-      lastProbeTime	<string>
+  status	<ReplicationControllerStatus>
+    availableReplicas	<integer>
+    conditions	<[]ReplicationControllerCondition>
       lastTransitionTime	<string>
       message	<string>
       reason	<string>
       status	<string> -required-
       type	<string> -required-
-    failed	<integer>
-    failedIndexes	<string>
-    ready	<integer>
-    startTime	<string>
-    succeeded	<integer>
-    terminating	<integer>
-    uncountedTerminatedPods	<UncountedTerminatedPods>
-      failed	<[]string>
-      succeeded	<[]string>
+    fullyLabeledReplicas	<integer>
+    observedGeneration	<integer>
+    readyReplicas	<integer>
+    replicas	<integer> -required-
 

@@ -1,3 +1,45 @@
+P: networking.k8s.io
+iVersion: #<string>
+nd: #<string>
+tadata: #<ObjectMeta>
+annotations: #<map[string]string>
+creationTimestamp: #<string>
+deletionGracePeriodSeconds: #<integer>
+deletionTimestamp: #<string>
+finalizers: #<[]string>
+generateName: #<string>
+generation: #<integer>
+labels: #<map[string]string>
+managedFields: #<[]ManagedFieldsEntry>
+  apiVersion: #<string>
+  fieldsType: #<string>
+  fieldsV1: #<FieldsV1>
+  manager: #<string>
+  operation: #<string>
+  subresource: #<string>
+  time: #<string>
+name: #<string>
+namespace: #<string>
+ownerReferences: #<[]OwnerReference>
+  apiVersion: #<string> -required-
+  blockOwnerDeletion: #<boolean>
+  controller: #<boolean>
+  kind: #<string> -required-
+  name: #<string> -required-
+  uid: #<string> -required-
+resourceVersion: #<string>
+selfLink: #<string>
+uid: #<string>
+ec: #<ServiceCIDRSpec>
+cidrs: #<[]string>
+atus: #<ServiceCIDRStatus>
+conditions: #<[]Condition>
+  lastTransitionTime: #<string> -required-
+  message: #<string> -required-
+  observedGeneration: #<integer>
+  reason: #<string> -required-
+  status: #<string> -required-
+  type: #<string> -required-
 OUP: networking.k8s.io
 apiVersion: #<string>
 kind: #<string>

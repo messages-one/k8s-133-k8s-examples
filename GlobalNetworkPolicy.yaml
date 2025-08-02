@@ -1,3 +1,138 @@
+P: crd.projectcalico.org
+iVersion: #<string>
+nd: #<string>
+tadata: #<ObjectMeta>
+annotations: #<map[string]string>
+creationTimestamp: #<string>
+deletionGracePeriodSeconds: #<integer>
+deletionTimestamp: #<string>
+finalizers: #<[]string>
+generateName: #<string>
+generation: #<integer>
+labels: #<map[string]string>
+managedFields: #<[]ManagedFieldsEntry>
+  apiVersion: #<string>
+  fieldsType: #<string>
+  fieldsV1: #<FieldsV1>
+  manager: #<string>
+  operation: #<string>
+  subresource: #<string>
+  time: #<string>
+name: #<string>
+namespace: #<string>
+ownerReferences: #<[]OwnerReference>
+  apiVersion: #<string> -required-
+  blockOwnerDeletion: #<boolean>
+  controller: #<boolean>
+  kind: #<string> -required-
+  name: #<string> -required-
+  uid: #<string> -required-
+resourceVersion: #<string>
+selfLink: #<string>
+uid: #<string>
+ec: #<Object>
+applyOnForward: #<boolean>
+doNotTrack: #<boolean>
+egress: #<[]Object>
+  action: #<string> -required-
+  destination: #<Object>
+    namespaceSelector: #<string>
+    nets: #<[]string>
+    notNets: #<[]string>
+    notPorts: #<[]Object>
+    notSelector: #<string>
+    ports: #<[]Object>
+    selector: #<string>
+    serviceAccounts: #<Object>
+      names: #<[]string>
+      selector: #<string>
+    services: #<Object>
+      name: #<string>
+      namespace: #<string>
+  http: #<Object>
+    methods: #<[]string>
+    paths: #<[]Object>
+      exact: #<string>
+      prefix: #<string>
+  icmp: #<Object>
+    code: #<integer>
+    type: #<integer>
+  ipVersion: #<integer>
+  metadata: #<Object>
+    annotations: #<map[string]string>
+  notICMP: #<Object>
+    code: #<integer>
+    type: #<integer>
+  notProtocol: #<Object>
+  protocol: #<Object>
+  source: #<Object>
+    namespaceSelector: #<string>
+    nets: #<[]string>
+    notNets: #<[]string>
+    notPorts: #<[]Object>
+    notSelector: #<string>
+    ports: #<[]Object>
+    selector: #<string>
+    serviceAccounts: #<Object>
+      names: #<[]string>
+      selector: #<string>
+    services: #<Object>
+      name: #<string>
+      namespace: #<string>
+ingress: #<[]Object>
+  action: #<string> -required-
+  destination: #<Object>
+    namespaceSelector: #<string>
+    nets: #<[]string>
+    notNets: #<[]string>
+    notPorts: #<[]Object>
+    notSelector: #<string>
+    ports: #<[]Object>
+    selector: #<string>
+    serviceAccounts: #<Object>
+      names: #<[]string>
+      selector: #<string>
+    services: #<Object>
+      name: #<string>
+      namespace: #<string>
+  http: #<Object>
+    methods: #<[]string>
+    paths: #<[]Object>
+      exact: #<string>
+      prefix: #<string>
+  icmp: #<Object>
+    code: #<integer>
+    type: #<integer>
+  ipVersion: #<integer>
+  metadata: #<Object>
+    annotations: #<map[string]string>
+  notICMP: #<Object>
+    code: #<integer>
+    type: #<integer>
+  notProtocol: #<Object>
+  protocol: #<Object>
+  source: #<Object>
+    namespaceSelector: #<string>
+    nets: #<[]string>
+    notNets: #<[]string>
+    notPorts: #<[]Object>
+    notSelector: #<string>
+    ports: #<[]Object>
+    selector: #<string>
+    serviceAccounts: #<Object>
+      names: #<[]string>
+      selector: #<string>
+    services: #<Object>
+      name: #<string>
+      namespace: #<string>
+namespaceSelector: #<string>
+order: #<number>
+performanceHints: #<[]string>
+preDNAT: #<boolean>
+selector: #<string>
+serviceAccountSelector: #<string>
+tier: #<string>
+types: #<[]string>
 OUP: crd.projectcalico.org
 apiVersion: #<string>
 kind: #<string>

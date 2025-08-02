@@ -1,10 +1,9 @@
-
-GROUP:      batch
-KIND:       Job
+GROUP:      apps
+KIND:       DaemonSet
 VERSION:    v1
 
 DESCRIPTION:
-    Job represents the configuration of a single job.
+    DaemonSet represents the configuration of a daemon set.
     
 FIELDS:
   apiVersion	<string>
@@ -38,42 +37,15 @@ FIELDS:
     resourceVersion	<string>
     selfLink	<string>
     uid	<string>
-  spec	<JobSpec>
-    activeDeadlineSeconds	<integer>
-    backoffLimit	<integer>
-    backoffLimitPerIndex	<integer>
-    completionMode	<string>
-    enum: Indexed, NonIndexed
-    completions	<integer>
-    managedBy	<string>
-    manualSelector	<boolean>
-    maxFailedIndexes	<integer>
-    parallelism	<integer>
-    podFailurePolicy	<PodFailurePolicy>
-      rules	<[]PodFailurePolicyRule> -required-
-        action	<string> -required-
-        enum: Count, FailIndex, FailJob, Ignore
-        onExitCodes	<PodFailurePolicyOnExitCodesRequirement>
-          containerName	<string>
-          operator	<string> -required-
-          enum: In, NotIn
-          values	<[]integer> -required-
-        onPodConditions	<[]PodFailurePolicyOnPodConditionsPattern>
-          status	<string> -required-
-          type	<string> -required-
-    podReplacementPolicy	<string>
-    enum: Failed, TerminatingOrFailed
-    selector	<LabelSelector>
+  spec	<DaemonSetSpec>
+    minReadySeconds	<integer>
+    revisionHistoryLimit	<integer>
+    selector	<LabelSelector> -required-
       matchExpressions	<[]LabelSelectorRequirement>
         key	<string> -required-
         operator	<string> -required-
         values	<[]string>
       matchLabels	<map[string]string>
-    successPolicy	<SuccessPolicy>
-      rules	<[]SuccessPolicyRule> -required-
-        succeededCount	<integer>
-        succeededIndexes	<string>
-    suspend	<boolean>
     template	<PodTemplateSpec> -required-
       metadata	<ObjectMeta>
         annotations	<map[string]string>
@@ -1221,25 +1193,26 @@ FIELDS:
             storagePolicyID	<string>
             storagePolicyName	<string>
             volumePath	<string> -required-
-    ttlSecondsAfterFinished	<integer>
-  status	<JobStatus>
-    active	<integer>
-    completedIndexes	<string>
-    completionTime	<string>
-    conditions	<[]JobCondition>
-      lastProbeTime	<string>
+    updateStrategy	<DaemonSetUpdateStrategy>
+      rollingUpdate	<RollingUpdateDaemonSet>
+        maxSurge	<IntOrString>
+        maxUnavailable	<IntOrString>
+      type	<string>
+      enum: OnDelete, RollingUpdate
+  status	<DaemonSetStatus>
+    collisionCount	<integer>
+    conditions	<[]DaemonSetCondition>
       lastTransitionTime	<string>
       message	<string>
       reason	<string>
       status	<string> -required-
       type	<string> -required-
-    failed	<integer>
-    failedIndexes	<string>
-    ready	<integer>
-    startTime	<string>
-    succeeded	<integer>
-    terminating	<integer>
-    uncountedTerminatedPods	<UncountedTerminatedPods>
-      failed	<[]string>
-      succeeded	<[]string>
+    currentNumberScheduled	<integer> -required-
+    desiredNumberScheduled	<integer> -required-
+    numberAvailable	<integer>
+    numberMisscheduled	<integer> -required-
+    numberReady	<integer> -required-
+    numberUnavailable	<integer>
+    observedGeneration	<integer>
+    updatedNumberScheduled	<integer>
 

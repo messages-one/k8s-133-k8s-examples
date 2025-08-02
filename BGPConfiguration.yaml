@@ -1,3 +1,60 @@
+P: crd.projectcalico.org
+iVersion: #<string>
+nd: #<string>
+tadata: #<ObjectMeta>
+annotations: #<map[string]string>
+creationTimestamp: #<string>
+deletionGracePeriodSeconds: #<integer>
+deletionTimestamp: #<string>
+finalizers: #<[]string>
+generateName: #<string>
+generation: #<integer>
+labels: #<map[string]string>
+managedFields: #<[]ManagedFieldsEntry>
+  apiVersion: #<string>
+  fieldsType: #<string>
+  fieldsV1: #<FieldsV1>
+  manager: #<string>
+  operation: #<string>
+  subresource: #<string>
+  time: #<string>
+name: #<string>
+namespace: #<string>
+ownerReferences: #<[]OwnerReference>
+  apiVersion: #<string> -required-
+  blockOwnerDeletion: #<boolean>
+  controller: #<boolean>
+  kind: #<string> -required-
+  name: #<string> -required-
+  uid: #<string> -required-
+resourceVersion: #<string>
+selfLink: #<string>
+uid: #<string>
+ec: #<Object>
+asNumber: #<integer>
+bindMode: #<string>
+communities: #<[]Object>
+  name: #<string>
+  value: #<string>
+ignoredInterfaces: #<[]string>
+listenPort: #<integer>
+logSeverityScreen: #<string>
+nodeMeshMaxRestartTime: #<string>
+nodeMeshPassword: #<Object>
+  secretKeyRef: #<Object>
+    key: #<string> -required-
+    name: #<string>
+    optional: #<boolean>
+nodeToNodeMeshEnabled: #<boolean>
+prefixAdvertisements: #<[]Object>
+  cidr: #<string>
+  communities: #<[]string>
+serviceClusterIPs: #<[]Object>
+  cidr: #<string>
+serviceExternalIPs: #<[]Object>
+  cidr: #<string>
+serviceLoadBalancerIPs: #<[]Object>
+  cidr: #<string>
 OUP: crd.projectcalico.org
 apiVersion: #<string>
 kind: #<string>

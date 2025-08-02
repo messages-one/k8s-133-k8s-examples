@@ -1,3 +1,60 @@
+P: policy
+iVersion: #<string>
+nd: #<string>
+tadata: #<ObjectMeta>
+annotations: #<map[string]string>
+creationTimestamp: #<string>
+deletionGracePeriodSeconds: #<integer>
+deletionTimestamp: #<string>
+finalizers: #<[]string>
+generateName: #<string>
+generation: #<integer>
+labels: #<map[string]string>
+managedFields: #<[]ManagedFieldsEntry>
+  apiVersion: #<string>
+  fieldsType: #<string>
+  fieldsV1: #<FieldsV1>
+  manager: #<string>
+  operation: #<string>
+  subresource: #<string>
+  time: #<string>
+name: #<string>
+namespace: #<string>
+ownerReferences: #<[]OwnerReference>
+  apiVersion: #<string> -required-
+  blockOwnerDeletion: #<boolean>
+  controller: #<boolean>
+  kind: #<string> -required-
+  name: #<string> -required-
+  uid: #<string> -required-
+resourceVersion: #<string>
+selfLink: #<string>
+uid: #<string>
+ec: #<PodDisruptionBudgetSpec>
+maxUnavailable: #<IntOrString>
+minAvailable: #<IntOrString>
+selector: #<LabelSelector>
+  matchExpressions: #<[]LabelSelectorRequirement>
+    key: #<string> -required-
+    operator: #<string> -required-
+    values: #<[]string>
+  matchLabels: #<map[string]string>
+unhealthyPodEvictionPolicy: #<string>
+enum: AlwaysAllow, IfHealthyBudget
+atus: #<PodDisruptionBudgetStatus>
+conditions: #<[]Condition>
+  lastTransitionTime: #<string> -required-
+  message: #<string> -required-
+  observedGeneration: #<integer>
+  reason: #<string> -required-
+  status: #<string> -required-
+  type: #<string> -required-
+currentHealthy: #<integer> -required-
+desiredHealthy: #<integer> -required-
+disruptedPods: #<map[string]string>
+disruptionsAllowed: #<integer> -required-
+expectedPods: #<integer> -required-
+observedGeneration: #<integer>
 OUP: policy
 apiVersion: #<string>
 kind: #<string>

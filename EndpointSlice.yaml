@@ -1,0 +1,63 @@
+OUP: discovery.k8s.io
+addressType: #<string> -required-
+enum: FQDN, IPv4, IPv6
+apiVersion: #<string>
+endpoints: #<[]Endpoint> -required-
+  addresses: #<[]string> -required-
+  conditions: #<EndpointConditions>
+    ready: #<boolean>
+    serving: #<boolean>
+    terminating: #<boolean>
+  deprecatedTopology: #<map[string]string>
+  hints: #<EndpointHints>
+    forNodes: #<[]ForNode>
+      name: #<string> -required-
+    forZones: #<[]ForZone>
+      name: #<string> -required-
+  hostname: #<string>
+  nodeName: #<string>
+  targetRef: #<ObjectReference>
+    apiVersion: #<string>
+    fieldPath: #<string>
+    kind: #<string>
+    name: #<string>
+    namespace: #<string>
+    resourceVersion: #<string>
+    uid: #<string>
+  zone: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+ports: #<[]EndpointPort>
+  appProtocol: #<string>
+  name: #<string>
+  port: #<integer>
+  protocol: #<string>
+  enum: SCTP, TCP, UDP

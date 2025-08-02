@@ -1,0 +1,73 @@
+OUP: admissionregistration.k8s.io
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+webhooks: #<[]MutatingWebhook>
+  admissionReviewVersions: #<[]string> -required-
+  clientConfig: #<WebhookClientConfig> -required-
+    caBundle: #<string>
+    service: #<ServiceReference>
+      name: #<string> -required-
+      namespace: #<string> -required-
+      path: #<string>
+      port: #<integer>
+    url: #<string>
+  failurePolicy: #<string>
+  enum: Fail, Ignore
+  matchConditions: #<[]MatchCondition>
+    expression: #<string> -required-
+    name: #<string> -required-
+  matchPolicy: #<string>
+  enum: Equivalent, Exact
+  name: #<string> -required-
+  namespaceSelector: #<LabelSelector>
+    matchExpressions: #<[]LabelSelectorRequirement>
+      key: #<string> -required-
+      operator: #<string> -required-
+      values: #<[]string>
+    matchLabels: #<map[string]string>
+  objectSelector: #<LabelSelector>
+    matchExpressions: #<[]LabelSelectorRequirement>
+      key: #<string> -required-
+      operator: #<string> -required-
+      values: #<[]string>
+    matchLabels: #<map[string]string>
+  reinvocationPolicy: #<string>
+  enum: IfNeeded, Never
+  rules: #<[]RuleWithOperations>
+    apiGroups: #<[]string>
+    apiVersions: #<[]string>
+    operations: #<[]string>
+    resources: #<[]string>
+    scope: #<string>
+  sideEffects: #<string> -required-
+  enum: None, NoneOnDryRun, Some, Unknown
+  timeoutSeconds: #<integer>

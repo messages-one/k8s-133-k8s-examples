@@ -1,0 +1,45 @@
+OUP: node.k8s.io
+apiVersion: #<string>
+handler: #<string> -required-
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+overhead: #<Overhead>
+  podFixed: #<map[string]Quantity>
+scheduling: #<Scheduling>
+  nodeSelector: #<map[string]string>
+  tolerations: #<[]Toleration>
+    effect: #<string>
+    enum: NoExecute, NoSchedule, PreferNoSchedule
+    key: #<string>
+    operator: #<string>
+    enum: Equal, Exists
+    tolerationSeconds: #<integer>
+    value: #<string>

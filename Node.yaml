@@ -1,0 +1,118 @@
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+spec: #<NodeSpec>
+  configSource: #<NodeConfigSource>
+    configMap: #<ConfigMapNodeConfigSource>
+      kubeletConfigKey: #<string> -required-
+      name: #<string> -required-
+      namespace: #<string> -required-
+      resourceVersion: #<string>
+      uid: #<string>
+  externalID: #<string>
+  podCIDR: #<string>
+  podCIDRs: #<[]string>
+  providerID: #<string>
+  taints: #<[]Taint>
+    effect: #<string> -required-
+    enum: NoExecute, NoSchedule, PreferNoSchedule
+    key: #<string> -required-
+    timeAdded: #<string>
+    value: #<string>
+  unschedulable: #<boolean>
+status: #<NodeStatus>
+  addresses: #<[]NodeAddress>
+    address: #<string> -required-
+    type: #<string> -required-
+  allocatable: #<map[string]Quantity>
+  capacity: #<map[string]Quantity>
+  conditions: #<[]NodeCondition>
+    lastHeartbeatTime: #<string>
+    lastTransitionTime: #<string>
+    message: #<string>
+    reason: #<string>
+    status: #<string> -required-
+    type: #<string> -required-
+  config: #<NodeConfigStatus>
+    active: #<NodeConfigSource>
+      configMap: #<ConfigMapNodeConfigSource>
+        kubeletConfigKey: #<string> -required-
+        name: #<string> -required-
+        namespace: #<string> -required-
+        resourceVersion: #<string>
+        uid: #<string>
+    assigned: #<NodeConfigSource>
+      configMap: #<ConfigMapNodeConfigSource>
+        kubeletConfigKey: #<string> -required-
+        name: #<string> -required-
+        namespace: #<string> -required-
+        resourceVersion: #<string>
+        uid: #<string>
+    error: #<string>
+    lastKnownGood: #<NodeConfigSource>
+      configMap: #<ConfigMapNodeConfigSource>
+        kubeletConfigKey: #<string> -required-
+        name: #<string> -required-
+        namespace: #<string> -required-
+        resourceVersion: #<string>
+        uid: #<string>
+  daemonEndpoints: #<NodeDaemonEndpoints>
+    kubeletEndpoint: #<DaemonEndpoint>
+      Port: #<integer> -required-
+  features: #<NodeFeatures>
+    supplementalGroupsPolicy: #<boolean>
+  images: #<[]ContainerImage>
+    names: #<[]string>
+    sizeBytes: #<integer>
+  nodeInfo: #<NodeSystemInfo>
+    architecture: #<string> -required-
+    bootID: #<string> -required-
+    containerRuntimeVersion: #<string> -required-
+    kernelVersion: #<string> -required-
+    kubeProxyVersion: #<string> -required-
+    kubeletVersion: #<string> -required-
+    machineID: #<string> -required-
+    operatingSystem: #<string> -required-
+    osImage: #<string> -required-
+    swap: #<NodeSwapStatus>
+      capacity: #<integer>
+    systemUUID: #<string> -required-
+  phase: #<string>
+  enum: Pending, Running, Terminated
+  runtimeHandlers: #<[]NodeRuntimeHandler>
+    features: #<NodeRuntimeHandlerFeatures>
+      recursiveReadOnlyMounts: #<boolean>
+      userNamespaces: #<boolean>
+    name: #<string>
+  volumesAttached: #<[]AttachedVolume>
+    devicePath: #<string> -required-
+    name: #<string> -required-
+  volumesInUse: #<[]string>

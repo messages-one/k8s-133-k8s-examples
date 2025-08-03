@@ -1,80 +1,52 @@
-P: networking.k8s.io
-iVersion: #<string>
-nd: #<string>
-tadata: #<ObjectMeta>
-annotations: #<map[string]string>
-creationTimestamp: #<string>
-deletionGracePeriodSeconds: #<integer>
-deletionTimestamp: #<string>
-finalizers: #<[]string>
-generateName: #<string>
-generation: #<integer>
-labels: #<map[string]string>
-managedFields: #<[]ManagedFieldsEntry>
-  apiVersion: #<string>
-  fieldsType: #<string>
-  fieldsV1: #<FieldsV1>
-  manager: #<string>
-  operation: #<string>
-  subresource: #<string>
-  time: #<string>
-name: #<string>
-namespace: #<string>
-ownerReferences: #<[]OwnerReference>
-  apiVersion: #<string> -required-
-  blockOwnerDeletion: #<boolean>
-  controller: #<boolean>
-  kind: #<string> -required-
-  name: #<string> -required-
-  uid: #<string> -required-
-resourceVersion: #<string>
-selfLink: #<string>
-uid: #<string>
-ec: #<IngressClassSpec>
-controller: #<string>
-parameters: #<IngressClassParametersReference>
-  apiGroup: #<string>
-  kind: #<string> -required-
-  name: #<string> -required-
-  namespace: #<string>
-  scope: #<string>
-OUP: networking.k8s.io
-apiVersion: #<string>
-kind: #<string>
-metadata: #<ObjectMeta>
-  annotations: #<map[string]string>
-  creationTimestamp: #<string>
-  deletionGracePeriodSeconds: #<integer>
-  deletionTimestamp: #<string>
-  finalizers: #<[]string>
-  generateName: #<string>
-  generation: #<integer>
-  labels: #<map[string]string>
-  managedFields: #<[]ManagedFieldsEntry>
-    apiVersion: #<string>
-    fieldsType: #<string>
-    fieldsV1: #<FieldsV1>
-    manager: #<string>
-    operation: #<string>
-    subresource: #<string>
-    time: #<string>
-  name: #<string>
-  namespace: #<string>
-  ownerReferences: #<[]OwnerReference>
-    apiVersion: #<string> -required-
-    blockOwnerDeletion: #<boolean>
-    controller: #<boolean>
-    kind: #<string> -required-
-    name: #<string> -required-
-    uid: #<string> -required-
-  resourceVersion: #<string>
-  selfLink: #<string>
-  uid: #<string>
-spec: #<IngressClassSpec>
-  controller: #<string>
-  parameters: #<IngressClassParametersReference>
-    apiGroup: #<string>
-    kind: #<string> -required-
-    name: #<string> -required-
-    namespace: #<string>
-    scope: #<string>
+GROUP:      networking.k8s.io
+KIND:       IngressClass
+VERSION:    v1
+
+DESCRIPTION:
+    IngressClass represents the class of the Ingress, referenced by the Ingress
+    Spec. The `ingressclass.kubernetes.io/is-default-class` annotation can be
+    used to indicate that an IngressClass should be considered default. When a
+    single IngressClass resource has this annotation set to true, new Ingress
+    resources without a class specified will be assigned this default class.
+    
+FIELDS:
+  apiVersion	<string>
+  kind	<string>
+  metadata	<ObjectMeta>
+    annotations	<map[string]string>
+    creationTimestamp	<string>
+    deletionGracePeriodSeconds	<integer>
+    deletionTimestamp	<string>
+    finalizers	<[]string>
+    generateName	<string>
+    generation	<integer>
+    labels	<map[string]string>
+    managedFields	<[]ManagedFieldsEntry>
+      apiVersion	<string>
+      fieldsType	<string>
+      fieldsV1	<FieldsV1>
+      manager	<string>
+      operation	<string>
+      subresource	<string>
+      time	<string>
+    name	<string>
+    namespace	<string>
+    ownerReferences	<[]OwnerReference>
+      apiVersion	<string> -required-
+      blockOwnerDeletion	<boolean>
+      controller	<boolean>
+      kind	<string> -required-
+      name	<string> -required-
+      uid	<string> -required-
+    resourceVersion	<string>
+    selfLink	<string>
+    uid	<string>
+  spec	<IngressClassSpec>
+    controller	<string>
+    parameters	<IngressClassParametersReference>
+      apiGroup	<string>
+      kind	<string> -required-
+      name	<string> -required-
+      namespace	<string>
+      scope	<string>
+

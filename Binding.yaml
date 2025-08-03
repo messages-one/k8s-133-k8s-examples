@@ -1,78 +1,48 @@
-iVersion: #<string>
-nd: #<string>
-tadata: #<ObjectMeta>
-annotations: #<map[string]string>
-creationTimestamp: #<string>
-deletionGracePeriodSeconds: #<integer>
-deletionTimestamp: #<string>
-finalizers: #<[]string>
-generateName: #<string>
-generation: #<integer>
-labels: #<map[string]string>
-managedFields: #<[]ManagedFieldsEntry>
-  apiVersion: #<string>
-  fieldsType: #<string>
-  fieldsV1: #<FieldsV1>
-  manager: #<string>
-  operation: #<string>
-  subresource: #<string>
-  time: #<string>
-name: #<string>
-namespace: #<string>
-ownerReferences: #<[]OwnerReference>
-  apiVersion: #<string> -required-
-  blockOwnerDeletion: #<boolean>
-  controller: #<boolean>
-  kind: #<string> -required-
-  name: #<string> -required-
-  uid: #<string> -required-
-resourceVersion: #<string>
-selfLink: #<string>
-uid: #<string>
-rget: #<ObjectReference> -required-
-apiVersion: #<string>
-fieldPath: #<string>
-kind: #<string>
-name: #<string>
-namespace: #<string>
-resourceVersion: #<string>
-uid: #<string>
-apiVersion: #<string>
-kind: #<string>
-metadata: #<ObjectMeta>
-  annotations: #<map[string]string>
-  creationTimestamp: #<string>
-  deletionGracePeriodSeconds: #<integer>
-  deletionTimestamp: #<string>
-  finalizers: #<[]string>
-  generateName: #<string>
-  generation: #<integer>
-  labels: #<map[string]string>
-  managedFields: #<[]ManagedFieldsEntry>
-    apiVersion: #<string>
-    fieldsType: #<string>
-    fieldsV1: #<FieldsV1>
-    manager: #<string>
-    operation: #<string>
-    subresource: #<string>
-    time: #<string>
-  name: #<string>
-  namespace: #<string>
-  ownerReferences: #<[]OwnerReference>
-    apiVersion: #<string> -required-
-    blockOwnerDeletion: #<boolean>
-    controller: #<boolean>
-    kind: #<string> -required-
-    name: #<string> -required-
-    uid: #<string> -required-
-  resourceVersion: #<string>
-  selfLink: #<string>
-  uid: #<string>
-target: #<ObjectReference> -required-
-  apiVersion: #<string>
-  fieldPath: #<string>
-  kind: #<string>
-  name: #<string>
-  namespace: #<string>
-  resourceVersion: #<string>
-  uid: #<string>
+KIND:       Binding
+VERSION:    v1
+
+DESCRIPTION:
+    Binding ties one object to another; for example, a pod is bound to a node by
+    a scheduler.
+    
+FIELDS:
+  apiVersion	<string>
+  kind	<string>
+  metadata	<ObjectMeta>
+    annotations	<map[string]string>
+    creationTimestamp	<string>
+    deletionGracePeriodSeconds	<integer>
+    deletionTimestamp	<string>
+    finalizers	<[]string>
+    generateName	<string>
+    generation	<integer>
+    labels	<map[string]string>
+    managedFields	<[]ManagedFieldsEntry>
+      apiVersion	<string>
+      fieldsType	<string>
+      fieldsV1	<FieldsV1>
+      manager	<string>
+      operation	<string>
+      subresource	<string>
+      time	<string>
+    name	<string>
+    namespace	<string>
+    ownerReferences	<[]OwnerReference>
+      apiVersion	<string> -required-
+      blockOwnerDeletion	<boolean>
+      controller	<boolean>
+      kind	<string> -required-
+      name	<string> -required-
+      uid	<string> -required-
+    resourceVersion	<string>
+    selfLink	<string>
+    uid	<string>
+  target	<ObjectReference> -required-
+    apiVersion	<string>
+    fieldPath	<string>
+    kind	<string>
+    name	<string>
+    namespace	<string>
+    resourceVersion	<string>
+    uid	<string>
+

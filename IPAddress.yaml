@@ -1,76 +1,54 @@
-P: networking.k8s.io
-iVersion: #<string>
-nd: #<string>
-tadata: #<ObjectMeta>
-annotations: #<map[string]string>
-creationTimestamp: #<string>
-deletionGracePeriodSeconds: #<integer>
-deletionTimestamp: #<string>
-finalizers: #<[]string>
-generateName: #<string>
-generation: #<integer>
-labels: #<map[string]string>
-managedFields: #<[]ManagedFieldsEntry>
-  apiVersion: #<string>
-  fieldsType: #<string>
-  fieldsV1: #<FieldsV1>
-  manager: #<string>
-  operation: #<string>
-  subresource: #<string>
-  time: #<string>
-name: #<string>
-namespace: #<string>
-ownerReferences: #<[]OwnerReference>
-  apiVersion: #<string> -required-
-  blockOwnerDeletion: #<boolean>
-  controller: #<boolean>
-  kind: #<string> -required-
-  name: #<string> -required-
-  uid: #<string> -required-
-resourceVersion: #<string>
-selfLink: #<string>
-uid: #<string>
-ec: #<IPAddressSpec>
-parentRef: #<ParentReference> -required-
-  group: #<string>
-  name: #<string> -required-
-  namespace: #<string>
-  resource: #<string> -required-
-OUP: networking.k8s.io
-apiVersion: #<string>
-kind: #<string>
-metadata: #<ObjectMeta>
-  annotations: #<map[string]string>
-  creationTimestamp: #<string>
-  deletionGracePeriodSeconds: #<integer>
-  deletionTimestamp: #<string>
-  finalizers: #<[]string>
-  generateName: #<string>
-  generation: #<integer>
-  labels: #<map[string]string>
-  managedFields: #<[]ManagedFieldsEntry>
-    apiVersion: #<string>
-    fieldsType: #<string>
-    fieldsV1: #<FieldsV1>
-    manager: #<string>
-    operation: #<string>
-    subresource: #<string>
-    time: #<string>
-  name: #<string>
-  namespace: #<string>
-  ownerReferences: #<[]OwnerReference>
-    apiVersion: #<string> -required-
-    blockOwnerDeletion: #<boolean>
-    controller: #<boolean>
-    kind: #<string> -required-
-    name: #<string> -required-
-    uid: #<string> -required-
-  resourceVersion: #<string>
-  selfLink: #<string>
-  uid: #<string>
-spec: #<IPAddressSpec>
-  parentRef: #<ParentReference> -required-
-    group: #<string>
-    name: #<string> -required-
-    namespace: #<string>
-    resource: #<string> -required-
+GROUP:      networking.k8s.io
+KIND:       IPAddress
+VERSION:    v1
+
+DESCRIPTION:
+    IPAddress represents a single IP of a single IP Family. The object is
+    designed to be used by APIs that operate on IP addresses. The object is used
+    by the Service core API for allocation of IP addresses. An IP address can be
+    represented in different formats, to guarantee the uniqueness of the IP, the
+    name of the object is the IP address in canonical format, four decimal
+    digits separated by dots suppressing leading zeros for IPv4 and the
+    representation defined by RFC 5952 for IPv6. Valid: 192.168.1.5 or
+    2001:db8::1 or 2001:db8:aaaa:bbbb:cccc:dddd:eeee:1 Invalid: 10.01.2.3 or
+    2001:db8:0:0:0::1
+    
+FIELDS:
+  apiVersion	<string>
+  kind	<string>
+  metadata	<ObjectMeta>
+    annotations	<map[string]string>
+    creationTimestamp	<string>
+    deletionGracePeriodSeconds	<integer>
+    deletionTimestamp	<string>
+    finalizers	<[]string>
+    generateName	<string>
+    generation	<integer>
+    labels	<map[string]string>
+    managedFields	<[]ManagedFieldsEntry>
+      apiVersion	<string>
+      fieldsType	<string>
+      fieldsV1	<FieldsV1>
+      manager	<string>
+      operation	<string>
+      subresource	<string>
+      time	<string>
+    name	<string>
+    namespace	<string>
+    ownerReferences	<[]OwnerReference>
+      apiVersion	<string> -required-
+      blockOwnerDeletion	<boolean>
+      controller	<boolean>
+      kind	<string> -required-
+      name	<string> -required-
+      uid	<string> -required-
+    resourceVersion	<string>
+    selfLink	<string>
+    uid	<string>
+  spec	<IPAddressSpec>
+    parentRef	<ParentReference> -required-
+      group	<string>
+      name	<string> -required-
+      namespace	<string>
+      resource	<string> -required-
+

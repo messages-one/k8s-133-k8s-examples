@@ -1,78 +1,48 @@
-iVersion: #<string>
-nd: #<string>
-tadata: #<ObjectMeta>
-annotations: #<map[string]string>
-creationTimestamp: #<string>
-deletionGracePeriodSeconds: #<integer>
-deletionTimestamp: #<string>
-finalizers: #<[]string>
-generateName: #<string>
-generation: #<integer>
-labels: #<map[string]string>
-managedFields: #<[]ManagedFieldsEntry>
-  apiVersion: #<string>
-  fieldsType: #<string>
-  fieldsV1: #<FieldsV1>
-  manager: #<string>
-  operation: #<string>
-  subresource: #<string>
-  time: #<string>
-name: #<string>
-namespace: #<string>
-ownerReferences: #<[]OwnerReference>
-  apiVersion: #<string> -required-
-  blockOwnerDeletion: #<boolean>
-  controller: #<boolean>
-  kind: #<string> -required-
-  name: #<string> -required-
-  uid: #<string> -required-
-resourceVersion: #<string>
-selfLink: #<string>
-uid: #<string>
-ec: #<LimitRangeSpec>
-limits: #<[]LimitRangeItem> -required-
-  default: #<map[string]Quantity>
-  defaultRequest: #<map[string]Quantity>
-  max: #<map[string]Quantity>
-  maxLimitRequestRatio: #<map[string]Quantity>
-  min: #<map[string]Quantity>
-  type: #<string> -required-
-apiVersion: #<string>
-kind: #<string>
-metadata: #<ObjectMeta>
-  annotations: #<map[string]string>
-  creationTimestamp: #<string>
-  deletionGracePeriodSeconds: #<integer>
-  deletionTimestamp: #<string>
-  finalizers: #<[]string>
-  generateName: #<string>
-  generation: #<integer>
-  labels: #<map[string]string>
-  managedFields: #<[]ManagedFieldsEntry>
-    apiVersion: #<string>
-    fieldsType: #<string>
-    fieldsV1: #<FieldsV1>
-    manager: #<string>
-    operation: #<string>
-    subresource: #<string>
-    time: #<string>
-  name: #<string>
-  namespace: #<string>
-  ownerReferences: #<[]OwnerReference>
-    apiVersion: #<string> -required-
-    blockOwnerDeletion: #<boolean>
-    controller: #<boolean>
-    kind: #<string> -required-
-    name: #<string> -required-
-    uid: #<string> -required-
-  resourceVersion: #<string>
-  selfLink: #<string>
-  uid: #<string>
-spec: #<LimitRangeSpec>
-  limits: #<[]LimitRangeItem> -required-
-    default: #<map[string]Quantity>
-    defaultRequest: #<map[string]Quantity>
-    max: #<map[string]Quantity>
-    maxLimitRequestRatio: #<map[string]Quantity>
-    min: #<map[string]Quantity>
-    type: #<string> -required-
+KIND:       LimitRange
+VERSION:    v1
+
+DESCRIPTION:
+    LimitRange sets resource usage limits for each kind of resource in a
+    Namespace.
+    
+FIELDS:
+  apiVersion	<string>
+  kind	<string>
+  metadata	<ObjectMeta>
+    annotations	<map[string]string>
+    creationTimestamp	<string>
+    deletionGracePeriodSeconds	<integer>
+    deletionTimestamp	<string>
+    finalizers	<[]string>
+    generateName	<string>
+    generation	<integer>
+    labels	<map[string]string>
+    managedFields	<[]ManagedFieldsEntry>
+      apiVersion	<string>
+      fieldsType	<string>
+      fieldsV1	<FieldsV1>
+      manager	<string>
+      operation	<string>
+      subresource	<string>
+      time	<string>
+    name	<string>
+    namespace	<string>
+    ownerReferences	<[]OwnerReference>
+      apiVersion	<string> -required-
+      blockOwnerDeletion	<boolean>
+      controller	<boolean>
+      kind	<string> -required-
+      name	<string> -required-
+      uid	<string> -required-
+    resourceVersion	<string>
+    selfLink	<string>
+    uid	<string>
+  spec	<LimitRangeSpec>
+    limits	<[]LimitRangeItem> -required-
+      default	<map[string]Quantity>
+      defaultRequest	<map[string]Quantity>
+      max	<map[string]Quantity>
+      maxLimitRequestRatio	<map[string]Quantity>
+      min	<map[string]Quantity>
+      type	<string> -required-
+

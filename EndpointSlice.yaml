@@ -1,126 +1,77 @@
-P: discovery.k8s.io
-dressType: #<string> -required-
-um: FQDN, IPv4, IPv6
-iVersion: #<string>
-dpoints: #<[]Endpoint> -required-
-addresses: #<[]string> -required-
-conditions: #<EndpointConditions>
-  ready: #<boolean>
-  serving: #<boolean>
-  terminating: #<boolean>
-deprecatedTopology: #<map[string]string>
-hints: #<EndpointHints>
-  forNodes: #<[]ForNode>
-    name: #<string> -required-
-  forZones: #<[]ForZone>
-    name: #<string> -required-
-hostname: #<string>
-nodeName: #<string>
-targetRef: #<ObjectReference>
-  apiVersion: #<string>
-  fieldPath: #<string>
-  kind: #<string>
-  name: #<string>
-  namespace: #<string>
-  resourceVersion: #<string>
-  uid: #<string>
-zone: #<string>
-nd: #<string>
-tadata: #<ObjectMeta>
-annotations: #<map[string]string>
-creationTimestamp: #<string>
-deletionGracePeriodSeconds: #<integer>
-deletionTimestamp: #<string>
-finalizers: #<[]string>
-generateName: #<string>
-generation: #<integer>
-labels: #<map[string]string>
-managedFields: #<[]ManagedFieldsEntry>
-  apiVersion: #<string>
-  fieldsType: #<string>
-  fieldsV1: #<FieldsV1>
-  manager: #<string>
-  operation: #<string>
-  subresource: #<string>
-  time: #<string>
-name: #<string>
-namespace: #<string>
-ownerReferences: #<[]OwnerReference>
-  apiVersion: #<string> -required-
-  blockOwnerDeletion: #<boolean>
-  controller: #<boolean>
-  kind: #<string> -required-
-  name: #<string> -required-
-  uid: #<string> -required-
-resourceVersion: #<string>
-selfLink: #<string>
-uid: #<string>
-rts: #<[]EndpointPort>
-appProtocol: #<string>
-name: #<string>
-port: #<integer>
-protocol: #<string>
-enum: SCTP, TCP, UDP
-OUP: discovery.k8s.io
-addressType: #<string> -required-
-enum: FQDN, IPv4, IPv6
-apiVersion: #<string>
-endpoints: #<[]Endpoint> -required-
-  addresses: #<[]string> -required-
-  conditions: #<EndpointConditions>
-    ready: #<boolean>
-    serving: #<boolean>
-    terminating: #<boolean>
-  deprecatedTopology: #<map[string]string>
-  hints: #<EndpointHints>
-    forNodes: #<[]ForNode>
-      name: #<string> -required-
-    forZones: #<[]ForZone>
-      name: #<string> -required-
-  hostname: #<string>
-  nodeName: #<string>
-  targetRef: #<ObjectReference>
-    apiVersion: #<string>
-    fieldPath: #<string>
-    kind: #<string>
-    name: #<string>
-    namespace: #<string>
-    resourceVersion: #<string>
-    uid: #<string>
-  zone: #<string>
-kind: #<string>
-metadata: #<ObjectMeta>
-  annotations: #<map[string]string>
-  creationTimestamp: #<string>
-  deletionGracePeriodSeconds: #<integer>
-  deletionTimestamp: #<string>
-  finalizers: #<[]string>
-  generateName: #<string>
-  generation: #<integer>
-  labels: #<map[string]string>
-  managedFields: #<[]ManagedFieldsEntry>
-    apiVersion: #<string>
-    fieldsType: #<string>
-    fieldsV1: #<FieldsV1>
-    manager: #<string>
-    operation: #<string>
-    subresource: #<string>
-    time: #<string>
-  name: #<string>
-  namespace: #<string>
-  ownerReferences: #<[]OwnerReference>
-    apiVersion: #<string> -required-
-    blockOwnerDeletion: #<boolean>
-    controller: #<boolean>
-    kind: #<string> -required-
-    name: #<string> -required-
-    uid: #<string> -required-
-  resourceVersion: #<string>
-  selfLink: #<string>
-  uid: #<string>
-ports: #<[]EndpointPort>
-  appProtocol: #<string>
-  name: #<string>
-  port: #<integer>
-  protocol: #<string>
-  enum: SCTP, TCP, UDP
+GROUP:      discovery.k8s.io
+KIND:       EndpointSlice
+VERSION:    v1
+
+DESCRIPTION:
+    EndpointSlice represents a set of service endpoints. Most EndpointSlices are
+    created by the EndpointSlice controller to represent the Pods selected by
+    Service objects. For a given service there may be multiple EndpointSlice
+    objects which must be joined to produce the full set of endpoints; you can
+    find all of the slices for a given service by listing EndpointSlices in the
+    service's namespace whose `kubernetes.io/service-name` label contains the
+    service's name.
+    
+FIELDS:
+  addressType	<string> -required-
+  enum: FQDN, IPv4, IPv6
+  apiVersion	<string>
+  endpoints	<[]Endpoint> -required-
+    addresses	<[]string> -required-
+    conditions	<EndpointConditions>
+      ready	<boolean>
+      serving	<boolean>
+      terminating	<boolean>
+    deprecatedTopology	<map[string]string>
+    hints	<EndpointHints>
+      forNodes	<[]ForNode>
+        name	<string> -required-
+      forZones	<[]ForZone>
+        name	<string> -required-
+    hostname	<string>
+    nodeName	<string>
+    targetRef	<ObjectReference>
+      apiVersion	<string>
+      fieldPath	<string>
+      kind	<string>
+      name	<string>
+      namespace	<string>
+      resourceVersion	<string>
+      uid	<string>
+    zone	<string>
+  kind	<string>
+  metadata	<ObjectMeta>
+    annotations	<map[string]string>
+    creationTimestamp	<string>
+    deletionGracePeriodSeconds	<integer>
+    deletionTimestamp	<string>
+    finalizers	<[]string>
+    generateName	<string>
+    generation	<integer>
+    labels	<map[string]string>
+    managedFields	<[]ManagedFieldsEntry>
+      apiVersion	<string>
+      fieldsType	<string>
+      fieldsV1	<FieldsV1>
+      manager	<string>
+      operation	<string>
+      subresource	<string>
+      time	<string>
+    name	<string>
+    namespace	<string>
+    ownerReferences	<[]OwnerReference>
+      apiVersion	<string> -required-
+      blockOwnerDeletion	<boolean>
+      controller	<boolean>
+      kind	<string> -required-
+      name	<string> -required-
+      uid	<string> -required-
+    resourceVersion	<string>
+    selfLink	<string>
+    uid	<string>
+  ports	<[]EndpointPort>
+    appProtocol	<string>
+    name	<string>
+    port	<integer>
+    protocol	<string>
+    enum: SCTP, TCP, UDP
+

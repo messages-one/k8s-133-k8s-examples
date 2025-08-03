@@ -1,272 +1,145 @@
-P: policy.networking.k8s.io
-iVersion: #<string>
-nd: #<string>
-tadata: #<ObjectMeta> -required-
-annotations: #<map[string]string>
-creationTimestamp: #<string>
-deletionGracePeriodSeconds: #<integer>
-deletionTimestamp: #<string>
-finalizers: #<[]string>
-generateName: #<string>
-generation: #<integer>
-labels: #<map[string]string>
-managedFields: #<[]ManagedFieldsEntry>
-  apiVersion: #<string>
-  fieldsType: #<string>
-  fieldsV1: #<FieldsV1>
-  manager: #<string>
-  operation: #<string>
-  subresource: #<string>
-  time: #<string>
-name: #<string>
-namespace: #<string>
-ownerReferences: #<[]OwnerReference>
-  apiVersion: #<string> -required-
-  blockOwnerDeletion: #<boolean>
-  controller: #<boolean>
-  kind: #<string> -required-
-  name: #<string> -required-
-  uid: #<string> -required-
-resourceVersion: #<string>
-selfLink: #<string>
-uid: #<string>
-ec: #<Object> -required-
-egress: #<[]Object>
-  action: #<string> -required-
-  enum: Allow, Deny, Pass
-  name: #<string>
-  ports: #<[]Object>
-    namedPort: #<string>
-    portNumber: #<Object>
-      port: #<integer> -required-
-      protocol: #<string> -required-
-    portRange: #<Object>
-      end: #<integer> -required-
-      protocol: #<string>
-      start: #<integer> -required-
-  to: #<[]Object> -required-
-    namespaces: #<Object>
-      matchExpressions: #<[]Object>
-        key: #<string> -required-
-        operator: #<string> -required-
-        values: #<[]string>
-      matchLabels: #<map[string]string>
-    networks: #<[]string>
-    nodes: #<Object>
-      matchExpressions: #<[]Object>
-        key: #<string> -required-
-        operator: #<string> -required-
-        values: #<[]string>
-      matchLabels: #<map[string]string>
-    pods: #<Object>
-      namespaceSelector: #<Object> -required-
-        matchExpressions: #<[]Object>
-          key: #<string> -required-
-          operator: #<string> -required-
-          values: #<[]string>
-        matchLabels: #<map[string]string>
-      podSelector: #<Object> -required-
-        matchExpressions: #<[]Object>
-          key: #<string> -required-
-          operator: #<string> -required-
-          values: #<[]string>
-        matchLabels: #<map[string]string>
-ingress: #<[]Object>
-  action: #<string> -required-
-  enum: Allow, Deny, Pass
-  from: #<[]Object> -required-
-    namespaces: #<Object>
-      matchExpressions: #<[]Object>
-        key: #<string> -required-
-        operator: #<string> -required-
-        values: #<[]string>
-      matchLabels: #<map[string]string>
-    pods: #<Object>
-      namespaceSelector: #<Object> -required-
-        matchExpressions: #<[]Object>
-          key: #<string> -required-
-          operator: #<string> -required-
-          values: #<[]string>
-        matchLabels: #<map[string]string>
-      podSelector: #<Object> -required-
-        matchExpressions: #<[]Object>
-          key: #<string> -required-
-          operator: #<string> -required-
-          values: #<[]string>
-        matchLabels: #<map[string]string>
-  name: #<string>
-  ports: #<[]Object>
-    namedPort: #<string>
-    portNumber: #<Object>
-      port: #<integer> -required-
-      protocol: #<string> -required-
-    portRange: #<Object>
-      end: #<integer> -required-
-      protocol: #<string>
-      start: #<integer> -required-
-priority: #<integer> -required-
-subject: #<Object> -required-
-  namespaces: #<Object>
-    matchExpressions: #<[]Object>
-      key: #<string> -required-
-      operator: #<string> -required-
-      values: #<[]string>
-    matchLabels: #<map[string]string>
-  pods: #<Object>
-    namespaceSelector: #<Object> -required-
-      matchExpressions: #<[]Object>
-        key: #<string> -required-
-        operator: #<string> -required-
-        values: #<[]string>
-      matchLabels: #<map[string]string>
-    podSelector: #<Object> -required-
-      matchExpressions: #<[]Object>
-        key: #<string> -required-
-        operator: #<string> -required-
-        values: #<[]string>
-      matchLabels: #<map[string]string>
-atus: #<Object>
-conditions: #<[]Object> -required-
-  lastTransitionTime: #<string> -required-
-  message: #<string> -required-
-  observedGeneration: #<integer>
-  reason: #<string> -required-
-  status: #<string> -required-
-  enum: True, False, Unknown
-  type: #<string> -required-
-OUP: policy.networking.k8s.io
-apiVersion: #<string>
-kind: #<string>
-metadata: #<ObjectMeta> -required-
-  annotations: #<map[string]string>
-  creationTimestamp: #<string>
-  deletionGracePeriodSeconds: #<integer>
-  deletionTimestamp: #<string>
-  finalizers: #<[]string>
-  generateName: #<string>
-  generation: #<integer>
-  labels: #<map[string]string>
-  managedFields: #<[]ManagedFieldsEntry>
-    apiVersion: #<string>
-    fieldsType: #<string>
-    fieldsV1: #<FieldsV1>
-    manager: #<string>
-    operation: #<string>
-    subresource: #<string>
-    time: #<string>
-  name: #<string>
-  namespace: #<string>
-  ownerReferences: #<[]OwnerReference>
-    apiVersion: #<string> -required-
-    blockOwnerDeletion: #<boolean>
-    controller: #<boolean>
-    kind: #<string> -required-
-    name: #<string> -required-
-    uid: #<string> -required-
-  resourceVersion: #<string>
-  selfLink: #<string>
-  uid: #<string>
-spec: #<Object> -required-
-  egress: #<[]Object>
-    action: #<string> -required-
-    enum: Allow, Deny, Pass
-    name: #<string>
-    ports: #<[]Object>
-      namedPort: #<string>
-      portNumber: #<Object>
-        port: #<integer> -required-
-        protocol: #<string> -required-
-      portRange: #<Object>
-        end: #<integer> -required-
-        protocol: #<string>
-        start: #<integer> -required-
-    to: #<[]Object> -required-
-      namespaces: #<Object>
-        matchExpressions: #<[]Object>
-          key: #<string> -required-
-          operator: #<string> -required-
-          values: #<[]string>
-        matchLabels: #<map[string]string>
-      networks: #<[]string>
-      nodes: #<Object>
-        matchExpressions: #<[]Object>
-          key: #<string> -required-
-          operator: #<string> -required-
-          values: #<[]string>
-        matchLabels: #<map[string]string>
-      pods: #<Object>
-        namespaceSelector: #<Object> -required-
-          matchExpressions: #<[]Object>
-            key: #<string> -required-
-            operator: #<string> -required-
-            values: #<[]string>
-          matchLabels: #<map[string]string>
-        podSelector: #<Object> -required-
-          matchExpressions: #<[]Object>
-            key: #<string> -required-
-            operator: #<string> -required-
-            values: #<[]string>
-          matchLabels: #<map[string]string>
-  ingress: #<[]Object>
-    action: #<string> -required-
-    enum: Allow, Deny, Pass
-    from: #<[]Object> -required-
-      namespaces: #<Object>
-        matchExpressions: #<[]Object>
-          key: #<string> -required-
-          operator: #<string> -required-
-          values: #<[]string>
-        matchLabels: #<map[string]string>
-      pods: #<Object>
-        namespaceSelector: #<Object> -required-
-          matchExpressions: #<[]Object>
-            key: #<string> -required-
-            operator: #<string> -required-
-            values: #<[]string>
-          matchLabels: #<map[string]string>
-        podSelector: #<Object> -required-
-          matchExpressions: #<[]Object>
-            key: #<string> -required-
-            operator: #<string> -required-
-            values: #<[]string>
-          matchLabels: #<map[string]string>
-    name: #<string>
-    ports: #<[]Object>
-      namedPort: #<string>
-      portNumber: #<Object>
-        port: #<integer> -required-
-        protocol: #<string> -required-
-      portRange: #<Object>
-        end: #<integer> -required-
-        protocol: #<string>
-        start: #<integer> -required-
-  priority: #<integer> -required-
-  subject: #<Object> -required-
-    namespaces: #<Object>
-      matchExpressions: #<[]Object>
-        key: #<string> -required-
-        operator: #<string> -required-
-        values: #<[]string>
-      matchLabels: #<map[string]string>
-    pods: #<Object>
-      namespaceSelector: #<Object> -required-
-        matchExpressions: #<[]Object>
-          key: #<string> -required-
-          operator: #<string> -required-
-          values: #<[]string>
-        matchLabels: #<map[string]string>
-      podSelector: #<Object> -required-
-        matchExpressions: #<[]Object>
-          key: #<string> -required-
-          operator: #<string> -required-
-          values: #<[]string>
-        matchLabels: #<map[string]string>
-status: #<Object>
-  conditions: #<[]Object> -required-
-    lastTransitionTime: #<string> -required-
-    message: #<string> -required-
-    observedGeneration: #<integer>
-    reason: #<string> -required-
-    status: #<string> -required-
-    enum: True, False, Unknown
-    type: #<string> -required-
+GROUP:      policy.networking.k8s.io
+KIND:       AdminNetworkPolicy
+VERSION:    v1alpha1
+
+DESCRIPTION:
+    AdminNetworkPolicy is  a cluster level resource that is part of the
+    AdminNetworkPolicy API.
+    
+FIELDS:
+  apiVersion	<string>
+  kind	<string>
+  metadata	<ObjectMeta> -required-
+    annotations	<map[string]string>
+    creationTimestamp	<string>
+    deletionGracePeriodSeconds	<integer>
+    deletionTimestamp	<string>
+    finalizers	<[]string>
+    generateName	<string>
+    generation	<integer>
+    labels	<map[string]string>
+    managedFields	<[]ManagedFieldsEntry>
+      apiVersion	<string>
+      fieldsType	<string>
+      fieldsV1	<FieldsV1>
+      manager	<string>
+      operation	<string>
+      subresource	<string>
+      time	<string>
+    name	<string>
+    namespace	<string>
+    ownerReferences	<[]OwnerReference>
+      apiVersion	<string> -required-
+      blockOwnerDeletion	<boolean>
+      controller	<boolean>
+      kind	<string> -required-
+      name	<string> -required-
+      uid	<string> -required-
+    resourceVersion	<string>
+    selfLink	<string>
+    uid	<string>
+  spec	<Object> -required-
+    egress	<[]Object>
+      action	<string> -required-
+      enum: Allow, Deny, Pass
+      name	<string>
+      ports	<[]Object>
+        namedPort	<string>
+        portNumber	<Object>
+          port	<integer> -required-
+          protocol	<string> -required-
+        portRange	<Object>
+          end	<integer> -required-
+          protocol	<string>
+          start	<integer> -required-
+      to	<[]Object> -required-
+        namespaces	<Object>
+          matchExpressions	<[]Object>
+            key	<string> -required-
+            operator	<string> -required-
+            values	<[]string>
+          matchLabels	<map[string]string>
+        networks	<[]string>
+        nodes	<Object>
+          matchExpressions	<[]Object>
+            key	<string> -required-
+            operator	<string> -required-
+            values	<[]string>
+          matchLabels	<map[string]string>
+        pods	<Object>
+          namespaceSelector	<Object> -required-
+            matchExpressions	<[]Object>
+              key	<string> -required-
+              operator	<string> -required-
+              values	<[]string>
+            matchLabels	<map[string]string>
+          podSelector	<Object> -required-
+            matchExpressions	<[]Object>
+              key	<string> -required-
+              operator	<string> -required-
+              values	<[]string>
+            matchLabels	<map[string]string>
+    ingress	<[]Object>
+      action	<string> -required-
+      enum: Allow, Deny, Pass
+      from	<[]Object> -required-
+        namespaces	<Object>
+          matchExpressions	<[]Object>
+            key	<string> -required-
+            operator	<string> -required-
+            values	<[]string>
+          matchLabels	<map[string]string>
+        pods	<Object>
+          namespaceSelector	<Object> -required-
+            matchExpressions	<[]Object>
+              key	<string> -required-
+              operator	<string> -required-
+              values	<[]string>
+            matchLabels	<map[string]string>
+          podSelector	<Object> -required-
+            matchExpressions	<[]Object>
+              key	<string> -required-
+              operator	<string> -required-
+              values	<[]string>
+            matchLabels	<map[string]string>
+      name	<string>
+      ports	<[]Object>
+        namedPort	<string>
+        portNumber	<Object>
+          port	<integer> -required-
+          protocol	<string> -required-
+        portRange	<Object>
+          end	<integer> -required-
+          protocol	<string>
+          start	<integer> -required-
+    priority	<integer> -required-
+    subject	<Object> -required-
+      namespaces	<Object>
+        matchExpressions	<[]Object>
+          key	<string> -required-
+          operator	<string> -required-
+          values	<[]string>
+        matchLabels	<map[string]string>
+      pods	<Object>
+        namespaceSelector	<Object> -required-
+          matchExpressions	<[]Object>
+            key	<string> -required-
+            operator	<string> -required-
+            values	<[]string>
+          matchLabels	<map[string]string>
+        podSelector	<Object> -required-
+          matchExpressions	<[]Object>
+            key	<string> -required-
+            operator	<string> -required-
+            values	<[]string>
+          matchLabels	<map[string]string>
+  status	<Object>
+    conditions	<[]Object> -required-
+      lastTransitionTime	<string> -required-
+      message	<string> -required-
+      observedGeneration	<integer>
+      reason	<string> -required-
+      status	<string> -required-
+      enum: True, False, Unknown
+      type	<string> -required-
+

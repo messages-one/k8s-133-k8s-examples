@@ -1,92 +1,53 @@
-P: crd.projectcalico.org
-iVersion: #<string>
-nd: #<string>
-tadata: #<ObjectMeta>
-annotations: #<map[string]string>
-creationTimestamp: #<string>
-deletionGracePeriodSeconds: #<integer>
-deletionTimestamp: #<string>
-finalizers: #<[]string>
-generateName: #<string>
-generation: #<integer>
-labels: #<map[string]string>
-managedFields: #<[]ManagedFieldsEntry>
-  apiVersion: #<string>
-  fieldsType: #<string>
-  fieldsV1: #<FieldsV1>
-  manager: #<string>
-  operation: #<string>
-  subresource: #<string>
-  time: #<string>
-name: #<string>
-namespace: #<string>
-ownerReferences: #<[]OwnerReference>
-  apiVersion: #<string> -required-
-  blockOwnerDeletion: #<boolean>
-  controller: #<boolean>
-  kind: #<string> -required-
-  name: #<string> -required-
-  uid: #<string> -required-
-resourceVersion: #<string>
-selfLink: #<string>
-uid: #<string>
-ec: #<Object>
-allowedUses: #<[]string>
-blockSize: #<integer>
-cidr: #<string> -required-
-disableBGPExport: #<boolean>
-disabled: #<boolean>
-ipip: #<Object>
-  enabled: #<boolean>
-  mode: #<string>
-ipipMode: #<string>
-nat-outgoing: #<boolean>
-natOutgoing: #<boolean>
-nodeSelector: #<string>
-vxlanMode: #<string>
-OUP: crd.projectcalico.org
-apiVersion: #<string>
-kind: #<string>
-metadata: #<ObjectMeta>
-  annotations: #<map[string]string>
-  creationTimestamp: #<string>
-  deletionGracePeriodSeconds: #<integer>
-  deletionTimestamp: #<string>
-  finalizers: #<[]string>
-  generateName: #<string>
-  generation: #<integer>
-  labels: #<map[string]string>
-  managedFields: #<[]ManagedFieldsEntry>
-    apiVersion: #<string>
-    fieldsType: #<string>
-    fieldsV1: #<FieldsV1>
-    manager: #<string>
-    operation: #<string>
-    subresource: #<string>
-    time: #<string>
-  name: #<string>
-  namespace: #<string>
-  ownerReferences: #<[]OwnerReference>
-    apiVersion: #<string> -required-
-    blockOwnerDeletion: #<boolean>
-    controller: #<boolean>
-    kind: #<string> -required-
-    name: #<string> -required-
-    uid: #<string> -required-
-  resourceVersion: #<string>
-  selfLink: #<string>
-  uid: #<string>
-spec: #<Object>
-  allowedUses: #<[]string>
-  blockSize: #<integer>
-  cidr: #<string> -required-
-  disableBGPExport: #<boolean>
-  disabled: #<boolean>
-  ipip: #<Object>
-    enabled: #<boolean>
-    mode: #<string>
-  ipipMode: #<string>
-  nat-outgoing: #<boolean>
-  natOutgoing: #<boolean>
-  nodeSelector: #<string>
-  vxlanMode: #<string>
+GROUP:      crd.projectcalico.org
+KIND:       IPPool
+VERSION:    v1
+
+DESCRIPTION:
+    <empty>
+FIELDS:
+  apiVersion	<string>
+  kind	<string>
+  metadata	<ObjectMeta>
+    annotations	<map[string]string>
+    creationTimestamp	<string>
+    deletionGracePeriodSeconds	<integer>
+    deletionTimestamp	<string>
+    finalizers	<[]string>
+    generateName	<string>
+    generation	<integer>
+    labels	<map[string]string>
+    managedFields	<[]ManagedFieldsEntry>
+      apiVersion	<string>
+      fieldsType	<string>
+      fieldsV1	<FieldsV1>
+      manager	<string>
+      operation	<string>
+      subresource	<string>
+      time	<string>
+    name	<string>
+    namespace	<string>
+    ownerReferences	<[]OwnerReference>
+      apiVersion	<string> -required-
+      blockOwnerDeletion	<boolean>
+      controller	<boolean>
+      kind	<string> -required-
+      name	<string> -required-
+      uid	<string> -required-
+    resourceVersion	<string>
+    selfLink	<string>
+    uid	<string>
+  spec	<Object>
+    allowedUses	<[]string>
+    blockSize	<integer>
+    cidr	<string> -required-
+    disableBGPExport	<boolean>
+    disabled	<boolean>
+    ipip	<Object>
+      enabled	<boolean>
+      mode	<string>
+    ipipMode	<string>
+    nat-outgoing	<boolean>
+    natOutgoing	<boolean>
+    nodeSelector	<string>
+    vxlanMode	<string>
+

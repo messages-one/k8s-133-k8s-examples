@@ -1,88 +1,54 @@
-P: authentication.k8s.io
-iVersion: #<string>
-nd: #<string>
-tadata: #<ObjectMeta>
-annotations: #<map[string]string>
-creationTimestamp: #<string>
-deletionGracePeriodSeconds: #<integer>
-deletionTimestamp: #<string>
-finalizers: #<[]string>
-generateName: #<string>
-generation: #<integer>
-labels: #<map[string]string>
-managedFields: #<[]ManagedFieldsEntry>
-  apiVersion: #<string>
-  fieldsType: #<string>
-  fieldsV1: #<FieldsV1>
-  manager: #<string>
-  operation: #<string>
-  subresource: #<string>
-  time: #<string>
-name: #<string>
-namespace: #<string>
-ownerReferences: #<[]OwnerReference>
-  apiVersion: #<string> -required-
-  blockOwnerDeletion: #<boolean>
-  controller: #<boolean>
-  kind: #<string> -required-
-  name: #<string> -required-
-  uid: #<string> -required-
-resourceVersion: #<string>
-selfLink: #<string>
-uid: #<string>
-ec: #<TokenReviewSpec> -required-
-audiences: #<[]string>
-token: #<string>
-atus: #<TokenReviewStatus>
-audiences: #<[]string>
-authenticated: #<boolean>
-error: #<string>
-user: #<UserInfo>
-  extra: #<map[string][]string>
-  groups: #<[]string>
-  uid: #<string>
-  username: #<string>
-OUP: authentication.k8s.io
-apiVersion: #<string>
-kind: #<string>
-metadata: #<ObjectMeta>
-  annotations: #<map[string]string>
-  creationTimestamp: #<string>
-  deletionGracePeriodSeconds: #<integer>
-  deletionTimestamp: #<string>
-  finalizers: #<[]string>
-  generateName: #<string>
-  generation: #<integer>
-  labels: #<map[string]string>
-  managedFields: #<[]ManagedFieldsEntry>
-    apiVersion: #<string>
-    fieldsType: #<string>
-    fieldsV1: #<FieldsV1>
-    manager: #<string>
-    operation: #<string>
-    subresource: #<string>
-    time: #<string>
-  name: #<string>
-  namespace: #<string>
-  ownerReferences: #<[]OwnerReference>
-    apiVersion: #<string> -required-
-    blockOwnerDeletion: #<boolean>
-    controller: #<boolean>
-    kind: #<string> -required-
-    name: #<string> -required-
-    uid: #<string> -required-
-  resourceVersion: #<string>
-  selfLink: #<string>
-  uid: #<string>
-spec: #<TokenReviewSpec> -required-
-  audiences: #<[]string>
-  token: #<string>
-status: #<TokenReviewStatus>
-  audiences: #<[]string>
-  authenticated: #<boolean>
-  error: #<string>
-  user: #<UserInfo>
-    extra: #<map[string][]string>
-    groups: #<[]string>
-    uid: #<string>
-    username: #<string>
+GROUP:      authentication.k8s.io
+KIND:       TokenReview
+VERSION:    v1
+
+DESCRIPTION:
+    TokenReview attempts to authenticate a token to a known user. Note:
+    TokenReview requests may be cached by the webhook token authenticator plugin
+    in the kube-apiserver.
+    
+FIELDS:
+  apiVersion	<string>
+  kind	<string>
+  metadata	<ObjectMeta>
+    annotations	<map[string]string>
+    creationTimestamp	<string>
+    deletionGracePeriodSeconds	<integer>
+    deletionTimestamp	<string>
+    finalizers	<[]string>
+    generateName	<string>
+    generation	<integer>
+    labels	<map[string]string>
+    managedFields	<[]ManagedFieldsEntry>
+      apiVersion	<string>
+      fieldsType	<string>
+      fieldsV1	<FieldsV1>
+      manager	<string>
+      operation	<string>
+      subresource	<string>
+      time	<string>
+    name	<string>
+    namespace	<string>
+    ownerReferences	<[]OwnerReference>
+      apiVersion	<string> -required-
+      blockOwnerDeletion	<boolean>
+      controller	<boolean>
+      kind	<string> -required-
+      name	<string> -required-
+      uid	<string> -required-
+    resourceVersion	<string>
+    selfLink	<string>
+    uid	<string>
+  spec	<TokenReviewSpec> -required-
+    audiences	<[]string>
+    token	<string>
+  status	<TokenReviewStatus>
+    audiences	<[]string>
+    authenticated	<boolean>
+    error	<string>
+    user	<UserInfo>
+      extra	<map[string][]string>
+      groups	<[]string>
+      uid	<string>
+      username	<string>
+

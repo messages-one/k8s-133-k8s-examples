@@ -1,100 +1,59 @@
-P: apiregistration.k8s.io
-iVersion: #<string>
-nd: #<string>
-tadata: #<ObjectMeta>
-annotations: #<map[string]string>
-creationTimestamp: #<string>
-deletionGracePeriodSeconds: #<integer>
-deletionTimestamp: #<string>
-finalizers: #<[]string>
-generateName: #<string>
-generation: #<integer>
-labels: #<map[string]string>
-managedFields: #<[]ManagedFieldsEntry>
-  apiVersion: #<string>
-  fieldsType: #<string>
-  fieldsV1: #<FieldsV1>
-  manager: #<string>
-  operation: #<string>
-  subresource: #<string>
-  time: #<string>
-name: #<string>
-namespace: #<string>
-ownerReferences: #<[]OwnerReference>
-  apiVersion: #<string> -required-
-  blockOwnerDeletion: #<boolean>
-  controller: #<boolean>
-  kind: #<string> -required-
-  name: #<string> -required-
-  uid: #<string> -required-
-resourceVersion: #<string>
-selfLink: #<string>
-uid: #<string>
-ec: #<APIServiceSpec>
-caBundle: #<string>
-group: #<string>
-groupPriorityMinimum: #<integer> -required-
-insecureSkipTLSVerify: #<boolean>
-service: #<ServiceReference>
-  name: #<string>
-  namespace: #<string>
-  port: #<integer>
-version: #<string>
-versionPriority: #<integer> -required-
-atus: #<APIServiceStatus>
-conditions: #<[]APIServiceCondition>
-  lastTransitionTime: #<string>
-  message: #<string>
-  reason: #<string>
-  status: #<string> -required-
-  type: #<string> -required-
-OUP: apiregistration.k8s.io
-apiVersion: #<string>
-kind: #<string>
-metadata: #<ObjectMeta>
-  annotations: #<map[string]string>
-  creationTimestamp: #<string>
-  deletionGracePeriodSeconds: #<integer>
-  deletionTimestamp: #<string>
-  finalizers: #<[]string>
-  generateName: #<string>
-  generation: #<integer>
-  labels: #<map[string]string>
-  managedFields: #<[]ManagedFieldsEntry>
-    apiVersion: #<string>
-    fieldsType: #<string>
-    fieldsV1: #<FieldsV1>
-    manager: #<string>
-    operation: #<string>
-    subresource: #<string>
-    time: #<string>
-  name: #<string>
-  namespace: #<string>
-  ownerReferences: #<[]OwnerReference>
-    apiVersion: #<string> -required-
-    blockOwnerDeletion: #<boolean>
-    controller: #<boolean>
-    kind: #<string> -required-
-    name: #<string> -required-
-    uid: #<string> -required-
-  resourceVersion: #<string>
-  selfLink: #<string>
-  uid: #<string>
-spec: #<APIServiceSpec>
-  caBundle: #<string>
-  group: #<string>
-  groupPriorityMinimum: #<integer> -required-
-  insecureSkipTLSVerify: #<boolean>
-  service: #<ServiceReference>
-    name: #<string>
-    namespace: #<string>
-    port: #<integer>
-  version: #<string>
-  versionPriority: #<integer> -required-
-status: #<APIServiceStatus>
-  conditions: #<[]APIServiceCondition>
-    lastTransitionTime: #<string>
-    message: #<string>
-    reason: #<string>
-    status: #<string> -required-
-    type: #<string> -required-
+GROUP:      apiregistration.k8s.io
+KIND:       APIService
+VERSION:    v1
+
+DESCRIPTION:
+    APIService represents a server for a particular GroupVersion. Name must be
+    "version.group".
+    
+FIELDS:
+  apiVersion	<string>
+  kind	<string>
+  metadata	<ObjectMeta>
+    annotations	<map[string]string>
+    creationTimestamp	<string>
+    deletionGracePeriodSeconds	<integer>
+    deletionTimestamp	<string>
+    finalizers	<[]string>
+    generateName	<string>
+    generation	<integer>
+    labels	<map[string]string>
+    managedFields	<[]ManagedFieldsEntry>
+      apiVersion	<string>
+      fieldsType	<string>
+      fieldsV1	<FieldsV1>
+      manager	<string>
+      operation	<string>
+      subresource	<string>
+      time	<string>
+    name	<string>
+    namespace	<string>
+    ownerReferences	<[]OwnerReference>
+      apiVersion	<string> -required-
+      blockOwnerDeletion	<boolean>
+      controller	<boolean>
+      kind	<string> -required-
+      name	<string> -required-
+      uid	<string> -required-
+    resourceVersion	<string>
+    selfLink	<string>
+    uid	<string>
+  spec	<APIServiceSpec>
+    caBundle	<string>
+    group	<string>
+    groupPriorityMinimum	<integer> -required-
+    insecureSkipTLSVerify	<boolean>
+    service	<ServiceReference>
+      name	<string>
+      namespace	<string>
+      port	<integer>
+    version	<string>
+    versionPriority	<integer> -required-
+  status	<APIServiceStatus>
+    conditions	<[]APIServiceCondition>
+      lastTransitionTime	<string>
+      message	<string>
+      reason	<string>
+      status	<string> -required-
+      type	<string> -required-
+

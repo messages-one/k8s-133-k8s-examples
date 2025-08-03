@@ -1,90 +1,54 @@
-P: rbac.authorization.k8s.io
-gregationRule: #<AggregationRule>
-clusterRoleSelectors: #<[]LabelSelector>
-  matchExpressions: #<[]LabelSelectorRequirement>
-    key: #<string> -required-
-    operator: #<string> -required-
-    values: #<[]string>
-  matchLabels: #<map[string]string>
-iVersion: #<string>
-nd: #<string>
-tadata: #<ObjectMeta>
-annotations: #<map[string]string>
-creationTimestamp: #<string>
-deletionGracePeriodSeconds: #<integer>
-deletionTimestamp: #<string>
-finalizers: #<[]string>
-generateName: #<string>
-generation: #<integer>
-labels: #<map[string]string>
-managedFields: #<[]ManagedFieldsEntry>
-  apiVersion: #<string>
-  fieldsType: #<string>
-  fieldsV1: #<FieldsV1>
-  manager: #<string>
-  operation: #<string>
-  subresource: #<string>
-  time: #<string>
-name: #<string>
-namespace: #<string>
-ownerReferences: #<[]OwnerReference>
-  apiVersion: #<string> -required-
-  blockOwnerDeletion: #<boolean>
-  controller: #<boolean>
-  kind: #<string> -required-
-  name: #<string> -required-
-  uid: #<string> -required-
-resourceVersion: #<string>
-selfLink: #<string>
-uid: #<string>
-les: #<[]PolicyRule>
-apiGroups: #<[]string>
-nonResourceURLs: #<[]string>
-resourceNames: #<[]string>
-resources: #<[]string>
-verbs: #<[]string> -required-
-OUP: rbac.authorization.k8s.io
-aggregationRule: #<AggregationRule>
-  clusterRoleSelectors: #<[]LabelSelector>
-    matchExpressions: #<[]LabelSelectorRequirement>
-      key: #<string> -required-
-      operator: #<string> -required-
-      values: #<[]string>
-    matchLabels: #<map[string]string>
-apiVersion: #<string>
-kind: #<string>
-metadata: #<ObjectMeta>
-  annotations: #<map[string]string>
-  creationTimestamp: #<string>
-  deletionGracePeriodSeconds: #<integer>
-  deletionTimestamp: #<string>
-  finalizers: #<[]string>
-  generateName: #<string>
-  generation: #<integer>
-  labels: #<map[string]string>
-  managedFields: #<[]ManagedFieldsEntry>
-    apiVersion: #<string>
-    fieldsType: #<string>
-    fieldsV1: #<FieldsV1>
-    manager: #<string>
-    operation: #<string>
-    subresource: #<string>
-    time: #<string>
-  name: #<string>
-  namespace: #<string>
-  ownerReferences: #<[]OwnerReference>
-    apiVersion: #<string> -required-
-    blockOwnerDeletion: #<boolean>
-    controller: #<boolean>
-    kind: #<string> -required-
-    name: #<string> -required-
-    uid: #<string> -required-
-  resourceVersion: #<string>
-  selfLink: #<string>
-  uid: #<string>
-rules: #<[]PolicyRule>
-  apiGroups: #<[]string>
-  nonResourceURLs: #<[]string>
-  resourceNames: #<[]string>
-  resources: #<[]string>
-  verbs: #<[]string> -required-
+GROUP:      rbac.authorization.k8s.io
+KIND:       ClusterRole
+VERSION:    v1
+
+DESCRIPTION:
+    ClusterRole is a cluster level, logical grouping of PolicyRules that can be
+    referenced as a unit by a RoleBinding or ClusterRoleBinding.
+    
+FIELDS:
+  aggregationRule	<AggregationRule>
+    clusterRoleSelectors	<[]LabelSelector>
+      matchExpressions	<[]LabelSelectorRequirement>
+        key	<string> -required-
+        operator	<string> -required-
+        values	<[]string>
+      matchLabels	<map[string]string>
+  apiVersion	<string>
+  kind	<string>
+  metadata	<ObjectMeta>
+    annotations	<map[string]string>
+    creationTimestamp	<string>
+    deletionGracePeriodSeconds	<integer>
+    deletionTimestamp	<string>
+    finalizers	<[]string>
+    generateName	<string>
+    generation	<integer>
+    labels	<map[string]string>
+    managedFields	<[]ManagedFieldsEntry>
+      apiVersion	<string>
+      fieldsType	<string>
+      fieldsV1	<FieldsV1>
+      manager	<string>
+      operation	<string>
+      subresource	<string>
+      time	<string>
+    name	<string>
+    namespace	<string>
+    ownerReferences	<[]OwnerReference>
+      apiVersion	<string> -required-
+      blockOwnerDeletion	<boolean>
+      controller	<boolean>
+      kind	<string> -required-
+      name	<string> -required-
+      uid	<string> -required-
+    resourceVersion	<string>
+    selfLink	<string>
+    uid	<string>
+  rules	<[]PolicyRule>
+    apiGroups	<[]string>
+    nonResourceURLs	<[]string>
+    resourceNames	<[]string>
+    resources	<[]string>
+    verbs	<[]string> -required-
+

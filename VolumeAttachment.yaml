@@ -1,4 +1,3 @@
-
 GROUP:      storage.k8s.io
 KIND:       VolumeAttachment
 VERSION:    v1

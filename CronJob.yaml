@@ -1,4 +1,3 @@
-
 GROUP:      batch
 KIND:       CronJob
 VERSION:    v1

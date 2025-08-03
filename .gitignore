@@ -1,0 +1,9 @@
+# Ignore specific files
+README.md
+generate.sh
+
+# Ignore JetBrains IDE folder
+.idea/
+
+# Ignore all .iml files (common in JetBrains IDEs)
+*.iml

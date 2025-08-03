@@ -7,3 +7,6 @@ generate.sh
 
 # Ignore all .iml files (common in JetBrains IDEs)
 *.iml
+
+# ignore yq.exe
+yq.exe

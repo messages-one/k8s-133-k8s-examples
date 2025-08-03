@@ -58,4 +58,4 @@ subsets: #<[]EndpointSubset>
     name: #<string>
     port: #<integer> -required-
     protocol: #<string>
-    enum: SCTP, TCP, UDP
+    #enum: SCTP, TCP, UDP

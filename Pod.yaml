@@ -37,12 +37,12 @@ spec: #<PodSpec>
           matchExpressions: #<[]NodeSelectorRequirement>
             key: #<string> -required-
             operator: #<string> -required-
-            enum: DoesNotExist, Exists, Gt, In, ....
+            #enum: DoesNotExist, Exists, Gt, In, ....
             values: #<[]string>
           matchFields: #<[]NodeSelectorRequirement>
             key: #<string> -required-
             operator: #<string> -required-
-            enum: DoesNotExist, Exists, Gt, In, ....
+            #enum: DoesNotExist, Exists, Gt, In, ....
             values: #<[]string>
         weight: #<integer> -required-
       requiredDuringSchedulingIgnoredDuringExecution: #<NodeSelector>
@@ -50,12 +50,12 @@ spec: #<PodSpec>
           matchExpressions: #<[]NodeSelectorRequirement>
             key: #<string> -required-
             operator: #<string> -required-
-            enum: DoesNotExist, Exists, Gt, In, ....
+            #enum: DoesNotExist, Exists, Gt, In, ....
             values: #<[]string>
           matchFields: #<[]NodeSelectorRequirement>
             key: #<string> -required-
             operator: #<string> -required-
-            enum: DoesNotExist, Exists, Gt, In, ....
+            #enum: DoesNotExist, Exists, Gt, In, ....
             values: #<[]string>
     podAffinity: #<PodAffinity>
       preferredDuringSchedulingIgnoredDuringExecution: #<[]WeightedPodAffinityTerm>
@@ -164,7 +164,7 @@ spec: #<PodSpec>
         optional: #<boolean>
     image: #<string>
     imagePullPolicy: #<string>
-    enum: Always, IfNotPresent, Never
+    #enum: Always, IfNotPresent, Never
     lifecycle: #<Lifecycle>
       postStart: #<LifecycleHandler>
         exec: #<ExecAction>
@@ -177,7 +177,7 @@ spec: #<PodSpec>
           path: #<string>
           port: #<IntOrString> -required-
           scheme: #<string>
-          enum: HTTP, HTTPS
+          #enum: HTTP, HTTPS
         sleep: #<SleepAction>
           seconds: #<integer> -required-
         tcpSocket: #<TCPSocketAction>
@@ -194,14 +194,14 @@ spec: #<PodSpec>
           path: #<string>
           port: #<IntOrString> -required-
           scheme: #<string>
-          enum: HTTP, HTTPS
+          #enum: HTTP, HTTPS
         sleep: #<SleepAction>
           seconds: #<integer> -required-
         tcpSocket: #<TCPSocketAction>
           host: #<string>
           port: #<IntOrString> -required-
       stopSignal: #<string>
-      enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+      #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
     livenessProbe: #<Probe>
       exec: #<ExecAction>
         command: #<[]string>
@@ -217,7 +217,7 @@ spec: #<PodSpec>
         path: #<string>
         port: #<IntOrString> -required-
         scheme: #<string>
-        enum: HTTP, HTTPS
+        #enum: HTTP, HTTPS
       initialDelaySeconds: #<integer>
       periodSeconds: #<integer>
       successThreshold: #<integer>
@@ -233,7 +233,7 @@ spec: #<PodSpec>
       hostPort: #<integer>
       name: #<string>
       protocol: #<string>
-      enum: SCTP, TCP, UDP
+      #enum: SCTP, TCP, UDP
     readinessProbe: #<Probe>
       exec: #<ExecAction>
         command: #<[]string>
@@ -249,7 +249,7 @@ spec: #<PodSpec>
         path: #<string>
         port: #<IntOrString> -required-
         scheme: #<string>
-        enum: HTTP, HTTPS
+        #enum: HTTP, HTTPS
       initialDelaySeconds: #<integer>
       periodSeconds: #<integer>
       successThreshold: #<integer>
@@ -273,13 +273,13 @@ spec: #<PodSpec>
       appArmorProfile: #<AppArmorProfile>
         localhostProfile: #<string>
         type: #<string> -required-
-        enum: Localhost, RuntimeDefault, Unconfined
+        #enum: Localhost, RuntimeDefault, Unconfined
       capabilities: #<Capabilities>
         add: #<[]string>
         drop: #<[]string>
       privileged: #<boolean>
       procMount: #<string>
-      enum: Default, Unmasked
+      #enum: Default, Unmasked
       readOnlyRootFilesystem: #<boolean>
       runAsGroup: #<integer>
       runAsNonRoot: #<boolean>
@@ -292,7 +292,7 @@ spec: #<PodSpec>
       seccompProfile: #<SeccompProfile>
         localhostProfile: #<string>
         type: #<string> -required-
-        enum: Localhost, RuntimeDefault, Unconfined
+        #enum: Localhost, RuntimeDefault, Unconfined
       windowsOptions: #<WindowsSecurityContextOptions>
         gmsaCredentialSpec: #<string>
         gmsaCredentialSpecName: #<string>
@@ -313,7 +313,7 @@ spec: #<PodSpec>
         path: #<string>
         port: #<IntOrString> -required-
         scheme: #<string>
-        enum: HTTP, HTTPS
+        #enum: HTTP, HTTPS
       initialDelaySeconds: #<integer>
       periodSeconds: #<integer>
       successThreshold: #<integer>
@@ -326,7 +326,7 @@ spec: #<PodSpec>
     stdinOnce: #<boolean>
     terminationMessagePath: #<string>
     terminationMessagePolicy: #<string>
-    enum: FallbackToLogsOnError, File
+    #enum: FallbackToLogsOnError, File
     tty: #<boolean>
     volumeDevices: #<[]VolumeDevice>
       devicePath: #<string> -required-
@@ -334,7 +334,7 @@ spec: #<PodSpec>
     volumeMounts: #<[]VolumeMount>
       mountPath: #<string> -required-
       mountPropagation: #<string>
-      enum: Bidirectional, HostToContainer, None
+      #enum: Bidirectional, HostToContainer, None
       name: #<string> -required-
       readOnly: #<boolean>
       recursiveReadOnly: #<string>
@@ -348,7 +348,7 @@ spec: #<PodSpec>
       value: #<string>
     searches: #<[]string>
   dnsPolicy: #<string>
-  enum: ClusterFirst, ClusterFirstWithHostNet, Default, None
+  #enum: ClusterFirst, ClusterFirstWithHostNet, Default, None
   enableServiceLinks: #<boolean>
   ephemeralContainers: #<[]EphemeralContainer>
     args: #<[]string>
@@ -382,7 +382,7 @@ spec: #<PodSpec>
         optional: #<boolean>
     image: #<string>
     imagePullPolicy: #<string>
-    enum: Always, IfNotPresent, Never
+    #enum: Always, IfNotPresent, Never
     lifecycle: #<Lifecycle>
       postStart: #<LifecycleHandler>
         exec: #<ExecAction>
@@ -395,7 +395,7 @@ spec: #<PodSpec>
           path: #<string>
           port: #<IntOrString> -required-
           scheme: #<string>
-          enum: HTTP, HTTPS
+          #enum: HTTP, HTTPS
         sleep: #<SleepAction>
           seconds: #<integer> -required-
         tcpSocket: #<TCPSocketAction>
@@ -412,14 +412,14 @@ spec: #<PodSpec>
           path: #<string>
           port: #<IntOrString> -required-
           scheme: #<string>
-          enum: HTTP, HTTPS
+          #enum: HTTP, HTTPS
         sleep: #<SleepAction>
           seconds: #<integer> -required-
         tcpSocket: #<TCPSocketAction>
           host: #<string>
           port: #<IntOrString> -required-
       stopSignal: #<string>
-      enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+      #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
     livenessProbe: #<Probe>
       exec: #<ExecAction>
         command: #<[]string>
@@ -435,7 +435,7 @@ spec: #<PodSpec>
         path: #<string>
         port: #<IntOrString> -required-
         scheme: #<string>
-        enum: HTTP, HTTPS
+        #enum: HTTP, HTTPS
       initialDelaySeconds: #<integer>
       periodSeconds: #<integer>
       successThreshold: #<integer>
@@ -451,7 +451,7 @@ spec: #<PodSpec>
       hostPort: #<integer>
       name: #<string>
       protocol: #<string>
-      enum: SCTP, TCP, UDP
+      #enum: SCTP, TCP, UDP
     readinessProbe: #<Probe>
       exec: #<ExecAction>
         command: #<[]string>
@@ -467,7 +467,7 @@ spec: #<PodSpec>
         path: #<string>
         port: #<IntOrString> -required-
         scheme: #<string>
-        enum: HTTP, HTTPS
+        #enum: HTTP, HTTPS
       initialDelaySeconds: #<integer>
       periodSeconds: #<integer>
       successThreshold: #<integer>
@@ -491,13 +491,13 @@ spec: #<PodSpec>
       appArmorProfile: #<AppArmorProfile>
         localhostProfile: #<string>
         type: #<string> -required-
-        enum: Localhost, RuntimeDefault, Unconfined
+        #enum: Localhost, RuntimeDefault, Unconfined
       capabilities: #<Capabilities>
         add: #<[]string>
         drop: #<[]string>
       privileged: #<boolean>
       procMount: #<string>
-      enum: Default, Unmasked
+      #enum: Default, Unmasked
       readOnlyRootFilesystem: #<boolean>
       runAsGroup: #<integer>
       runAsNonRoot: #<boolean>
@@ -510,7 +510,7 @@ spec: #<PodSpec>
       seccompProfile: #<SeccompProfile>
         localhostProfile: #<string>
         type: #<string> -required-
-        enum: Localhost, RuntimeDefault, Unconfined
+        #enum: Localhost, RuntimeDefault, Unconfined
       windowsOptions: #<WindowsSecurityContextOptions>
         gmsaCredentialSpec: #<string>
         gmsaCredentialSpecName: #<string>
@@ -531,7 +531,7 @@ spec: #<PodSpec>
         path: #<string>
         port: #<IntOrString> -required-
         scheme: #<string>
-        enum: HTTP, HTTPS
+        #enum: HTTP, HTTPS
       initialDelaySeconds: #<integer>
       periodSeconds: #<integer>
       successThreshold: #<integer>
@@ -545,7 +545,7 @@ spec: #<PodSpec>
     targetContainerName: #<string>
     terminationMessagePath: #<string>
     terminationMessagePolicy: #<string>
-    enum: FallbackToLogsOnError, File
+    #enum: FallbackToLogsOnError, File
     tty: #<boolean>
     volumeDevices: #<[]VolumeDevice>
       devicePath: #<string> -required-
@@ -553,7 +553,7 @@ spec: #<PodSpec>
     volumeMounts: #<[]VolumeMount>
       mountPath: #<string> -required-
       mountPropagation: #<string>
-      enum: Bidirectional, HostToContainer, None
+      #enum: Bidirectional, HostToContainer, None
       name: #<string> -required-
       readOnly: #<boolean>
       recursiveReadOnly: #<string>
@@ -602,7 +602,7 @@ spec: #<PodSpec>
         optional: #<boolean>
     image: #<string>
     imagePullPolicy: #<string>
-    enum: Always, IfNotPresent, Never
+    #enum: Always, IfNotPresent, Never
     lifecycle: #<Lifecycle>
       postStart: #<LifecycleHandler>
         exec: #<ExecAction>
@@ -615,7 +615,7 @@ spec: #<PodSpec>
           path: #<string>
           port: #<IntOrString> -required-
           scheme: #<string>
-          enum: HTTP, HTTPS
+          #enum: HTTP, HTTPS
         sleep: #<SleepAction>
           seconds: #<integer> -required-
         tcpSocket: #<TCPSocketAction>
@@ -632,14 +632,14 @@ spec: #<PodSpec>
           path: #<string>
           port: #<IntOrString> -required-
           scheme: #<string>
-          enum: HTTP, HTTPS
+          #enum: HTTP, HTTPS
         sleep: #<SleepAction>
           seconds: #<integer> -required-
         tcpSocket: #<TCPSocketAction>
           host: #<string>
           port: #<IntOrString> -required-
       stopSignal: #<string>
-      enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+      #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
     livenessProbe: #<Probe>
       exec: #<ExecAction>
         command: #<[]string>
@@ -655,7 +655,7 @@ spec: #<PodSpec>
         path: #<string>
         port: #<IntOrString> -required-
         scheme: #<string>
-        enum: HTTP, HTTPS
+        #enum: HTTP, HTTPS
       initialDelaySeconds: #<integer>
       periodSeconds: #<integer>
       successThreshold: #<integer>
@@ -671,7 +671,7 @@ spec: #<PodSpec>
       hostPort: #<integer>
       name: #<string>
       protocol: #<string>
-      enum: SCTP, TCP, UDP
+      #enum: SCTP, TCP, UDP
     readinessProbe: #<Probe>
       exec: #<ExecAction>
         command: #<[]string>
@@ -687,7 +687,7 @@ spec: #<PodSpec>
         path: #<string>
         port: #<IntOrString> -required-
         scheme: #<string>
-        enum: HTTP, HTTPS
+        #enum: HTTP, HTTPS
       initialDelaySeconds: #<integer>
       periodSeconds: #<integer>
       successThreshold: #<integer>
@@ -711,13 +711,13 @@ spec: #<PodSpec>
       appArmorProfile: #<AppArmorProfile>
         localhostProfile: #<string>
         type: #<string> -required-
-        enum: Localhost, RuntimeDefault, Unconfined
+        #enum: Localhost, RuntimeDefault, Unconfined
       capabilities: #<Capabilities>
         add: #<[]string>
         drop: #<[]string>
       privileged: #<boolean>
       procMount: #<string>
-      enum: Default, Unmasked
+      #enum: Default, Unmasked
       readOnlyRootFilesystem: #<boolean>
       runAsGroup: #<integer>
       runAsNonRoot: #<boolean>
@@ -730,7 +730,7 @@ spec: #<PodSpec>
       seccompProfile: #<SeccompProfile>
         localhostProfile: #<string>
         type: #<string> -required-
-        enum: Localhost, RuntimeDefault, Unconfined
+        #enum: Localhost, RuntimeDefault, Unconfined
       windowsOptions: #<WindowsSecurityContextOptions>
         gmsaCredentialSpec: #<string>
         gmsaCredentialSpecName: #<string>
@@ -751,7 +751,7 @@ spec: #<PodSpec>
         path: #<string>
         port: #<IntOrString> -required-
         scheme: #<string>
-        enum: HTTP, HTTPS
+        #enum: HTTP, HTTPS
       initialDelaySeconds: #<integer>
       periodSeconds: #<integer>
       successThreshold: #<integer>
@@ -764,7 +764,7 @@ spec: #<PodSpec>
     stdinOnce: #<boolean>
     terminationMessagePath: #<string>
     terminationMessagePolicy: #<string>
-    enum: FallbackToLogsOnError, File
+    #enum: FallbackToLogsOnError, File
     tty: #<boolean>
     volumeDevices: #<[]VolumeDevice>
       devicePath: #<string> -required-
@@ -772,7 +772,7 @@ spec: #<PodSpec>
     volumeMounts: #<[]VolumeMount>
       mountPath: #<string> -required-
       mountPropagation: #<string>
-      enum: Bidirectional, HostToContainer, None
+      #enum: Bidirectional, HostToContainer, None
       name: #<string> -required-
       readOnly: #<boolean>
       recursiveReadOnly: #<string>
@@ -785,7 +785,7 @@ spec: #<PodSpec>
     name: #<string> -required-
   overhead: #<map[string]Quantity>
   preemptionPolicy: #<string>
-  enum: Never, PreemptLowerPriority
+  #enum: Never, PreemptLowerPriority
   priority: #<integer>
   priorityClassName: #<string>
   readinessGates: #<[]PodReadinessGate>
@@ -801,7 +801,7 @@ spec: #<PodSpec>
     limits: #<map[string]Quantity>
     requests: #<map[string]Quantity>
   restartPolicy: #<string>
-  enum: Always, Never, OnFailure
+  #enum: Always, Never, OnFailure
   runtimeClassName: #<string>
   schedulerName: #<string>
   schedulingGates: #<[]PodSchedulingGate>
@@ -810,10 +810,10 @@ spec: #<PodSpec>
     appArmorProfile: #<AppArmorProfile>
       localhostProfile: #<string>
       type: #<string> -required-
-      enum: Localhost, RuntimeDefault, Unconfined
+      #enum: Localhost, RuntimeDefault, Unconfined
     fsGroup: #<integer>
     fsGroupChangePolicy: #<string>
-    enum: Always, OnRootMismatch
+    #enum: Always, OnRootMismatch
     runAsGroup: #<integer>
     runAsNonRoot: #<boolean>
     runAsUser: #<integer>
@@ -826,10 +826,10 @@ spec: #<PodSpec>
     seccompProfile: #<SeccompProfile>
       localhostProfile: #<string>
       type: #<string> -required-
-      enum: Localhost, RuntimeDefault, Unconfined
+      #enum: Localhost, RuntimeDefault, Unconfined
     supplementalGroups: #<[]integer>
     supplementalGroupsPolicy: #<string>
-    enum: Merge, Strict
+    #enum: Merge, Strict
     sysctls: #<[]Sysctl>
       name: #<string> -required-
       value: #<string> -required-
@@ -846,10 +846,10 @@ spec: #<PodSpec>
   terminationGracePeriodSeconds: #<integer>
   tolerations: #<[]Toleration>
     effect: #<string>
-    enum: NoExecute, NoSchedule, PreferNoSchedule
+    #enum: NoExecute, NoSchedule, PreferNoSchedule
     key: #<string>
     operator: #<string>
-    enum: Equal, Exists
+    #enum: Equal, Exists
     tolerationSeconds: #<integer>
     value: #<string>
   topologySpreadConstraints: #<[]TopologySpreadConstraint>
@@ -863,12 +863,12 @@ spec: #<PodSpec>
     maxSkew: #<integer> -required-
     minDomains: #<integer>
     nodeAffinityPolicy: #<string>
-    enum: Honor, Ignore
+    #enum: Honor, Ignore
     nodeTaintsPolicy: #<string>
-    enum: Honor, Ignore
+    #enum: Honor, Ignore
     topologyKey: #<string> -required-
     whenUnsatisfiable: #<string> -required-
-    enum: DoNotSchedule, ScheduleAnyway
+    #enum: DoNotSchedule, ScheduleAnyway
   volumes: #<[]Volume>
     awsElasticBlockStore: #<AWSElasticBlockStoreVolumeSource>
       fsType: #<string>
@@ -877,12 +877,12 @@ spec: #<PodSpec>
       volumeID: #<string> -required-
     azureDisk: #<AzureDiskVolumeSource>
       cachingMode: #<string>
-      enum: None, ReadOnly, ReadWrite
+      #enum: None, ReadOnly, ReadWrite
       diskName: #<string> -required-
       diskURI: #<string> -required-
       fsType: #<string>
       kind: #<string>
-      enum: Dedicated, Managed, Shared
+      #enum: Dedicated, Managed, Shared
       readOnly: #<boolean>
     azureFile: #<AzureFileVolumeSource>
       readOnly: #<boolean>
@@ -986,7 +986,7 @@ spec: #<PodSpec>
           storageClassName: #<string>
           volumeAttributesClassName: #<string>
           volumeMode: #<string>
-          enum: Block, Filesystem
+          #enum: Block, Filesystem
           volumeName: #<string>
     fc: #<FCVolumeSource>
       fsType: #<string>
@@ -1020,10 +1020,10 @@ spec: #<PodSpec>
     hostPath: #<HostPathVolumeSource>
       path: #<string> -required-
       type: #<string>
-      enum: "", BlockDevice, CharDevice, Directory, ....
+      #enum: "", BlockDevice, CharDevice, Directory, ....
     image: #<ImageVolumeSource>
       pullPolicy: #<string>
-      enum: Always, IfNotPresent, Never
+      #enum: Always, IfNotPresent, Never
       reference: #<string>
     iscsi: #<ISCSIVolumeSource>
       chapAuthDiscovery: #<boolean>
@@ -1203,7 +1203,7 @@ status: #<PodStatus>
         message: #<string>
         reason: #<string>
     stopSignal: #<string>
-    enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+    #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
     user: #<ContainerUser>
       linux: #<LinuxContainerUser>
         gid: #<integer> -required-
@@ -1263,7 +1263,7 @@ status: #<PodStatus>
         message: #<string>
         reason: #<string>
     stopSignal: #<string>
-    enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+    #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
     user: #<ContainerUser>
       linux: #<LinuxContainerUser>
         gid: #<integer> -required-
@@ -1326,7 +1326,7 @@ status: #<PodStatus>
         message: #<string>
         reason: #<string>
     stopSignal: #<string>
-    enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+    #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
     user: #<ContainerUser>
       linux: #<LinuxContainerUser>
         gid: #<integer> -required-
@@ -1341,12 +1341,12 @@ status: #<PodStatus>
   nominatedNodeName: #<string>
   observedGeneration: #<integer>
   phase: #<string>
-  enum: Failed, Pending, Running, Succeeded, ....
+  #enum: Failed, Pending, Running, Succeeded, ....
   podIP: #<string>
   podIPs: #<[]PodIP>
     ip: #<string> -required-
   qosClass: #<string>
-  enum: BestEffort, Burstable, Guaranteed
+  #enum: BestEffort, Burstable, Guaranteed
   reason: #<string>
   resize: #<string>
   resourceClaimStatuses: #<[]PodResourceClaimStatus>

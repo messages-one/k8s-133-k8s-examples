@@ -1,0 +1,93 @@
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+spec: #<ValidatingAdmissionPolicySpec>
+  auditAnnotations: #<[]AuditAnnotation>
+    key: #<string> -required-
+    valueExpression: #<string> -required-
+  failurePolicy: #<string>
+  enum: Fail, Ignore
+  matchConditions: #<[]MatchCondition>
+    expression: #<string> -required-
+    name: #<string> -required-
+  matchConstraints: #<MatchResources>
+    excludeResourceRules: #<[]NamedRuleWithOperations>
+      apiGroups: #<[]string>
+      apiVersions: #<[]string>
+      operations: #<[]string>
+      resourceNames: #<[]string>
+      resources: #<[]string>
+      scope: #<string>
+    matchPolicy: #<string>
+    enum: Equivalent, Exact
+    namespaceSelector: #<LabelSelector>
+      matchExpressions: #<[]LabelSelectorRequirement>
+        key: #<string> -required-
+        operator: #<string> -required-
+        values: #<[]string>
+      matchLabels: #<map[string]string>
+    objectSelector: #<LabelSelector>
+      matchExpressions: #<[]LabelSelectorRequirement>
+        key: #<string> -required-
+        operator: #<string> -required-
+        values: #<[]string>
+      matchLabels: #<map[string]string>
+    resourceRules: #<[]NamedRuleWithOperations>
+      apiGroups: #<[]string>
+      apiVersions: #<[]string>
+      operations: #<[]string>
+      resourceNames: #<[]string>
+      resources: #<[]string>
+      scope: #<string>
+  paramKind: #<ParamKind>
+    apiVersion: #<string>
+    kind: #<string>
+  validations: #<[]Validation>
+    expression: #<string> -required-
+    message: #<string>
+    messageExpression: #<string>
+    reason: #<string>
+  variables: #<[]Variable>
+    expression: #<string> -required-
+    name: #<string> -required-
+status: #<ValidatingAdmissionPolicyStatus>
+  conditions: #<[]Condition>
+    lastTransitionTime: #<string> -required-
+    message: #<string> -required-
+    observedGeneration: #<integer>
+    reason: #<string> -required-
+    status: #<string> -required-
+    type: #<string> -required-
+  observedGeneration: #<integer>
+  typeChecking: #<TypeChecking>
+    expressionWarnings: #<[]ExpressionWarning>
+      fieldRef: #<string> -required-
+      warning: #<string> -required-

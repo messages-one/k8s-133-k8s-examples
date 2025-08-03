@@ -35,7 +35,7 @@ spec: #<NetworkPolicySpec>
       endPort: #<integer>
       port: #<IntOrString>
       protocol: #<string>
-      enum: SCTP, TCP, UDP
+      #enum: SCTP, TCP, UDP
     to: #<[]NetworkPolicyPeer>
       ipBlock: #<IPBlock>
         cidr: #<string> -required-
@@ -73,7 +73,7 @@ spec: #<NetworkPolicySpec>
       endPort: #<integer>
       port: #<IntOrString>
       protocol: #<string>
-      enum: SCTP, TCP, UDP
+      #enum: SCTP, TCP, UDP
   podSelector: #<LabelSelector> -required-
     matchExpressions: #<[]LabelSelectorRequirement>
       key: #<string> -required-

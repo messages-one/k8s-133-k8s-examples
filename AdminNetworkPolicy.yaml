@@ -32,7 +32,7 @@ metadata: #<ObjectMeta> -required-
 spec: #<Object> -required-
   egress: #<[]Object>
     action: #<string> -required-
-    enum: Allow, Deny, Pass
+    #enum: Allow, Deny, Pass
     name: #<string>
     ports: #<[]Object>
       namedPort: #<string>
@@ -72,7 +72,7 @@ spec: #<Object> -required-
           matchLabels: #<map[string]string>
   ingress: #<[]Object>
     action: #<string> -required-
-    enum: Allow, Deny, Pass
+    #enum: Allow, Deny, Pass
     from: #<[]Object> -required-
       namespaces: #<Object>
         matchExpressions: #<[]Object>
@@ -131,5 +131,5 @@ status: #<Object>
     observedGeneration: #<integer>
     reason: #<string> -required-
     status: #<string> -required-
-    enum: True, False, Unknown
+    #enum: True, False, Unknown
     type: #<string> -required-

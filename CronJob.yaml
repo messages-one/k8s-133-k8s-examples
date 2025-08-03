@@ -31,7 +31,7 @@ metadata: #<ObjectMeta>
   uid: #<string>
 spec: #<CronJobSpec>
   concurrencyPolicy: #<string>
-  enum: Allow, Forbid, Replace
+  #enum: Allow, Forbid, Replace
   failedJobsHistoryLimit: #<integer>
   jobTemplate: #<JobTemplateSpec> -required-
     metadata: #<ObjectMeta>
@@ -68,7 +68,7 @@ spec: #<CronJobSpec>
       backoffLimit: #<integer>
       backoffLimitPerIndex: #<integer>
       completionMode: #<string>
-      enum: Indexed, NonIndexed
+      #enum: Indexed, NonIndexed
       completions: #<integer>
       managedBy: #<string>
       manualSelector: #<boolean>
@@ -77,17 +77,17 @@ spec: #<CronJobSpec>
       podFailurePolicy: #<PodFailurePolicy>
         rules: #<[]PodFailurePolicyRule> -required-
           action: #<string> -required-
-          enum: Count, FailIndex, FailJob, Ignore
+          #enum: Count, FailIndex, FailJob, Ignore
           onExitCodes: #<PodFailurePolicyOnExitCodesRequirement>
             containerName: #<string>
             operator: #<string> -required-
-            enum: In, NotIn
+            #enum: In, NotIn
             values: #<[]integer> -required-
           onPodConditions: #<[]PodFailurePolicyOnPodConditionsPattern>
             status: #<string> -required-
             type: #<string> -required-
       podReplacementPolicy: #<string>
-      enum: Failed, TerminatingOrFailed
+      #enum: Failed, TerminatingOrFailed
       selector: #<LabelSelector>
         matchExpressions: #<[]LabelSelectorRequirement>
           key: #<string> -required-
@@ -138,12 +138,12 @@ spec: #<CronJobSpec>
                   matchExpressions: #<[]NodeSelectorRequirement>
                     key: #<string> -required-
                     operator: #<string> -required-
-                    enum: DoesNotExist, Exists, Gt, In, ....
+                    #enum: DoesNotExist, Exists, Gt, In, ....
                     values: #<[]string>
                   matchFields: #<[]NodeSelectorRequirement>
                     key: #<string> -required-
                     operator: #<string> -required-
-                    enum: DoesNotExist, Exists, Gt, In, ....
+                    #enum: DoesNotExist, Exists, Gt, In, ....
                     values: #<[]string>
                 weight: #<integer> -required-
               requiredDuringSchedulingIgnoredDuringExecution: #<NodeSelector>
@@ -151,12 +151,12 @@ spec: #<CronJobSpec>
                   matchExpressions: #<[]NodeSelectorRequirement>
                     key: #<string> -required-
                     operator: #<string> -required-
-                    enum: DoesNotExist, Exists, Gt, In, ....
+                    #enum: DoesNotExist, Exists, Gt, In, ....
                     values: #<[]string>
                   matchFields: #<[]NodeSelectorRequirement>
                     key: #<string> -required-
                     operator: #<string> -required-
-                    enum: DoesNotExist, Exists, Gt, In, ....
+                    #enum: DoesNotExist, Exists, Gt, In, ....
                     values: #<[]string>
             podAffinity: #<PodAffinity>
               preferredDuringSchedulingIgnoredDuringExecution: #<[]WeightedPodAffinityTerm>
@@ -265,7 +265,7 @@ spec: #<CronJobSpec>
                 optional: #<boolean>
             image: #<string>
             imagePullPolicy: #<string>
-            enum: Always, IfNotPresent, Never
+            #enum: Always, IfNotPresent, Never
             lifecycle: #<Lifecycle>
               postStart: #<LifecycleHandler>
                 exec: #<ExecAction>
@@ -278,7 +278,7 @@ spec: #<CronJobSpec>
                   path: #<string>
                   port: #<IntOrString> -required-
                   scheme: #<string>
-                  enum: HTTP, HTTPS
+                  #enum: HTTP, HTTPS
                 sleep: #<SleepAction>
                   seconds: #<integer> -required-
                 tcpSocket: #<TCPSocketAction>
@@ -295,14 +295,14 @@ spec: #<CronJobSpec>
                   path: #<string>
                   port: #<IntOrString> -required-
                   scheme: #<string>
-                  enum: HTTP, HTTPS
+                  #enum: HTTP, HTTPS
                 sleep: #<SleepAction>
                   seconds: #<integer> -required-
                 tcpSocket: #<TCPSocketAction>
                   host: #<string>
                   port: #<IntOrString> -required-
               stopSignal: #<string>
-              enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+              #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
             livenessProbe: #<Probe>
               exec: #<ExecAction>
                 command: #<[]string>
@@ -318,7 +318,7 @@ spec: #<CronJobSpec>
                 path: #<string>
                 port: #<IntOrString> -required-
                 scheme: #<string>
-                enum: HTTP, HTTPS
+                #enum: HTTP, HTTPS
               initialDelaySeconds: #<integer>
               periodSeconds: #<integer>
               successThreshold: #<integer>
@@ -334,7 +334,7 @@ spec: #<CronJobSpec>
               hostPort: #<integer>
               name: #<string>
               protocol: #<string>
-              enum: SCTP, TCP, UDP
+              #enum: SCTP, TCP, UDP
             readinessProbe: #<Probe>
               exec: #<ExecAction>
                 command: #<[]string>
@@ -350,7 +350,7 @@ spec: #<CronJobSpec>
                 path: #<string>
                 port: #<IntOrString> -required-
                 scheme: #<string>
-                enum: HTTP, HTTPS
+                #enum: HTTP, HTTPS
               initialDelaySeconds: #<integer>
               periodSeconds: #<integer>
               successThreshold: #<integer>
@@ -374,13 +374,13 @@ spec: #<CronJobSpec>
               appArmorProfile: #<AppArmorProfile>
                 localhostProfile: #<string>
                 type: #<string> -required-
-                enum: Localhost, RuntimeDefault, Unconfined
+                #enum: Localhost, RuntimeDefault, Unconfined
               capabilities: #<Capabilities>
                 add: #<[]string>
                 drop: #<[]string>
               privileged: #<boolean>
               procMount: #<string>
-              enum: Default, Unmasked
+              #enum: Default, Unmasked
               readOnlyRootFilesystem: #<boolean>
               runAsGroup: #<integer>
               runAsNonRoot: #<boolean>
@@ -393,7 +393,7 @@ spec: #<CronJobSpec>
               seccompProfile: #<SeccompProfile>
                 localhostProfile: #<string>
                 type: #<string> -required-
-                enum: Localhost, RuntimeDefault, Unconfined
+                #enum: Localhost, RuntimeDefault, Unconfined
               windowsOptions: #<WindowsSecurityContextOptions>
                 gmsaCredentialSpec: #<string>
                 gmsaCredentialSpecName: #<string>
@@ -414,7 +414,7 @@ spec: #<CronJobSpec>
                 path: #<string>
                 port: #<IntOrString> -required-
                 scheme: #<string>
-                enum: HTTP, HTTPS
+                #enum: HTTP, HTTPS
               initialDelaySeconds: #<integer>
               periodSeconds: #<integer>
               successThreshold: #<integer>
@@ -427,7 +427,7 @@ spec: #<CronJobSpec>
             stdinOnce: #<boolean>
             terminationMessagePath: #<string>
             terminationMessagePolicy: #<string>
-            enum: FallbackToLogsOnError, File
+            #enum: FallbackToLogsOnError, File
             tty: #<boolean>
             volumeDevices: #<[]VolumeDevice>
               devicePath: #<string> -required-
@@ -435,7 +435,7 @@ spec: #<CronJobSpec>
             volumeMounts: #<[]VolumeMount>
               mountPath: #<string> -required-
               mountPropagation: #<string>
-              enum: Bidirectional, HostToContainer, None
+              #enum: Bidirectional, HostToContainer, None
               name: #<string> -required-
               readOnly: #<boolean>
               recursiveReadOnly: #<string>
@@ -449,7 +449,7 @@ spec: #<CronJobSpec>
               value: #<string>
             searches: #<[]string>
           dnsPolicy: #<string>
-          enum: ClusterFirst, ClusterFirstWithHostNet, Default, None
+          #enum: ClusterFirst, ClusterFirstWithHostNet, Default, None
           enableServiceLinks: #<boolean>
           ephemeralContainers: #<[]EphemeralContainer>
             args: #<[]string>
@@ -483,7 +483,7 @@ spec: #<CronJobSpec>
                 optional: #<boolean>
             image: #<string>
             imagePullPolicy: #<string>
-            enum: Always, IfNotPresent, Never
+            #enum: Always, IfNotPresent, Never
             lifecycle: #<Lifecycle>
               postStart: #<LifecycleHandler>
                 exec: #<ExecAction>
@@ -496,7 +496,7 @@ spec: #<CronJobSpec>
                   path: #<string>
                   port: #<IntOrString> -required-
                   scheme: #<string>
-                  enum: HTTP, HTTPS
+                  #enum: HTTP, HTTPS
                 sleep: #<SleepAction>
                   seconds: #<integer> -required-
                 tcpSocket: #<TCPSocketAction>
@@ -513,14 +513,14 @@ spec: #<CronJobSpec>
                   path: #<string>
                   port: #<IntOrString> -required-
                   scheme: #<string>
-                  enum: HTTP, HTTPS
+                  #enum: HTTP, HTTPS
                 sleep: #<SleepAction>
                   seconds: #<integer> -required-
                 tcpSocket: #<TCPSocketAction>
                   host: #<string>
                   port: #<IntOrString> -required-
               stopSignal: #<string>
-              enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+              #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
             livenessProbe: #<Probe>
               exec: #<ExecAction>
                 command: #<[]string>
@@ -536,7 +536,7 @@ spec: #<CronJobSpec>
                 path: #<string>
                 port: #<IntOrString> -required-
                 scheme: #<string>
-                enum: HTTP, HTTPS
+                #enum: HTTP, HTTPS
               initialDelaySeconds: #<integer>
               periodSeconds: #<integer>
               successThreshold: #<integer>
@@ -552,7 +552,7 @@ spec: #<CronJobSpec>
               hostPort: #<integer>
               name: #<string>
               protocol: #<string>
-              enum: SCTP, TCP, UDP
+              #enum: SCTP, TCP, UDP
             readinessProbe: #<Probe>
               exec: #<ExecAction>
                 command: #<[]string>
@@ -568,7 +568,7 @@ spec: #<CronJobSpec>
                 path: #<string>
                 port: #<IntOrString> -required-
                 scheme: #<string>
-                enum: HTTP, HTTPS
+                #enum: HTTP, HTTPS
               initialDelaySeconds: #<integer>
               periodSeconds: #<integer>
               successThreshold: #<integer>
@@ -592,13 +592,13 @@ spec: #<CronJobSpec>
               appArmorProfile: #<AppArmorProfile>
                 localhostProfile: #<string>
                 type: #<string> -required-
-                enum: Localhost, RuntimeDefault, Unconfined
+                #enum: Localhost, RuntimeDefault, Unconfined
               capabilities: #<Capabilities>
                 add: #<[]string>
                 drop: #<[]string>
               privileged: #<boolean>
               procMount: #<string>
-              enum: Default, Unmasked
+              #enum: Default, Unmasked
               readOnlyRootFilesystem: #<boolean>
               runAsGroup: #<integer>
               runAsNonRoot: #<boolean>
@@ -611,7 +611,7 @@ spec: #<CronJobSpec>
               seccompProfile: #<SeccompProfile>
                 localhostProfile: #<string>
                 type: #<string> -required-
-                enum: Localhost, RuntimeDefault, Unconfined
+                #enum: Localhost, RuntimeDefault, Unconfined
               windowsOptions: #<WindowsSecurityContextOptions>
                 gmsaCredentialSpec: #<string>
                 gmsaCredentialSpecName: #<string>
@@ -632,7 +632,7 @@ spec: #<CronJobSpec>
                 path: #<string>
                 port: #<IntOrString> -required-
                 scheme: #<string>
-                enum: HTTP, HTTPS
+                #enum: HTTP, HTTPS
               initialDelaySeconds: #<integer>
               periodSeconds: #<integer>
               successThreshold: #<integer>
@@ -646,7 +646,7 @@ spec: #<CronJobSpec>
             targetContainerName: #<string>
             terminationMessagePath: #<string>
             terminationMessagePolicy: #<string>
-            enum: FallbackToLogsOnError, File
+            #enum: FallbackToLogsOnError, File
             tty: #<boolean>
             volumeDevices: #<[]VolumeDevice>
               devicePath: #<string> -required-
@@ -654,7 +654,7 @@ spec: #<CronJobSpec>
             volumeMounts: #<[]VolumeMount>
               mountPath: #<string> -required-
               mountPropagation: #<string>
-              enum: Bidirectional, HostToContainer, None
+              #enum: Bidirectional, HostToContainer, None
               name: #<string> -required-
               readOnly: #<boolean>
               recursiveReadOnly: #<string>
@@ -703,7 +703,7 @@ spec: #<CronJobSpec>
                 optional: #<boolean>
             image: #<string>
             imagePullPolicy: #<string>
-            enum: Always, IfNotPresent, Never
+            #enum: Always, IfNotPresent, Never
             lifecycle: #<Lifecycle>
               postStart: #<LifecycleHandler>
                 exec: #<ExecAction>
@@ -716,7 +716,7 @@ spec: #<CronJobSpec>
                   path: #<string>
                   port: #<IntOrString> -required-
                   scheme: #<string>
-                  enum: HTTP, HTTPS
+                  #enum: HTTP, HTTPS
                 sleep: #<SleepAction>
                   seconds: #<integer> -required-
                 tcpSocket: #<TCPSocketAction>
@@ -733,14 +733,14 @@ spec: #<CronJobSpec>
                   path: #<string>
                   port: #<IntOrString> -required-
                   scheme: #<string>
-                  enum: HTTP, HTTPS
+                  #enum: HTTP, HTTPS
                 sleep: #<SleepAction>
                   seconds: #<integer> -required-
                 tcpSocket: #<TCPSocketAction>
                   host: #<string>
                   port: #<IntOrString> -required-
               stopSignal: #<string>
-              enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+              #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
             livenessProbe: #<Probe>
               exec: #<ExecAction>
                 command: #<[]string>
@@ -756,7 +756,7 @@ spec: #<CronJobSpec>
                 path: #<string>
                 port: #<IntOrString> -required-
                 scheme: #<string>
-                enum: HTTP, HTTPS
+                #enum: HTTP, HTTPS
               initialDelaySeconds: #<integer>
               periodSeconds: #<integer>
               successThreshold: #<integer>
@@ -772,7 +772,7 @@ spec: #<CronJobSpec>
               hostPort: #<integer>
               name: #<string>
               protocol: #<string>
-              enum: SCTP, TCP, UDP
+              #enum: SCTP, TCP, UDP
             readinessProbe: #<Probe>
               exec: #<ExecAction>
                 command: #<[]string>
@@ -788,7 +788,7 @@ spec: #<CronJobSpec>
                 path: #<string>
                 port: #<IntOrString> -required-
                 scheme: #<string>
-                enum: HTTP, HTTPS
+                #enum: HTTP, HTTPS
               initialDelaySeconds: #<integer>
               periodSeconds: #<integer>
               successThreshold: #<integer>
@@ -812,13 +812,13 @@ spec: #<CronJobSpec>
               appArmorProfile: #<AppArmorProfile>
                 localhostProfile: #<string>
                 type: #<string> -required-
-                enum: Localhost, RuntimeDefault, Unconfined
+                #enum: Localhost, RuntimeDefault, Unconfined
               capabilities: #<Capabilities>
                 add: #<[]string>
                 drop: #<[]string>
               privileged: #<boolean>
               procMount: #<string>
-              enum: Default, Unmasked
+              #enum: Default, Unmasked
               readOnlyRootFilesystem: #<boolean>
               runAsGroup: #<integer>
               runAsNonRoot: #<boolean>
@@ -831,7 +831,7 @@ spec: #<CronJobSpec>
               seccompProfile: #<SeccompProfile>
                 localhostProfile: #<string>
                 type: #<string> -required-
-                enum: Localhost, RuntimeDefault, Unconfined
+                #enum: Localhost, RuntimeDefault, Unconfined
               windowsOptions: #<WindowsSecurityContextOptions>
                 gmsaCredentialSpec: #<string>
                 gmsaCredentialSpecName: #<string>
@@ -852,7 +852,7 @@ spec: #<CronJobSpec>
                 path: #<string>
                 port: #<IntOrString> -required-
                 scheme: #<string>
-                enum: HTTP, HTTPS
+                #enum: HTTP, HTTPS
               initialDelaySeconds: #<integer>
               periodSeconds: #<integer>
               successThreshold: #<integer>
@@ -865,7 +865,7 @@ spec: #<CronJobSpec>
             stdinOnce: #<boolean>
             terminationMessagePath: #<string>
             terminationMessagePolicy: #<string>
-            enum: FallbackToLogsOnError, File
+            #enum: FallbackToLogsOnError, File
             tty: #<boolean>
             volumeDevices: #<[]VolumeDevice>
               devicePath: #<string> -required-
@@ -873,7 +873,7 @@ spec: #<CronJobSpec>
             volumeMounts: #<[]VolumeMount>
               mountPath: #<string> -required-
               mountPropagation: #<string>
-              enum: Bidirectional, HostToContainer, None
+              #enum: Bidirectional, HostToContainer, None
               name: #<string> -required-
               readOnly: #<boolean>
               recursiveReadOnly: #<string>
@@ -886,7 +886,7 @@ spec: #<CronJobSpec>
             name: #<string> -required-
           overhead: #<map[string]Quantity>
           preemptionPolicy: #<string>
-          enum: Never, PreemptLowerPriority
+          #enum: Never, PreemptLowerPriority
           priority: #<integer>
           priorityClassName: #<string>
           readinessGates: #<[]PodReadinessGate>
@@ -902,7 +902,7 @@ spec: #<CronJobSpec>
             limits: #<map[string]Quantity>
             requests: #<map[string]Quantity>
           restartPolicy: #<string>
-          enum: Always, Never, OnFailure
+          #enum: Always, Never, OnFailure
           runtimeClassName: #<string>
           schedulerName: #<string>
           schedulingGates: #<[]PodSchedulingGate>
@@ -911,10 +911,10 @@ spec: #<CronJobSpec>
             appArmorProfile: #<AppArmorProfile>
               localhostProfile: #<string>
               type: #<string> -required-
-              enum: Localhost, RuntimeDefault, Unconfined
+              #enum: Localhost, RuntimeDefault, Unconfined
             fsGroup: #<integer>
             fsGroupChangePolicy: #<string>
-            enum: Always, OnRootMismatch
+            #enum: Always, OnRootMismatch
             runAsGroup: #<integer>
             runAsNonRoot: #<boolean>
             runAsUser: #<integer>
@@ -927,10 +927,10 @@ spec: #<CronJobSpec>
             seccompProfile: #<SeccompProfile>
               localhostProfile: #<string>
               type: #<string> -required-
-              enum: Localhost, RuntimeDefault, Unconfined
+              #enum: Localhost, RuntimeDefault, Unconfined
             supplementalGroups: #<[]integer>
             supplementalGroupsPolicy: #<string>
-            enum: Merge, Strict
+            #enum: Merge, Strict
             sysctls: #<[]Sysctl>
               name: #<string> -required-
               value: #<string> -required-
@@ -947,10 +947,10 @@ spec: #<CronJobSpec>
           terminationGracePeriodSeconds: #<integer>
           tolerations: #<[]Toleration>
             effect: #<string>
-            enum: NoExecute, NoSchedule, PreferNoSchedule
+            #enum: NoExecute, NoSchedule, PreferNoSchedule
             key: #<string>
             operator: #<string>
-            enum: Equal, Exists
+            #enum: Equal, Exists
             tolerationSeconds: #<integer>
             value: #<string>
           topologySpreadConstraints: #<[]TopologySpreadConstraint>
@@ -964,12 +964,12 @@ spec: #<CronJobSpec>
             maxSkew: #<integer> -required-
             minDomains: #<integer>
             nodeAffinityPolicy: #<string>
-            enum: Honor, Ignore
+            #enum: Honor, Ignore
             nodeTaintsPolicy: #<string>
-            enum: Honor, Ignore
+            #enum: Honor, Ignore
             topologyKey: #<string> -required-
             whenUnsatisfiable: #<string> -required-
-            enum: DoNotSchedule, ScheduleAnyway
+            #enum: DoNotSchedule, ScheduleAnyway
           volumes: #<[]Volume>
             awsElasticBlockStore: #<AWSElasticBlockStoreVolumeSource>
               fsType: #<string>
@@ -978,12 +978,12 @@ spec: #<CronJobSpec>
               volumeID: #<string> -required-
             azureDisk: #<AzureDiskVolumeSource>
               cachingMode: #<string>
-              enum: None, ReadOnly, ReadWrite
+              #enum: None, ReadOnly, ReadWrite
               diskName: #<string> -required-
               diskURI: #<string> -required-
               fsType: #<string>
               kind: #<string>
-              enum: Dedicated, Managed, Shared
+              #enum: Dedicated, Managed, Shared
               readOnly: #<boolean>
             azureFile: #<AzureFileVolumeSource>
               readOnly: #<boolean>
@@ -1087,7 +1087,7 @@ spec: #<CronJobSpec>
                   storageClassName: #<string>
                   volumeAttributesClassName: #<string>
                   volumeMode: #<string>
-                  enum: Block, Filesystem
+                  #enum: Block, Filesystem
                   volumeName: #<string>
             fc: #<FCVolumeSource>
               fsType: #<string>
@@ -1121,10 +1121,10 @@ spec: #<CronJobSpec>
             hostPath: #<HostPathVolumeSource>
               path: #<string> -required-
               type: #<string>
-              enum: "", BlockDevice, CharDevice, Directory, ....
+              #enum: "", BlockDevice, CharDevice, Directory, ....
             image: #<ImageVolumeSource>
               pullPolicy: #<string>
-              enum: Always, IfNotPresent, Never
+              #enum: Always, IfNotPresent, Never
               reference: #<string>
             iscsi: #<ISCSIVolumeSource>
               chapAuthDiscovery: #<boolean>

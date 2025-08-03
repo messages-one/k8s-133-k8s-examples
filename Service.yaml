@@ -35,13 +35,13 @@ spec: #<ServiceSpec>
   externalIPs: #<[]string>
   externalName: #<string>
   externalTrafficPolicy: #<string>
-  enum: Cluster, Local
+  #enum: Cluster, Local
   healthCheckNodePort: #<integer>
   internalTrafficPolicy: #<string>
-  enum: Cluster, Local
+  #enum: Cluster, Local
   ipFamilies: #<[]string>
   ipFamilyPolicy: #<string>
-  enum: PreferDualStack, RequireDualStack, SingleStack
+  #enum: PreferDualStack, RequireDualStack, SingleStack
   loadBalancerClass: #<string>
   loadBalancerIP: #<string>
   loadBalancerSourceRanges: #<[]string>
@@ -51,18 +51,18 @@ spec: #<ServiceSpec>
     nodePort: #<integer>
     port: #<integer> -required-
     protocol: #<string>
-    enum: SCTP, TCP, UDP
+    #enum: SCTP, TCP, UDP
     targetPort: #<IntOrString>
   publishNotReadyAddresses: #<boolean>
   selector: #<map[string]string>
   sessionAffinity: #<string>
-  enum: ClientIP, None
+  #enum: ClientIP, None
   sessionAffinityConfig: #<SessionAffinityConfig>
     clientIP: #<ClientIPConfig>
       timeoutSeconds: #<integer>
   trafficDistribution: #<string>
   type: #<string>
-  enum: ClusterIP, ExternalName, LoadBalancer, NodePort
+  #enum: ClusterIP, ExternalName, LoadBalancer, NodePort
 status: #<ServiceStatus>
   conditions: #<[]Condition>
     lastTransitionTime: #<string> -required-
@@ -80,4 +80,4 @@ status: #<ServiceStatus>
         error: #<string>
         port: #<integer> -required-
         protocol: #<string> -required-
-        enum: SCTP, TCP, UDP
+        #enum: SCTP, TCP, UDP

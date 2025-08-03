@@ -36148,7 +36148,7 @@ io.k8s.api.admissionregistration.v1.MatchResources:
          - `"Equivalent"` means requests should be sent to the webhook if they modify a resource listed in rules via another API group or version.
          - `"Exact"` means requests should only be sent to the webhook if they exactly match a given rule.
       type: string
-      enum:
+      #enum:
         - Equivalent
         - Exact
     namespaceSelector:
@@ -36221,7 +36221,7 @@ io.k8s.api.admissionregistration.v1.MutatingWebhook:
          - `"Fail"` means that an error calling the webhook causes the admission to fail.
          - `"Ignore"` means that an error calling the webhook is ignored.
       type: string
-      enum:
+      #enum:
         - Fail
         - Ignore
     matchConditions:
@@ -36256,7 +36256,7 @@ io.k8s.api.admissionregistration.v1.MutatingWebhook:
          - `"Equivalent"` means requests should be sent to the webhook if they modify a resource listed in rules via another API group or version.
          - `"Exact"` means requests should only be sent to the webhook if they exactly match a given rule.
       type: string
-      enum:
+      #enum:
         - Equivalent
         - Exact
     name:
@@ -36313,7 +36313,7 @@ io.k8s.api.admissionregistration.v1.MutatingWebhook:
          - `"IfNeeded"` indicates that the mutation may be called at least one additional time as part of the admission evaluation if the object being admitted is modified by other admission plugins after the initial mutation call.
          - `"Never"` indicates that the mutation must not be called more than once in a single admission evaluation.
       type: string
-      enum:
+      #enum:
         - IfNeeded
         - Never
     rules:
@@ -36332,7 +36332,7 @@ io.k8s.api.admissionregistration.v1.MutatingWebhook:
          - `"Some"` means that calling the webhook will possibly have side effects. If a request with the dry-run attribute would trigger a call to this webhook, the request will instead fail.
          - `"Unknown"` means that no information is known about the side effects of calling the webhook. If a request with the dry-run attribute would trigger a call to this webhook, the request will instead fail.
       type: string
-      enum:
+      #enum:
         - None
         - NoneOnDryRun
         - Some
@@ -36413,7 +36413,7 @@ io.k8s.api.admissionregistration.v1.NamedRuleWithOperations:
       type: array
       items:
         type: string
-        enum:
+        #enum:
           - '*'
           - CONNECT
           - CREATE
@@ -36514,7 +36514,7 @@ io.k8s.api.admissionregistration.v1.RuleWithOperations:
       type: array
       items:
         type: string
-        enum:
+        #enum:
           - '*'
           - CONNECT
           - CREATE
@@ -36676,7 +36676,7 @@ io.k8s.api.admissionregistration.v1.ValidatingAdmissionPolicyBindingSpec:
       type: array
       items:
         type: string
-        enum:
+        #enum:
           - Audit
           - Deny
           - Warn
@@ -36731,7 +36731,7 @@ io.k8s.api.admissionregistration.v1.ValidatingAdmissionPolicySpec:
          - `"Fail"` means that an error calling the webhook causes the admission to fail.
          - `"Ignore"` means that an error calling the webhook is ignored.
       type: string
-      enum:
+      #enum:
         - Fail
         - Ignore
     matchConditions:
@@ -36824,7 +36824,7 @@ io.k8s.api.admissionregistration.v1.ValidatingWebhook:
          - `"Fail"` means that an error calling the webhook causes the admission to fail.
          - `"Ignore"` means that an error calling the webhook is ignored.
       type: string
-      enum:
+      #enum:
         - Fail
         - Ignore
     matchConditions:
@@ -36859,7 +36859,7 @@ io.k8s.api.admissionregistration.v1.ValidatingWebhook:
          - `"Equivalent"` means requests should be sent to the webhook if they modify a resource listed in rules via another API group or version.
          - `"Exact"` means requests should only be sent to the webhook if they exactly match a given rule.
       type: string
-      enum:
+      #enum:
         - Equivalent
         - Exact
     name:
@@ -36918,7 +36918,7 @@ io.k8s.api.admissionregistration.v1.ValidatingWebhook:
          - `"Some"` means that calling the webhook will possibly have side effects. If a request with the dry-run attribute would trigger a call to this webhook, the request will instead fail.
          - `"Unknown"` means that no information is known about the side effects of calling the webhook. If a request with the dry-run attribute would trigger a call to this webhook, the request will instead fail.
       type: string
-      enum:
+      #enum:
         - None
         - NoneOnDryRun
         - Some
@@ -37251,7 +37251,7 @@ io.k8s.api.apps.v1.DaemonSetUpdateStrategy:
          - `"OnDelete"` Replace the old daemons only when it's killed
          - `"RollingUpdate"` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
       type: string
-      enum:
+      #enum:
         - OnDelete
         - RollingUpdate
 io.k8s.api.apps.v1.Deployment:
@@ -37426,7 +37426,7 @@ io.k8s.api.apps.v1.DeploymentStrategy:
          - `"Recreate"` Kill all existing pods before creating new ones.
          - `"RollingUpdate"` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
       type: string
-      enum:
+      #enum:
         - Recreate
         - RollingUpdate
 io.k8s.api.apps.v1.ReplicaSet:
@@ -37713,7 +37713,7 @@ io.k8s.api.apps.v1.StatefulSetSpec:
          - `"OrderedReady"` will create pods in strictly increasing order on scale up and strictly decreasing order on scale down, progressing only when the previous pod is ready or terminated. At most one pod will be changed at any time.
          - `"Parallel"` will create and delete pods as soon as the stateful set replica count is changed, and will not wait for pods to be ready or complete termination.
       type: string
-      enum:
+      #enum:
         - OrderedReady
         - Parallel
     replicas:
@@ -37807,7 +37807,7 @@ io.k8s.api.apps.v1.StatefulSetUpdateStrategy:
          - `"OnDelete"` triggers the legacy behavior. Version tracking and ordered rolling restarts are disabled. Pods are recreated from the StatefulSetSpec when they are manually deleted. When a scale operation is performed with this strategy,specification version indicated by the StatefulSet's currentRevision.
          - `"RollingUpdate"` indicates that update will be applied to all Pods in the StatefulSet with respect to the StatefulSet ordering constraints. When a scale operation is performed with this strategy, new Pods will be created from the specification version indicated by the StatefulSet's updateRevision.
       type: string
-      enum:
+      #enum:
         - OnDelete
         - RollingUpdate
 io.k8s.api.authentication.v1.BoundObjectReference:
@@ -38975,7 +38975,7 @@ io.k8s.api.batch.v1.CronJobSpec:
          - `"Forbid"` forbids concurrent runs, skipping next run if previous hasn't finished yet.
          - `"Replace"` cancels currently running job and replaces it with a new one.
       type: string
-      enum:
+      #enum:
         - Allow
         - Forbid
         - Replace
@@ -39123,7 +39123,7 @@ io.k8s.api.batch.v1.JobSpec:
          - `"Indexed"` is a Job completion mode. In this mode, the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1). The Job is considered complete when a Pod completes for each completion index.
          - `"NonIndexed"` is a Job completion mode. In this mode, the Job is considered complete when there have been .spec.completions successfully completed Pods. Pod completions are homologous to each other.
       type: string
-      enum:
+      #enum:
         - Indexed
         - NonIndexed
     completions:
@@ -39163,7 +39163,7 @@ io.k8s.api.batch.v1.JobSpec:
          - `"Failed"` means to wait until a previously created Pod is fully terminated (has phase Failed or Succeeded) before creating a replacement Pod.
          - `"TerminatingOrFailed"` means that we recreate pods when they are terminating (has a metadata.deletionTimestamp) or failed.
       type: string
-      enum:
+      #enum:
         - Failed
         - TerminatingOrFailed
     selector:
@@ -39296,7 +39296,7 @@ io.k8s.api.batch.v1.PodFailurePolicyOnExitCodesRequirement:
          - `"In"`
          - `"NotIn"`
       type: string
-      enum:
+      #enum:
         - In
         - NotIn
     values:
@@ -39345,7 +39345,7 @@ io.k8s.api.batch.v1.PodFailurePolicyRule:
          - `"FailJob"` This is an action which might be taken on a pod failure - mark the pod's job as Failed and terminate all running pods.
          - `"Ignore"` This is an action which might be taken on a pod failure - the counter towards .backoffLimit, represented by the job's .status.failed field, is not incremented and a replacement pod is created.
       type: string
-      enum:
+      #enum:
         - Count
         - FailIndex
         - FailJob
@@ -39575,7 +39575,7 @@ io.k8s.api.certificates.v1.CertificateSigningRequestSpec:
       type: array
       items:
         type: string
-        enum:
+        #enum:
           - any
           - cert sign
           - client auth
@@ -39769,7 +39769,7 @@ io.k8s.api.core.v1.AppArmorProfile:
          - `"RuntimeDefault"` indicates that the container runtime's default AppArmor profile should be used.
          - `"Unconfined"` indicates that no AppArmor profile should be enforced.
       type: string
-      enum:
+      #enum:
         - Localhost
         - RuntimeDefault
         - Unconfined
@@ -39806,7 +39806,7 @@ io.k8s.api.core.v1.AzureDiskVolumeSource:
          - `"ReadOnly"`
          - `"ReadWrite"`
       type: string
-      enum:
+      #enum:
         - None
         - ReadOnly
         - ReadWrite
@@ -39828,7 +39828,7 @@ io.k8s.api.core.v1.AzureDiskVolumeSource:
          - `"Managed"`
          - `"Shared"`
       type: string
-      enum:
+      #enum:
         - Dedicated
         - Managed
         - Shared
@@ -40354,7 +40354,7 @@ io.k8s.api.core.v1.Container:
          - `"IfNotPresent"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.
          - `"Never"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
       type: string
-      enum:
+      #enum:
         - Always
         - IfNotPresent
         - Never
@@ -40416,7 +40416,7 @@ io.k8s.api.core.v1.Container:
          - `"FallbackToLogsOnError"` will read the most recent contents of the container logs for the container status message when the container exits with an error and the terminationMessagePath has no contents.
          - `"File"` is the default behavior and will set the container status message to the contents of the container's terminationMessagePath when the container exits.
       type: string
-      enum:
+      #enum:
         - FallbackToLogsOnError
         - File
     tty:
@@ -40488,7 +40488,7 @@ io.k8s.api.core.v1.ContainerPort:
          - `"TCP"` is the TCP protocol.
          - `"UDP"` is the UDP protocol.
       type: string
-      enum:
+      #enum:
         - SCTP
         - TCP
         - UDP
@@ -40694,7 +40694,7 @@ io.k8s.api.core.v1.ContainerStatus:
          - `"SIGXCPU"`
          - `"SIGXFSZ"`
       type: string
-      enum:
+      #enum:
         - SIGABRT
         - SIGALRM
         - SIGBUS
@@ -40897,7 +40897,7 @@ io.k8s.api.core.v1.EndpointPort:
          - `"TCP"` is the TCP protocol.
          - `"UDP"` is the UDP protocol.
       type: string
-      enum:
+      #enum:
         - SCTP
         - TCP
         - UDP
@@ -41064,7 +41064,7 @@ io.k8s.api.core.v1.EphemeralContainer:
          - `"IfNotPresent"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.
          - `"Never"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
       type: string
-      enum:
+      #enum:
         - Always
         - IfNotPresent
         - Never
@@ -41132,7 +41132,7 @@ io.k8s.api.core.v1.EphemeralContainer:
          - `"FallbackToLogsOnError"` will read the most recent contents of the container logs for the container status message when the container exits with an error and the terminationMessagePath has no contents.
          - `"File"` is the default behavior and will set the container status message to the contents of the container's terminationMessagePath when the container exits.
       type: string
-      enum:
+      #enum:
         - FallbackToLogsOnError
         - File
     tty:
@@ -41495,7 +41495,7 @@ io.k8s.api.core.v1.HTTPGetAction:
          - `"HTTP"` means that the scheme used will be http://
          - `"HTTPS"` means that the scheme used will be https://
       type: string
-      enum:
+      #enum:
         - HTTP
         - HTTPS
 io.k8s.api.core.v1.HTTPHeader:
@@ -41558,7 +41558,7 @@ io.k8s.api.core.v1.HostPathVolumeSource:
          - `"FileOrCreate"` If nothing exists at the given path, an empty file will be created there as needed with file mode 0644, having the same group and ownership with Kubelet.
          - `"Socket"` A UNIX socket must exist at the given path
       type: string
-      enum:
+      #enum:
         - ''
         - BlockDevice
         - CharDevice
@@ -41670,7 +41670,7 @@ io.k8s.api.core.v1.ImageVolumeSource:
          - `"IfNotPresent"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.
          - `"Never"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
       type: string
-      enum:
+      #enum:
         - Always
         - IfNotPresent
         - Never
@@ -41775,7 +41775,7 @@ io.k8s.api.core.v1.Lifecycle:
          - `"SIGXCPU"`
          - `"SIGXFSZ"`
       type: string
-      enum:
+      #enum:
         - SIGABRT
         - SIGALRM
         - SIGBUS
@@ -42027,7 +42027,7 @@ io.k8s.api.core.v1.ModifyVolumeStatus:
     status:
       description: "status is the status of the ControllerModifyVolume operation. It can be in any of following states:\n - Pending\n   Pending indicates that the PersistentVolumeClaim cannot be modified due to unmet requirements, such as\n   the specified VolumeAttributesClass not existing.\n - InProgress\n   InProgress indicates that the volume is being modified.\n - Infeasible\n  Infeasible indicates that the request has been rejected as invalid by the CSI driver. To\n\t  resolve the error, a valid VolumeAttributesClass needs to be specified.\nNote: New statuses can be added in the future. Consumers should check for unknown statuses and fail appropriately.\n\nPossible enum values:\n - `\"InProgress\"` InProgress indicates that the volume is being modified\n - `\"Infeasible\"` Infeasible indicates that the request has been rejected as invalid by the CSI driver. To resolve the error, a valid VolumeAttributesClass needs to be specified\n - `\"Pending\"` Pending indicates that the PersistentVolumeClaim cannot be modified due to unmet requirements, such as the specified VolumeAttributesClass not existing"
       type: string
-      enum:
+      #enum:
         - InProgress
         - Infeasible
         - Pending
@@ -42151,7 +42151,7 @@ io.k8s.api.core.v1.NamespaceStatus:
          - `"Active"` means the namespace is available for use in the system
          - `"Terminating"` means the namespace is undergoing graceful termination
       type: string
-      enum:
+      #enum:
         - Active
         - Terminating
 io.k8s.api.core.v1.Node:
@@ -42344,7 +42344,7 @@ io.k8s.api.core.v1.NodeSelectorRequirement:
          - `"Lt"`
          - `"NotIn"`
       type: string
-      enum:
+      #enum:
         - DoesNotExist
         - Exists
         - Gt
@@ -42467,7 +42467,7 @@ io.k8s.api.core.v1.NodeStatus:
          - `"Running"` means the node has been configured and has Kubernetes components running.
          - `"Terminated"` means the node has been removed from the cluster.
       type: string
-      enum:
+      #enum:
         - Pending
         - Running
         - Terminated
@@ -42688,7 +42688,7 @@ io.k8s.api.core.v1.PersistentVolumeClaimSpec:
       type: array
       items:
         type: string
-        enum:
+        #enum:
           - ReadOnlyMany
           - ReadWriteMany
           - ReadWriteOnce
@@ -42728,7 +42728,7 @@ io.k8s.api.core.v1.PersistentVolumeClaimSpec:
          - `"Block"` means the volume will not be formatted with a filesystem and will remain a raw block device.
          - `"Filesystem"` means the volume will be or is formatted with a filesystem.
       type: string
-      enum:
+      #enum:
         - Block
         - Filesystem
     volumeName:
@@ -42743,7 +42743,7 @@ io.k8s.api.core.v1.PersistentVolumeClaimStatus:
       type: array
       items:
         type: string
-        enum:
+        #enum:
           - ReadOnlyMany
           - ReadWriteMany
           - ReadWriteOnce
@@ -42754,7 +42754,7 @@ io.k8s.api.core.v1.PersistentVolumeClaimStatus:
       type: object
       additionalProperties:
         type: string
-        enum:
+        #enum:
           - ControllerResizeInProgress
           - ControllerResizeInfeasible
           - NodeResizeInProgress
@@ -42796,7 +42796,7 @@ io.k8s.api.core.v1.PersistentVolumeClaimStatus:
          - `"Lost"` used for PersistentVolumeClaims that lost their underlying PersistentVolume. The claim was bound to a PersistentVolume and this volume does not exist any longer and all data on it was lost.
          - `"Pending"` used for PersistentVolumeClaims that are not yet bound
       type: string
-      enum:
+      #enum:
         - Bound
         - Lost
         - Pending
@@ -42857,7 +42857,7 @@ io.k8s.api.core.v1.PersistentVolumeSpec:
       type: array
       items:
         type: string
-        enum:
+        #enum:
           - ReadOnlyMany
           - ReadWriteMany
           - ReadWriteOnce
@@ -42935,7 +42935,7 @@ io.k8s.api.core.v1.PersistentVolumeSpec:
          - `"Recycle"` means the volume will be recycled back into the pool of unbound persistent volumes on release from its claim. The volume plugin must support Recycling.
          - `"Retain"` means the volume will be left in its current phase (Released) for manual reclamation by the administrator. The default policy is Retain.
       type: string
-      enum:
+      #enum:
         - Delete
         - Recycle
         - Retain
@@ -42971,7 +42971,7 @@ io.k8s.api.core.v1.PersistentVolumeSpec:
          - `"Block"` means the volume will not be formatted with a filesystem and will remain a raw block device.
          - `"Filesystem"` means the volume will be or is formatted with a filesystem.
       type: string
-      enum:
+      #enum:
         - Block
         - Filesystem
     vsphereVolume:
@@ -42998,7 +42998,7 @@ io.k8s.api.core.v1.PersistentVolumeStatus:
          - `"Pending"` used for PersistentVolumes that are not available
          - `"Released"` used for PersistentVolumes where the bound PersistentVolumeClaim was deleted released volumes must be recycled before becoming available again this phase is used by the persistent volume claim binder to signal to another process to reclaim the resource
       type: string
-      enum:
+      #enum:
         - Available
         - Bound
         - Failed
@@ -43292,7 +43292,7 @@ io.k8s.api.core.v1.PodSecurityContext:
          - `"Always"` indicates that volume's ownership and permissions should always be changed whenever volume is mounted inside a Pod. This the default behavior.
          - `"OnRootMismatch"` indicates that volume's ownership and permissions will be changed only when permission and ownership of root directory does not match with expected permissions on the volume. This can help shorten the time it takes to change ownership and permissions of a volume.
       type: string
-      enum:
+      #enum:
         - Always
         - OnRootMismatch
     runAsGroup:
@@ -43341,7 +43341,7 @@ io.k8s.api.core.v1.PodSecurityContext:
          - `"Merge"` means that the container's provided SupplementalGroups and FsGroup (specified in SecurityContext) will be merged with the primary user's groups as defined in the container image (in /etc/group).
          - `"Strict"` means that the container's provided SupplementalGroups and FsGroup (specified in SecurityContext) will be used instead of any groups defined in the container image.
       type: string
-      enum:
+      #enum:
         - Merge
         - Strict
     sysctls:
@@ -43392,7 +43392,7 @@ io.k8s.api.core.v1.PodSpec:
          - `"Default"` indicates that the pod should use the default (as determined by kubelet) DNS settings.
          - `"None"` indicates that the pod should use empty DNS settings. DNS parameters such as nameservers and search paths should be defined via DNSConfig.
       type: string
-      enum:
+      #enum:
         - ClusterFirst
         - ClusterFirstWithHostNet
         - Default
@@ -43485,7 +43485,7 @@ io.k8s.api.core.v1.PodSpec:
          - `"Never"` means that pod never preempts other pods with lower priority.
          - `"PreemptLowerPriority"` means that pod can preempt other pods with lower priority.
       type: string
-      enum:
+      #enum:
         - Never
         - PreemptLowerPriority
     priority:
@@ -43533,7 +43533,7 @@ io.k8s.api.core.v1.PodSpec:
          - `"Never"`
          - `"OnFailure"`
       type: string
-      enum:
+      #enum:
         - Always
         - Never
         - OnFailure
@@ -43673,7 +43673,7 @@ io.k8s.api.core.v1.PodStatus:
          - `"Succeeded"` means that all containers in the pod have voluntarily terminated with a container exit code of 0, and the system is not going to restart any of these containers.
          - `"Unknown"` means that for some reason the state of the pod could not be obtained, typically due to an error in communicating with the host of the pod. Deprecated: It isn't being set since 2015 (74da3b14b0c0f658b3bb8d2def5094686d0e9095)
       type: string
-      enum:
+      #enum:
         - Failed
         - Pending
         - Running
@@ -43701,7 +43701,7 @@ io.k8s.api.core.v1.PodStatus:
          - `"Burstable"` is the Burstable qos class.
          - `"Guaranteed"` is the Guaranteed qos class.
       type: string
-      enum:
+      #enum:
         - BestEffort
         - Burstable
         - Guaranteed
@@ -43805,7 +43805,7 @@ io.k8s.api.core.v1.PortStatus:
          - `"TCP"` is the TCP protocol.
          - `"UDP"` is the UDP protocol.
       type: string
-      enum:
+      #enum:
         - SCTP
         - TCP
         - UDP
@@ -44224,7 +44224,7 @@ io.k8s.api.core.v1.ResourceQuotaSpec:
       type: array
       items:
         type: string
-        enum:
+        #enum:
           - BestEffort
           - CrossNamespacePodAffinity
           - NotBestEffort
@@ -44411,7 +44411,7 @@ io.k8s.api.core.v1.ScopedResourceSelectorRequirement:
          - `"In"`
          - `"NotIn"`
       type: string
-      enum:
+      #enum:
         - DoesNotExist
         - Exists
         - In
@@ -44429,7 +44429,7 @@ io.k8s.api.core.v1.ScopedResourceSelectorRequirement:
          - `"Terminating"` Match all pod objects where spec.activeDeadlineSeconds >=0
          - `"VolumeAttributesClass"` Match all pvc objects that have volume attributes class mentioned.
       type: string
-      enum:
+      #enum:
         - BestEffort
         - CrossNamespacePodAffinity
         - NotBestEffort
@@ -44463,7 +44463,7 @@ io.k8s.api.core.v1.SeccompProfile:
          - `"RuntimeDefault"` represents the default container runtime seccomp profile.
          - `"Unconfined"` indicates no seccomp profile is applied (A.K.A. unconfined).
       type: string
-      enum:
+      #enum:
         - Localhost
         - RuntimeDefault
         - Unconfined
@@ -44635,7 +44635,7 @@ io.k8s.api.core.v1.SecurityContext:
          - `"Default"` uses the container runtime defaults for readonly and masked paths for /proc. Most container runtimes mask certain paths in /proc to avoid accidental security exposure of special devices or information.
          - `"Unmasked"` bypasses the default masking behavior of the container runtime and ensures the newly created /proc the container stays in tact with no modifications.
       type: string
-      enum:
+      #enum:
         - Default
         - Unmasked
     readOnlyRootFilesystem:
@@ -44823,7 +44823,7 @@ io.k8s.api.core.v1.ServicePort:
          - `"TCP"` is the TCP protocol.
          - `"UDP"` is the UDP protocol.
       type: string
-      enum:
+      #enum:
         - SCTP
         - TCP
         - UDP
@@ -44866,7 +44866,7 @@ io.k8s.api.core.v1.ServiceSpec:
          - `"Cluster"` routes traffic to all endpoints.
          - `"Local"` preserves the source IP of the traffic by routing only to endpoints on the same node as the traffic was received on (dropping the traffic if there are no local endpoints).
       type: string
-      enum:
+      #enum:
         - Cluster
         - Local
     healthCheckNodePort:
@@ -44881,7 +44881,7 @@ io.k8s.api.core.v1.ServiceSpec:
          - `"Cluster"` routes traffic to all endpoints.
          - `"Local"` routes traffic only to endpoints on the same node as the client pod (dropping the traffic if there are no local endpoints).
       type: string
-      enum:
+      #enum:
         - Cluster
         - Local
     ipFamilies:
@@ -44892,7 +44892,7 @@ io.k8s.api.core.v1.ServiceSpec:
       type: array
       items:
         type: string
-        enum:
+        #enum:
           - ''
           - IPv4
           - IPv6
@@ -44906,7 +44906,7 @@ io.k8s.api.core.v1.ServiceSpec:
          - `"RequireDualStack"` indicates that this service requires dual-stack. Using IPFamilyPolicyRequireDualStack on a single stack cluster will result in validation errors. The IPFamilies (and their order) assigned to this service is based on service.spec.ipFamilies. If service.spec.ipFamilies was not provided then it will be assigned according to how they are configured on the cluster. If service.spec.ipFamilies has only one entry then the alternative IPFamily will be added by apiserver
          - `"SingleStack"` indicates that this service is required to have a single IPFamily. The IPFamily assigned is based on the default IPFamily used by the cluster or as identified by service.spec.ipFamilies field
       type: string
-      enum:
+      #enum:
         - PreferDualStack
         - RequireDualStack
         - SingleStack
@@ -44950,7 +44950,7 @@ io.k8s.api.core.v1.ServiceSpec:
          - `"ClientIP"` is the Client IP based.
          - `"None"` - no session affinity.
       type: string
-      enum:
+      #enum:
         - ClientIP
         - None
     sessionAffinityConfig:
@@ -44969,7 +44969,7 @@ io.k8s.api.core.v1.ServiceSpec:
          - `"LoadBalancer"` means a service will be exposed via an external load balancer (if the cloud provider supports it), in addition to 'NodePort' type.
          - `"NodePort"` means a service will be exposed on one port of every node, in addition to 'ClusterIP' type.
       type: string
-      enum:
+      #enum:
         - ClusterIP
         - ExternalName
         - LoadBalancer
@@ -45087,7 +45087,7 @@ io.k8s.api.core.v1.Taint:
          - `"NoSchedule"` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
          - `"PreferNoSchedule"` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
       type: string
-      enum:
+      #enum:
         - NoExecute
         - NoSchedule
         - PreferNoSchedule
@@ -45113,7 +45113,7 @@ io.k8s.api.core.v1.Toleration:
          - `"NoSchedule"` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.
          - `"PreferNoSchedule"` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
       type: string
-      enum:
+      #enum:
         - NoExecute
         - NoSchedule
         - PreferNoSchedule
@@ -45128,7 +45128,7 @@ io.k8s.api.core.v1.Toleration:
          - `"Equal"`
          - `"Exists"`
       type: string
-      enum:
+      #enum:
         - Equal
         - Exists
     tolerationSeconds:
@@ -45206,7 +45206,7 @@ io.k8s.api.core.v1.TopologySpreadConstraint:
          - `"Honor"` means use this scheduling directive when calculating pod topology spread skew.
          - `"Ignore"` means ignore this scheduling directive when calculating pod topology spread skew.
       type: string
-      enum:
+      #enum:
         - Honor
         - Ignore
     nodeTaintsPolicy:
@@ -45219,7 +45219,7 @@ io.k8s.api.core.v1.TopologySpreadConstraint:
          - `"Honor"` means use this scheduling directive when calculating pod topology spread skew.
          - `"Ignore"` means ignore this scheduling directive when calculating pod topology spread skew.
       type: string
-      enum:
+      #enum:
         - Honor
         - Ignore
     topologyKey:
@@ -45236,7 +45236,7 @@ io.k8s.api.core.v1.TopologySpreadConstraint:
          - `"DoNotSchedule"` instructs the scheduler not to schedule the pod when constraints are not satisfied.
          - `"ScheduleAnyway"` instructs the scheduler to schedule the pod even if constraints are not satisfied.
       type: string
-      enum:
+      #enum:
         - DoNotSchedule
         - ScheduleAnyway
 io.k8s.api.core.v1.TypedLocalObjectReference:
@@ -45425,7 +45425,7 @@ io.k8s.api.core.v1.VolumeMount:
          - `"HostToContainer"` means that the volume in a container will receive new mounts from the host or other containers, but filesystems mounted inside the container won't be propagated to the host or other containers. Note that this mode is recursively applied to all mounts in the volume ("rslave" in Linux terminology).
          - `"None"` means that the volume in a container will not receive new mounts from the host or other containers, and filesystems mounted inside the container won't be propagated to the host or other containers. Note that this mode corresponds to "private" in Linux terminology.
       type: string
-      enum:
+      #enum:
         - Bidirectional
         - HostToContainer
         - None
@@ -45664,7 +45664,7 @@ io.k8s.api.discovery.v1.EndpointPort:
          - `"TCP"` is the TCP protocol.
          - `"UDP"` is the UDP protocol.
       type: string
-      enum:
+      #enum:
         - SCTP
         - TCP
         - UDP
@@ -45685,7 +45685,7 @@ io.k8s.api.discovery.v1.EndpointSlice:
          - `"IPv4"` represents an IPv4 Address.
          - `"IPv6"` represents an IPv6 Address.
       type: string
-      enum:
+      #enum:
         - FQDN
         - IPv4
         - IPv6
@@ -46339,7 +46339,7 @@ io.k8s.api.networking.v1.HTTPIngressPath:
          - `"ImplementationSpecific"` matching is up to the IngressClass. Implementations can treat this as a separate PathType or treat it identically to Prefix or Exact path types.
          - `"Prefix"` matches based on a URL path prefix split by '/'. Matching is case sensitive and done on a path element by element basis. A path element refers to the list of labels in the path split by the '/' separator. A request is a match for path p if every p is an element-wise prefix of p of the request path. Note that if the last element of the path is a substring of the last element in request path, it is not a match (e.g. /foo/bar matches /foo/bar/baz, but does not match /foo/barbaz). If multiple matching paths exist in an Ingress spec, the longest matching path is given priority. Examples: - /foo/bar does not match requests to /foo/barbaz - /foo/bar matches request to /foo/bar and /foo/bar/baz - /foo and /foo/ both match requests to /foo and /foo/. If both paths are present in an Ingress spec, the longest matching path (/foo/) is given priority.
       type: string
-      enum:
+      #enum:
         - Exact
         - ImplementationSpecific
         - Prefix
@@ -46609,7 +46609,7 @@ io.k8s.api.networking.v1.IngressPortStatus:
          - `"TCP"` is the TCP protocol.
          - `"UDP"` is the UDP protocol.
       type: string
-      enum:
+      #enum:
         - SCTP
         - TCP
         - UDP
@@ -46791,7 +46791,7 @@ io.k8s.api.networking.v1.NetworkPolicyPort:
          - `"TCP"` is the TCP protocol.
          - `"UDP"` is the UDP protocol.
       type: string
-      enum:
+      #enum:
         - SCTP
         - TCP
         - UDP
@@ -46821,7 +46821,7 @@ io.k8s.api.networking.v1.NetworkPolicySpec:
       type: array
       items:
         type: string
-        enum:
+        #enum:
           - Egress
           - Ingress
       x-kubernetes-list-type: atomic
@@ -47103,7 +47103,7 @@ io.k8s.api.policy.v1.PodDisruptionBudgetSpec:
          - `"AlwaysAllow"` policy means that all running pods (status.phase="Running"), but not yet healthy are considered disrupted and can be evicted regardless of whether the criteria in a PDB is met. This means perspective running pods of a disrupted application might not get a chance to become healthy. Healthy pods will be subject to the PDB for eviction.
          - `"IfHealthyBudget"` policy means that running pods (status.phase="Running"), but not yet healthy can be evicted only if the guarded application is not disrupted (status.currentHealthy is at least equal to status.desiredHealthy). Healthy pods will be subject to the PDB for eviction.
       type: string
-      enum:
+      #enum:
         - AlwaysAllow
         - IfHealthyBudget
 io.k8s.api.policy.v1.PodDisruptionBudgetStatus:
@@ -47473,7 +47473,7 @@ io.k8s.api.scheduling.v1.PriorityClass:
          - `"Never"` means that pod never preempts other pods with lower priority.
          - `"PreemptLowerPriority"` means that pod can preempt other pods with lower priority.
       type: string
-      enum:
+      #enum:
         - Never
         - PreemptLowerPriority
     value:
@@ -47857,7 +47857,7 @@ io.k8s.api.storage.v1.StorageClass:
          - `"Recycle"` means the volume will be recycled back into the pool of unbound persistent volumes on release from its claim. The volume plugin must support Recycling.
          - `"Retain"` means the volume will be left in its current phase (Released) for manual reclamation by the administrator. The default policy is Retain.
       type: string
-      enum:
+      #enum:
         - Delete
         - Recycle
         - Retain
@@ -47869,7 +47869,7 @@ io.k8s.api.storage.v1.StorageClass:
          - `"Immediate"` indicates that PersistentVolumeClaims should be immediately provisioned and bound. This is the default mode.
          - `"WaitForFirstConsumer"` indicates that PersistentVolumeClaims should not be provisioned and bound until the first Pod is created that references the PeristentVolumeClaim. The volume provisioning and binding will occur during Pod scheduing.
       type: string
-      enum:
+      #enum:
         - Immediate
         - WaitForFirstConsumer
   x-kubernetes-group-version-kind:
@@ -48353,7 +48353,7 @@ io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.JSONSchemaProps:
         $ref: '#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.JSONSchemaPropsOrStringArray'
     description:
       type: string
-    enum:
+    #enum:
       type: array
       items:
         $ref: '#/definitions/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.JSON'
@@ -48571,7 +48571,7 @@ io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.ValidationRule:
          - `"FieldValueInvalid"` is used to report malformed values (e.g. failed regex match, too long, out of bounds).
          - `"FieldValueRequired"` is used to report required values that are not provided (e.g. empty strings, null values, or empty arrays).
       type: string
-      enum:
+      #enum:
         - FieldValueDuplicate
         - FieldValueForbidden
         - FieldValueInvalid
@@ -49829,7 +49829,7 @@ io.k8s.networking.policy.v1alpha1.AdminNetworkPolicy:
 
                   Support: Core
                 type: string
-                enum:
+                #enum:
                   - Allow
                   - Deny
                   - Pass
@@ -50241,7 +50241,7 @@ io.k8s.networking.policy.v1alpha1.AdminNetworkPolicy:
 
                   Support: Core
                 type: string
-                enum:
+                #enum:
                   - Allow
                   - Deny
                   - Pass
@@ -50741,7 +50741,7 @@ io.k8s.networking.policy.v1alpha1.AdminNetworkPolicy:
               status:
                 description: status of the condition, one of True, False, Unknown.
                 type: string
-                enum:
+                #enum:
                   - 'True'
                   - 'False'
                   - Unknown
@@ -51577,7 +51577,7 @@ org.projectcalico.crd.v1.FelixConfiguration:
         awsSrcDstCheck:
           description: 'Set source-destination-check on AWS EC2 instances. Accepted value must be one of "DoNothing", "Enable" or "Disable". [Default: DoNothing]'
           type: string
-          enum:
+          #enum:
             - DoNothing
             - Enable
             - Disable
@@ -51587,7 +51587,7 @@ org.projectcalico.crd.v1.FelixConfiguration:
         bpfConnectTimeLoadBalancing:
           description: 'BPFConnectTimeLoadBalancing when in BPF mode, controls whether Felix installs the connect-time load balancer. The connect-time load balancer is required for the host to be able to reach Kubernetes services and it improves the performance of pod-to-service connections.When set to TCP, connect time load balancing is available only for services with TCP ports. [Default: TCP]'
           type: string
-          enum:
+          #enum:
             - TCP
             - Enabled
             - Disabled
@@ -51638,7 +51638,7 @@ org.projectcalico.crd.v1.FelixConfiguration:
         bpfHostNetworkedNATWithoutCTLB:
           description: 'BPFHostNetworkedNATWithoutCTLB when in BPF mode, controls whether Felix does a NAT without CTLB. This along with BPFConnectTimeLoadBalancing determines the CTLB behavior. [Default: Enabled]'
           type: string
-          enum:
+          #enum:
             - Enabled
             - Disabled
         bpfKubeProxyEndpointSlicesEnabled:
@@ -51799,7 +51799,7 @@ org.projectcalico.crd.v1.FelixConfiguration:
         floatingIPs:
           description: FloatingIPs configures whether or not Felix will program non-OpenStack floating IP addresses.  (OpenStack-derived floating IPs are always programmed, regardless of this setting.)
           type: string
-          enum:
+          #enum:
             - Enabled
             - Disabled
         genericXDPEnabled:
@@ -51856,7 +51856,7 @@ org.projectcalico.crd.v1.FelixConfiguration:
         ipForwarding:
           description: 'IPForwarding controls whether Felix sets the host sysctls to enable IP forwarding.  IP forwarding is required when using Calico for workload networking.  This should only be disabled on hosts where Calico is used for host protection.  [Default: Enabled]'
           type: string
-          enum:
+          #enum:
             - Enabled
             - Disabled
         ipipEnabled:
@@ -52087,7 +52087,7 @@ org.projectcalico.crd.v1.FelixConfiguration:
         windowsManageFirewallRules:
           description: 'WindowsManageFirewallRules configures whether or not Felix will program Windows Firewall rules. (to allow inbound access to its own metrics ports) [Default: Disabled]'
           type: string
-          enum:
+          #enum:
             - Enabled
             - Disabled
         wireguardEnabled:
@@ -53889,7 +53889,7 @@ org.projectcalico.crd.v1.Tier:
         defaultAction:
           description: 'DefaultAction specifies the action applied to workloads selected by a policy in the tier, but not rule matched the workload''s traffic. [Default: Deny]'
           type: string
-          enum:
+          #enum:
             - Pass
             - Deny
         order:

@@ -38,6 +38,6 @@ mountOptions: #<[]string>
 parameters: #<map[string]string>
 provisioner: #<string> -required-
 reclaimPolicy: #<string>
-enum: Delete, Recycle, Retain
+#enum: Delete, Recycle, Retain
 volumeBindingMode: #<string>
-enum: Immediate, WaitForFirstConsumer
+#enum: Immediate, WaitForFirstConsumer

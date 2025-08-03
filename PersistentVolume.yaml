@@ -37,12 +37,12 @@ spec: #<PersistentVolumeSpec>
     volumeID: #<string> -required-
   azureDisk: #<AzureDiskVolumeSource>
     cachingMode: #<string>
-    enum: None, ReadOnly, ReadWrite
+    #enum: None, ReadOnly, ReadWrite
     diskName: #<string> -required-
     diskURI: #<string> -required-
     fsType: #<string>
     kind: #<string>
-    enum: Dedicated, Managed, Shared
+    #enum: Dedicated, Managed, Shared
     readOnly: #<boolean>
   azureFile: #<AzureFilePersistentVolumeSource>
     readOnly: #<boolean>
@@ -125,7 +125,7 @@ spec: #<PersistentVolumeSpec>
   hostPath: #<HostPathVolumeSource>
     path: #<string> -required-
     type: #<string>
-    enum: "", BlockDevice, CharDevice, Directory, ....
+    #enum: "", BlockDevice, CharDevice, Directory, ....
   iscsi: #<ISCSIPersistentVolumeSource>
     chapAuthDiscovery: #<boolean>
     chapAuthSession: #<boolean>
@@ -154,15 +154,15 @@ spec: #<PersistentVolumeSpec>
         matchExpressions: #<[]NodeSelectorRequirement>
           key: #<string> -required-
           operator: #<string> -required-
-          enum: DoesNotExist, Exists, Gt, In, ....
+          #enum: DoesNotExist, Exists, Gt, In, ....
           values: #<[]string>
         matchFields: #<[]NodeSelectorRequirement>
           key: #<string> -required-
           operator: #<string> -required-
-          enum: DoesNotExist, Exists, Gt, In, ....
+          #enum: DoesNotExist, Exists, Gt, In, ....
           values: #<[]string>
   persistentVolumeReclaimPolicy: #<string>
-  enum: Delete, Recycle, Retain
+  #enum: Delete, Recycle, Retain
   photonPersistentDisk: #<PhotonPersistentDiskVolumeSource>
     fsType: #<string>
     pdID: #<string> -required-
@@ -217,7 +217,7 @@ spec: #<PersistentVolumeSpec>
     volumeNamespace: #<string>
   volumeAttributesClassName: #<string>
   volumeMode: #<string>
-  enum: Block, Filesystem
+  #enum: Block, Filesystem
   vsphereVolume: #<VsphereVirtualDiskVolumeSource>
     fsType: #<string>
     storagePolicyID: #<string>
@@ -227,5 +227,5 @@ status: #<PersistentVolumeStatus>
   lastPhaseTransitionTime: #<string>
   message: #<string>
   phase: #<string>
-  enum: Available, Bound, Failed, Pending, ....
+  #enum: Available, Bound, Failed, Pending, ....
   reason: #<string>

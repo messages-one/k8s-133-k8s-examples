@@ -38,4 +38,4 @@ status: #<NamespaceStatus>
     status: #<string> -required-
     type: #<string> -required-
   phase: #<string>
-  enum: Active, Terminating
+  #enum: Active, Terminating

@@ -31,5 +31,5 @@ metadata: #<ObjectMeta>
   uid: #<string>
 spec: #<Object>
   defaultAction: #<string>
-  enum: Pass, Deny
+  #enum: Pass, Deny
   order: #<number>

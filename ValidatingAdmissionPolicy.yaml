@@ -34,7 +34,7 @@ spec: #<ValidatingAdmissionPolicySpec>
     key: #<string> -required-
     valueExpression: #<string> -required-
   failurePolicy: #<string>
-  enum: Fail, Ignore
+  #enum: Fail, Ignore
   matchConditions: #<[]MatchCondition>
     expression: #<string> -required-
     name: #<string> -required-
@@ -47,7 +47,7 @@ spec: #<ValidatingAdmissionPolicySpec>
       resources: #<[]string>
       scope: #<string>
     matchPolicy: #<string>
-    enum: Equivalent, Exact
+    #enum: Equivalent, Exact
     namespaceSelector: #<LabelSelector>
       matchExpressions: #<[]LabelSelectorRequirement>
         key: #<string> -required-

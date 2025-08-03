@@ -42,7 +42,7 @@ spec: #<NodeSpec>
   providerID: #<string>
   taints: #<[]Taint>
     effect: #<string> -required-
-    enum: NoExecute, NoSchedule, PreferNoSchedule
+    #enum: NoExecute, NoSchedule, PreferNoSchedule
     key: #<string> -required-
     timeAdded: #<string>
     value: #<string>
@@ -105,7 +105,7 @@ status: #<NodeStatus>
       capacity: #<integer>
     systemUUID: #<string> -required-
   phase: #<string>
-  enum: Pending, Running, Terminated
+  #enum: Pending, Running, Terminated
   runtimeHandlers: #<[]NodeRuntimeHandler>
     features: #<NodeRuntimeHandlerFeatures>
       recursiveReadOnlyMounts: #<boolean>

@@ -33,9 +33,9 @@ spec: #<ResourceQuotaSpec>
   scopeSelector: #<ScopeSelector>
     matchExpressions: #<[]ScopedResourceSelectorRequirement>
       operator: #<string> -required-
-      enum: DoesNotExist, Exists, In, NotIn
+      #enum: DoesNotExist, Exists, In, NotIn
       scopeName: #<string> -required-
-      enum: BestEffort, CrossNamespacePodAffinity, NotBestEffort, NotTerminating, ....
+      #enum: BestEffort, CrossNamespacePodAffinity, NotBestEffort, NotTerminating, ....
       values: #<[]string>
   scopes: #<[]string>
 status: #<ResourceQuotaStatus>

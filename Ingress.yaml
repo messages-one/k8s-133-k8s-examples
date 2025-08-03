@@ -57,7 +57,7 @@ spec: #<IngressSpec>
               number: #<integer>
         path: #<string>
         pathType: #<string> -required-
-        enum: Exact, ImplementationSpecific, Prefix
+        #enum: Exact, ImplementationSpecific, Prefix
   tls: #<[]IngressTLS>
     hosts: #<[]string>
     secretName: #<string>
@@ -70,4 +70,4 @@ status: #<IngressStatus>
         error: #<string>
         port: #<integer> -required-
         protocol: #<string> -required-
-        enum: SCTP, TCP, UDP
+        #enum: SCTP, TCP, UDP

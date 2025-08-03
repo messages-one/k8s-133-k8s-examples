@@ -37,7 +37,7 @@ spec: #<StatefulSetSpec>
     whenDeleted: #<string>
     whenScaled: #<string>
   podManagementPolicy: #<string>
-  enum: OrderedReady, Parallel
+  #enum: OrderedReady, Parallel
   replicas: #<integer>
   revisionHistoryLimit: #<integer>
   selector: #<LabelSelector> -required-
@@ -86,12 +86,12 @@ spec: #<StatefulSetSpec>
               matchExpressions: #<[]NodeSelectorRequirement>
                 key: #<string> -required-
                 operator: #<string> -required-
-                enum: DoesNotExist, Exists, Gt, In, ....
+                #enum: DoesNotExist, Exists, Gt, In, ....
                 values: #<[]string>
               matchFields: #<[]NodeSelectorRequirement>
                 key: #<string> -required-
                 operator: #<string> -required-
-                enum: DoesNotExist, Exists, Gt, In, ....
+                #enum: DoesNotExist, Exists, Gt, In, ....
                 values: #<[]string>
             weight: #<integer> -required-
           requiredDuringSchedulingIgnoredDuringExecution: #<NodeSelector>
@@ -99,12 +99,12 @@ spec: #<StatefulSetSpec>
               matchExpressions: #<[]NodeSelectorRequirement>
                 key: #<string> -required-
                 operator: #<string> -required-
-                enum: DoesNotExist, Exists, Gt, In, ....
+                #enum: DoesNotExist, Exists, Gt, In, ....
                 values: #<[]string>
               matchFields: #<[]NodeSelectorRequirement>
                 key: #<string> -required-
                 operator: #<string> -required-
-                enum: DoesNotExist, Exists, Gt, In, ....
+                #enum: DoesNotExist, Exists, Gt, In, ....
                 values: #<[]string>
         podAffinity: #<PodAffinity>
           preferredDuringSchedulingIgnoredDuringExecution: #<[]WeightedPodAffinityTerm>
@@ -213,7 +213,7 @@ spec: #<StatefulSetSpec>
             optional: #<boolean>
         image: #<string>
         imagePullPolicy: #<string>
-        enum: Always, IfNotPresent, Never
+        #enum: Always, IfNotPresent, Never
         lifecycle: #<Lifecycle>
           postStart: #<LifecycleHandler>
             exec: #<ExecAction>
@@ -226,7 +226,7 @@ spec: #<StatefulSetSpec>
               path: #<string>
               port: #<IntOrString> -required-
               scheme: #<string>
-              enum: HTTP, HTTPS
+              #enum: HTTP, HTTPS
             sleep: #<SleepAction>
               seconds: #<integer> -required-
             tcpSocket: #<TCPSocketAction>
@@ -243,14 +243,14 @@ spec: #<StatefulSetSpec>
               path: #<string>
               port: #<IntOrString> -required-
               scheme: #<string>
-              enum: HTTP, HTTPS
+              #enum: HTTP, HTTPS
             sleep: #<SleepAction>
               seconds: #<integer> -required-
             tcpSocket: #<TCPSocketAction>
               host: #<string>
               port: #<IntOrString> -required-
           stopSignal: #<string>
-          enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+          #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
         livenessProbe: #<Probe>
           exec: #<ExecAction>
             command: #<[]string>
@@ -266,7 +266,7 @@ spec: #<StatefulSetSpec>
             path: #<string>
             port: #<IntOrString> -required-
             scheme: #<string>
-            enum: HTTP, HTTPS
+            #enum: HTTP, HTTPS
           initialDelaySeconds: #<integer>
           periodSeconds: #<integer>
           successThreshold: #<integer>
@@ -282,7 +282,7 @@ spec: #<StatefulSetSpec>
           hostPort: #<integer>
           name: #<string>
           protocol: #<string>
-          enum: SCTP, TCP, UDP
+          #enum: SCTP, TCP, UDP
         readinessProbe: #<Probe>
           exec: #<ExecAction>
             command: #<[]string>
@@ -298,7 +298,7 @@ spec: #<StatefulSetSpec>
             path: #<string>
             port: #<IntOrString> -required-
             scheme: #<string>
-            enum: HTTP, HTTPS
+            #enum: HTTP, HTTPS
           initialDelaySeconds: #<integer>
           periodSeconds: #<integer>
           successThreshold: #<integer>
@@ -322,13 +322,13 @@ spec: #<StatefulSetSpec>
           appArmorProfile: #<AppArmorProfile>
             localhostProfile: #<string>
             type: #<string> -required-
-            enum: Localhost, RuntimeDefault, Unconfined
+            #enum: Localhost, RuntimeDefault, Unconfined
           capabilities: #<Capabilities>
             add: #<[]string>
             drop: #<[]string>
           privileged: #<boolean>
           procMount: #<string>
-          enum: Default, Unmasked
+          #enum: Default, Unmasked
           readOnlyRootFilesystem: #<boolean>
           runAsGroup: #<integer>
           runAsNonRoot: #<boolean>
@@ -341,7 +341,7 @@ spec: #<StatefulSetSpec>
           seccompProfile: #<SeccompProfile>
             localhostProfile: #<string>
             type: #<string> -required-
-            enum: Localhost, RuntimeDefault, Unconfined
+            #enum: Localhost, RuntimeDefault, Unconfined
           windowsOptions: #<WindowsSecurityContextOptions>
             gmsaCredentialSpec: #<string>
             gmsaCredentialSpecName: #<string>
@@ -362,7 +362,7 @@ spec: #<StatefulSetSpec>
             path: #<string>
             port: #<IntOrString> -required-
             scheme: #<string>
-            enum: HTTP, HTTPS
+            #enum: HTTP, HTTPS
           initialDelaySeconds: #<integer>
           periodSeconds: #<integer>
           successThreshold: #<integer>
@@ -375,7 +375,7 @@ spec: #<StatefulSetSpec>
         stdinOnce: #<boolean>
         terminationMessagePath: #<string>
         terminationMessagePolicy: #<string>
-        enum: FallbackToLogsOnError, File
+        #enum: FallbackToLogsOnError, File
         tty: #<boolean>
         volumeDevices: #<[]VolumeDevice>
           devicePath: #<string> -required-
@@ -383,7 +383,7 @@ spec: #<StatefulSetSpec>
         volumeMounts: #<[]VolumeMount>
           mountPath: #<string> -required-
           mountPropagation: #<string>
-          enum: Bidirectional, HostToContainer, None
+          #enum: Bidirectional, HostToContainer, None
           name: #<string> -required-
           readOnly: #<boolean>
           recursiveReadOnly: #<string>
@@ -397,7 +397,7 @@ spec: #<StatefulSetSpec>
           value: #<string>
         searches: #<[]string>
       dnsPolicy: #<string>
-      enum: ClusterFirst, ClusterFirstWithHostNet, Default, None
+      #enum: ClusterFirst, ClusterFirstWithHostNet, Default, None
       enableServiceLinks: #<boolean>
       ephemeralContainers: #<[]EphemeralContainer>
         args: #<[]string>
@@ -431,7 +431,7 @@ spec: #<StatefulSetSpec>
             optional: #<boolean>
         image: #<string>
         imagePullPolicy: #<string>
-        enum: Always, IfNotPresent, Never
+        #enum: Always, IfNotPresent, Never
         lifecycle: #<Lifecycle>
           postStart: #<LifecycleHandler>
             exec: #<ExecAction>
@@ -444,7 +444,7 @@ spec: #<StatefulSetSpec>
               path: #<string>
               port: #<IntOrString> -required-
               scheme: #<string>
-              enum: HTTP, HTTPS
+              #enum: HTTP, HTTPS
             sleep: #<SleepAction>
               seconds: #<integer> -required-
             tcpSocket: #<TCPSocketAction>
@@ -461,14 +461,14 @@ spec: #<StatefulSetSpec>
               path: #<string>
               port: #<IntOrString> -required-
               scheme: #<string>
-              enum: HTTP, HTTPS
+              #enum: HTTP, HTTPS
             sleep: #<SleepAction>
               seconds: #<integer> -required-
             tcpSocket: #<TCPSocketAction>
               host: #<string>
               port: #<IntOrString> -required-
           stopSignal: #<string>
-          enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+          #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
         livenessProbe: #<Probe>
           exec: #<ExecAction>
             command: #<[]string>
@@ -484,7 +484,7 @@ spec: #<StatefulSetSpec>
             path: #<string>
             port: #<IntOrString> -required-
             scheme: #<string>
-            enum: HTTP, HTTPS
+            #enum: HTTP, HTTPS
           initialDelaySeconds: #<integer>
           periodSeconds: #<integer>
           successThreshold: #<integer>
@@ -500,7 +500,7 @@ spec: #<StatefulSetSpec>
           hostPort: #<integer>
           name: #<string>
           protocol: #<string>
-          enum: SCTP, TCP, UDP
+          #enum: SCTP, TCP, UDP
         readinessProbe: #<Probe>
           exec: #<ExecAction>
             command: #<[]string>
@@ -516,7 +516,7 @@ spec: #<StatefulSetSpec>
             path: #<string>
             port: #<IntOrString> -required-
             scheme: #<string>
-            enum: HTTP, HTTPS
+            #enum: HTTP, HTTPS
           initialDelaySeconds: #<integer>
           periodSeconds: #<integer>
           successThreshold: #<integer>
@@ -540,13 +540,13 @@ spec: #<StatefulSetSpec>
           appArmorProfile: #<AppArmorProfile>
             localhostProfile: #<string>
             type: #<string> -required-
-            enum: Localhost, RuntimeDefault, Unconfined
+            #enum: Localhost, RuntimeDefault, Unconfined
           capabilities: #<Capabilities>
             add: #<[]string>
             drop: #<[]string>
           privileged: #<boolean>
           procMount: #<string>
-          enum: Default, Unmasked
+          #enum: Default, Unmasked
           readOnlyRootFilesystem: #<boolean>
           runAsGroup: #<integer>
           runAsNonRoot: #<boolean>
@@ -559,7 +559,7 @@ spec: #<StatefulSetSpec>
           seccompProfile: #<SeccompProfile>
             localhostProfile: #<string>
             type: #<string> -required-
-            enum: Localhost, RuntimeDefault, Unconfined
+            #enum: Localhost, RuntimeDefault, Unconfined
           windowsOptions: #<WindowsSecurityContextOptions>
             gmsaCredentialSpec: #<string>
             gmsaCredentialSpecName: #<string>
@@ -580,7 +580,7 @@ spec: #<StatefulSetSpec>
             path: #<string>
             port: #<IntOrString> -required-
             scheme: #<string>
-            enum: HTTP, HTTPS
+            #enum: HTTP, HTTPS
           initialDelaySeconds: #<integer>
           periodSeconds: #<integer>
           successThreshold: #<integer>
@@ -594,7 +594,7 @@ spec: #<StatefulSetSpec>
         targetContainerName: #<string>
         terminationMessagePath: #<string>
         terminationMessagePolicy: #<string>
-        enum: FallbackToLogsOnError, File
+        #enum: FallbackToLogsOnError, File
         tty: #<boolean>
         volumeDevices: #<[]VolumeDevice>
           devicePath: #<string> -required-
@@ -602,7 +602,7 @@ spec: #<StatefulSetSpec>
         volumeMounts: #<[]VolumeMount>
           mountPath: #<string> -required-
           mountPropagation: #<string>
-          enum: Bidirectional, HostToContainer, None
+          #enum: Bidirectional, HostToContainer, None
           name: #<string> -required-
           readOnly: #<boolean>
           recursiveReadOnly: #<string>
@@ -651,7 +651,7 @@ spec: #<StatefulSetSpec>
             optional: #<boolean>
         image: #<string>
         imagePullPolicy: #<string>
-        enum: Always, IfNotPresent, Never
+        #enum: Always, IfNotPresent, Never
         lifecycle: #<Lifecycle>
           postStart: #<LifecycleHandler>
             exec: #<ExecAction>
@@ -664,7 +664,7 @@ spec: #<StatefulSetSpec>
               path: #<string>
               port: #<IntOrString> -required-
               scheme: #<string>
-              enum: HTTP, HTTPS
+              #enum: HTTP, HTTPS
             sleep: #<SleepAction>
               seconds: #<integer> -required-
             tcpSocket: #<TCPSocketAction>
@@ -681,14 +681,14 @@ spec: #<StatefulSetSpec>
               path: #<string>
               port: #<IntOrString> -required-
               scheme: #<string>
-              enum: HTTP, HTTPS
+              #enum: HTTP, HTTPS
             sleep: #<SleepAction>
               seconds: #<integer> -required-
             tcpSocket: #<TCPSocketAction>
               host: #<string>
               port: #<IntOrString> -required-
           stopSignal: #<string>
-          enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
+          #enum: SIGABRT, SIGALRM, SIGBUS, SIGCHLD, ....
         livenessProbe: #<Probe>
           exec: #<ExecAction>
             command: #<[]string>
@@ -704,7 +704,7 @@ spec: #<StatefulSetSpec>
             path: #<string>
             port: #<IntOrString> -required-
             scheme: #<string>
-            enum: HTTP, HTTPS
+            #enum: HTTP, HTTPS
           initialDelaySeconds: #<integer>
           periodSeconds: #<integer>
           successThreshold: #<integer>
@@ -720,7 +720,7 @@ spec: #<StatefulSetSpec>
           hostPort: #<integer>
           name: #<string>
           protocol: #<string>
-          enum: SCTP, TCP, UDP
+          #enum: SCTP, TCP, UDP
         readinessProbe: #<Probe>
           exec: #<ExecAction>
             command: #<[]string>
@@ -736,7 +736,7 @@ spec: #<StatefulSetSpec>
             path: #<string>
             port: #<IntOrString> -required-
             scheme: #<string>
-            enum: HTTP, HTTPS
+            #enum: HTTP, HTTPS
           initialDelaySeconds: #<integer>
           periodSeconds: #<integer>
           successThreshold: #<integer>
@@ -760,13 +760,13 @@ spec: #<StatefulSetSpec>
           appArmorProfile: #<AppArmorProfile>
             localhostProfile: #<string>
             type: #<string> -required-
-            enum: Localhost, RuntimeDefault, Unconfined
+            #enum: Localhost, RuntimeDefault, Unconfined
           capabilities: #<Capabilities>
             add: #<[]string>
             drop: #<[]string>
           privileged: #<boolean>
           procMount: #<string>
-          enum: Default, Unmasked
+          #enum: Default, Unmasked
           readOnlyRootFilesystem: #<boolean>
           runAsGroup: #<integer>
           runAsNonRoot: #<boolean>
@@ -779,7 +779,7 @@ spec: #<StatefulSetSpec>
           seccompProfile: #<SeccompProfile>
             localhostProfile: #<string>
             type: #<string> -required-
-            enum: Localhost, RuntimeDefault, Unconfined
+            #enum: Localhost, RuntimeDefault, Unconfined
           windowsOptions: #<WindowsSecurityContextOptions>
             gmsaCredentialSpec: #<string>
             gmsaCredentialSpecName: #<string>
@@ -800,7 +800,7 @@ spec: #<StatefulSetSpec>
             path: #<string>
             port: #<IntOrString> -required-
             scheme: #<string>
-            enum: HTTP, HTTPS
+            #enum: HTTP, HTTPS
           initialDelaySeconds: #<integer>
           periodSeconds: #<integer>
           successThreshold: #<integer>
@@ -813,7 +813,7 @@ spec: #<StatefulSetSpec>
         stdinOnce: #<boolean>
         terminationMessagePath: #<string>
         terminationMessagePolicy: #<string>
-        enum: FallbackToLogsOnError, File
+        #enum: FallbackToLogsOnError, File
         tty: #<boolean>
         volumeDevices: #<[]VolumeDevice>
           devicePath: #<string> -required-
@@ -821,7 +821,7 @@ spec: #<StatefulSetSpec>
         volumeMounts: #<[]VolumeMount>
           mountPath: #<string> -required-
           mountPropagation: #<string>
-          enum: Bidirectional, HostToContainer, None
+          #enum: Bidirectional, HostToContainer, None
           name: #<string> -required-
           readOnly: #<boolean>
           recursiveReadOnly: #<string>
@@ -834,7 +834,7 @@ spec: #<StatefulSetSpec>
         name: #<string> -required-
       overhead: #<map[string]Quantity>
       preemptionPolicy: #<string>
-      enum: Never, PreemptLowerPriority
+      #enum: Never, PreemptLowerPriority
       priority: #<integer>
       priorityClassName: #<string>
       readinessGates: #<[]PodReadinessGate>
@@ -850,7 +850,7 @@ spec: #<StatefulSetSpec>
         limits: #<map[string]Quantity>
         requests: #<map[string]Quantity>
       restartPolicy: #<string>
-      enum: Always, Never, OnFailure
+      #enum: Always, Never, OnFailure
       runtimeClassName: #<string>
       schedulerName: #<string>
       schedulingGates: #<[]PodSchedulingGate>
@@ -859,10 +859,10 @@ spec: #<StatefulSetSpec>
         appArmorProfile: #<AppArmorProfile>
           localhostProfile: #<string>
           type: #<string> -required-
-          enum: Localhost, RuntimeDefault, Unconfined
+          #enum: Localhost, RuntimeDefault, Unconfined
         fsGroup: #<integer>
         fsGroupChangePolicy: #<string>
-        enum: Always, OnRootMismatch
+        #enum: Always, OnRootMismatch
         runAsGroup: #<integer>
         runAsNonRoot: #<boolean>
         runAsUser: #<integer>
@@ -875,10 +875,10 @@ spec: #<StatefulSetSpec>
         seccompProfile: #<SeccompProfile>
           localhostProfile: #<string>
           type: #<string> -required-
-          enum: Localhost, RuntimeDefault, Unconfined
+          #enum: Localhost, RuntimeDefault, Unconfined
         supplementalGroups: #<[]integer>
         supplementalGroupsPolicy: #<string>
-        enum: Merge, Strict
+        #enum: Merge, Strict
         sysctls: #<[]Sysctl>
           name: #<string> -required-
           value: #<string> -required-
@@ -895,10 +895,10 @@ spec: #<StatefulSetSpec>
       terminationGracePeriodSeconds: #<integer>
       tolerations: #<[]Toleration>
         effect: #<string>
-        enum: NoExecute, NoSchedule, PreferNoSchedule
+        #enum: NoExecute, NoSchedule, PreferNoSchedule
         key: #<string>
         operator: #<string>
-        enum: Equal, Exists
+        #enum: Equal, Exists
         tolerationSeconds: #<integer>
         value: #<string>
       topologySpreadConstraints: #<[]TopologySpreadConstraint>
@@ -912,12 +912,12 @@ spec: #<StatefulSetSpec>
         maxSkew: #<integer> -required-
         minDomains: #<integer>
         nodeAffinityPolicy: #<string>
-        enum: Honor, Ignore
+        #enum: Honor, Ignore
         nodeTaintsPolicy: #<string>
-        enum: Honor, Ignore
+        #enum: Honor, Ignore
         topologyKey: #<string> -required-
         whenUnsatisfiable: #<string> -required-
-        enum: DoNotSchedule, ScheduleAnyway
+        #enum: DoNotSchedule, ScheduleAnyway
       volumes: #<[]Volume>
         awsElasticBlockStore: #<AWSElasticBlockStoreVolumeSource>
           fsType: #<string>
@@ -926,12 +926,12 @@ spec: #<StatefulSetSpec>
           volumeID: #<string> -required-
         azureDisk: #<AzureDiskVolumeSource>
           cachingMode: #<string>
-          enum: None, ReadOnly, ReadWrite
+          #enum: None, ReadOnly, ReadWrite
           diskName: #<string> -required-
           diskURI: #<string> -required-
           fsType: #<string>
           kind: #<string>
-          enum: Dedicated, Managed, Shared
+          #enum: Dedicated, Managed, Shared
           readOnly: #<boolean>
         azureFile: #<AzureFileVolumeSource>
           readOnly: #<boolean>
@@ -1035,7 +1035,7 @@ spec: #<StatefulSetSpec>
               storageClassName: #<string>
               volumeAttributesClassName: #<string>
               volumeMode: #<string>
-              enum: Block, Filesystem
+              #enum: Block, Filesystem
               volumeName: #<string>
         fc: #<FCVolumeSource>
           fsType: #<string>
@@ -1069,10 +1069,10 @@ spec: #<StatefulSetSpec>
         hostPath: #<HostPathVolumeSource>
           path: #<string> -required-
           type: #<string>
-          enum: "", BlockDevice, CharDevice, Directory, ....
+          #enum: "", BlockDevice, CharDevice, Directory, ....
         image: #<ImageVolumeSource>
           pullPolicy: #<string>
-          enum: Always, IfNotPresent, Never
+          #enum: Always, IfNotPresent, Never
           reference: #<string>
         iscsi: #<ISCSIVolumeSource>
           chapAuthDiscovery: #<boolean>
@@ -1199,7 +1199,7 @@ spec: #<StatefulSetSpec>
       maxUnavailable: #<IntOrString>
       partition: #<integer>
     type: #<string>
-    enum: OnDelete, RollingUpdate
+    #enum: OnDelete, RollingUpdate
   volumeClaimTemplates: #<[]PersistentVolumeClaim>
     apiVersion: #<string>
     kind: #<string>
@@ -1255,7 +1255,7 @@ spec: #<StatefulSetSpec>
       storageClassName: #<string>
       volumeAttributesClassName: #<string>
       volumeMode: #<string>
-      enum: Block, Filesystem
+      #enum: Block, Filesystem
       volumeName: #<string>
     status: #<PersistentVolumeClaimStatus>
       accessModes: #<[]string>
@@ -1272,10 +1272,10 @@ spec: #<StatefulSetSpec>
       currentVolumeAttributesClassName: #<string>
       modifyVolumeStatus: #<ModifyVolumeStatus>
         status: #<string> -required-
-        enum: InProgress, Infeasible, Pending
+        #enum: InProgress, Infeasible, Pending
         targetVolumeAttributesClassName: #<string>
       phase: #<string>
-      enum: Bound, Lost, Pending
+      #enum: Bound, Lost, Pending
 status: #<StatefulSetStatus>
   availableReplicas: #<integer>
   collisionCount: #<integer>

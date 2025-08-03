@@ -33,10 +33,10 @@ spec: #<Object>
   allowIPIPPacketsFromWorkloads: #<boolean>
   allowVXLANPacketsFromWorkloads: #<boolean>
   awsSrcDstCheck: #<string>
-  enum: DoNothing, Enable, Disable
+  #enum: DoNothing, Enable, Disable
   bpfCTLBLogFilter: #<string>
   bpfConnectTimeLoadBalancing: #<string>
-  enum: TCP, Enabled, Disabled
+  #enum: TCP, Enabled, Disabled
   bpfConnectTimeLoadBalancingEnabled: #<boolean>
   bpfDSROptoutCIDRs: #<[]string>
   bpfDataIfacePattern: #<string>
@@ -50,7 +50,7 @@ spec: #<Object>
   bpfForceTrackPacketsFromIfaces: #<[]string>
   bpfHostConntrackBypass: #<boolean>
   bpfHostNetworkedNATWithoutCTLB: #<string>
-  enum: Enabled, Disabled
+  #enum: Enabled, Disabled
   bpfKubeProxyEndpointSlicesEnabled: #<boolean>
   bpfKubeProxyIptablesCleanupEnabled: #<boolean>
   bpfKubeProxyMinSyncPeriod: #<string>
@@ -97,7 +97,7 @@ spec: #<Object>
   featureDetectOverride: #<string>
   featureGates: #<string>
   floatingIPs: #<string>
-  enum: Enabled, Disabled
+  #enum: Enabled, Disabled
   genericXDPEnabled: #<boolean>
   goGCThreshold: #<integer>
   goMaxProcs: #<integer>
@@ -112,7 +112,7 @@ spec: #<Object>
   interfacePrefix: #<string>
   interfaceRefreshInterval: #<string>
   ipForwarding: #<string>
-  enum: Enabled, Disabled
+  #enum: Enabled, Disabled
   ipipEnabled: #<boolean>
   ipipMTU: #<integer>
   ipsetsRefreshInterval: #<string>
@@ -180,7 +180,7 @@ spec: #<Object>
   vxlanPort: #<integer>
   vxlanVNI: #<integer>
   windowsManageFirewallRules: #<string>
-  enum: Enabled, Disabled
+  #enum: Enabled, Disabled
   wireguardEnabled: #<boolean>
   wireguardEnabledV6: #<boolean>
   wireguardHostEncryptionEnabled: #<boolean>

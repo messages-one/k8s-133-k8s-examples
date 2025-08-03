@@ -1,5 +1,5 @@
 addressType: #<string> -required-
-enum: FQDN, IPv4, IPv6
+#enum: FQDN, IPv4, IPv6
 apiVersion: #<string>
 endpoints: #<[]Endpoint> -required-
   addresses: #<[]string> -required-
@@ -59,4 +59,4 @@ ports: #<[]EndpointPort>
   name: #<string>
   port: #<integer>
   protocol: #<string>
-  enum: SCTP, TCP, UDP
+  #enum: SCTP, TCP, UDP

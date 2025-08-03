@@ -39,7 +39,7 @@ spec: #<PodDisruptionBudgetSpec>
       values: #<[]string>
     matchLabels: #<map[string]string>
   unhealthyPodEvictionPolicy: #<string>
-  enum: AlwaysAllow, IfHealthyBudget
+  #enum: AlwaysAllow, IfHealthyBudget
 status: #<PodDisruptionBudgetStatus>
   conditions: #<[]Condition>
     lastTransitionTime: #<string> -required-

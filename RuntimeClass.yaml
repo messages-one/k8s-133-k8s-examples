@@ -36,9 +36,9 @@ scheduling: #<Scheduling>
   nodeSelector: #<map[string]string>
   tolerations: #<[]Toleration>
     effect: #<string>
-    enum: NoExecute, NoSchedule, PreferNoSchedule
+    #enum: NoExecute, NoSchedule, PreferNoSchedule
     key: #<string>
     operator: #<string>
-    enum: Equal, Exists
+    #enum: Equal, Exists
     tolerationSeconds: #<integer>
     value: #<string>

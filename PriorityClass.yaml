@@ -32,5 +32,5 @@ metadata: #<ObjectMeta>
   selfLink: #<string>
   uid: #<string>
 preemptionPolicy: #<string>
-enum: Never, PreemptLowerPriority
+#enum: Never, PreemptLowerPriority
 value: #<integer> -required-

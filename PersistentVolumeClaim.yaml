@@ -51,7 +51,7 @@ spec: #<PersistentVolumeClaimSpec>
   storageClassName: #<string>
   volumeAttributesClassName: #<string>
   volumeMode: #<string>
-  enum: Block, Filesystem
+  #enum: Block, Filesystem
   volumeName: #<string>
 status: #<PersistentVolumeClaimStatus>
   accessModes: #<[]string>
@@ -68,7 +68,7 @@ status: #<PersistentVolumeClaimStatus>
   currentVolumeAttributesClassName: #<string>
   modifyVolumeStatus: #<ModifyVolumeStatus>
     status: #<string> -required-
-    enum: InProgress, Infeasible, Pending
+    #enum: InProgress, Infeasible, Pending
     targetVolumeAttributesClassName: #<string>
   phase: #<string>
-  enum: Bound, Lost, Pending
+  #enum: Bound, Lost, Pending

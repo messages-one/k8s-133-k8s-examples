@@ -40,12 +40,12 @@ webhooks: #<[]MutatingWebhook>
       port: #<integer>
     url: #<string>
   failurePolicy: #<string>
-  enum: Fail, Ignore
+  #enum: Fail, Ignore
   matchConditions: #<[]MatchCondition>
     expression: #<string> -required-
     name: #<string> -required-
   matchPolicy: #<string>
-  enum: Equivalent, Exact
+  #enum: Equivalent, Exact
   name: #<string> -required-
   namespaceSelector: #<LabelSelector>
     matchExpressions: #<[]LabelSelectorRequirement>
@@ -60,7 +60,7 @@ webhooks: #<[]MutatingWebhook>
       values: #<[]string>
     matchLabels: #<map[string]string>
   reinvocationPolicy: #<string>
-  enum: IfNeeded, Never
+  #enum: IfNeeded, Never
   rules: #<[]RuleWithOperations>
     apiGroups: #<[]string>
     apiVersions: #<[]string>
@@ -68,5 +68,5 @@ webhooks: #<[]MutatingWebhook>
     resources: #<[]string>
     scope: #<string>
   sideEffects: #<string> -required-
-  enum: None, NoneOnDryRun, Some, Unknown
+  #enum: None, NoneOnDryRun, Some, Unknown
   timeoutSeconds: #<integer>

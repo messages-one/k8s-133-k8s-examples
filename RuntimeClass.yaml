@@ -1,59 +1,44 @@
-GROUP:      node.k8s.io
-KIND:       RuntimeClass
-VERSION:    v1
-
-DESCRIPTION:
-    RuntimeClass defines a class of container runtime supported in the cluster.
-    The RuntimeClass is used to determine which container runtime is used to run
-    all containers in a pod. RuntimeClasses are manually defined by a user or
-    cluster provisioner, and referenced in the PodSpec. The Kubelet is
-    responsible for resolving the RuntimeClassName reference before running the
-    pod.  For more details, see
-    https://kubernetes.io/docs/concepts/containers/runtime-class/
-    
-FIELDS:
-  apiVersion	<string>
-  handler	<string> -required-
-  kind	<string>
-  metadata	<ObjectMeta>
-    annotations	<map[string]string>
-    creationTimestamp	<string>
-    deletionGracePeriodSeconds	<integer>
-    deletionTimestamp	<string>
-    finalizers	<[]string>
-    generateName	<string>
-    generation	<integer>
-    labels	<map[string]string>
-    managedFields	<[]ManagedFieldsEntry>
-      apiVersion	<string>
-      fieldsType	<string>
-      fieldsV1	<FieldsV1>
-      manager	<string>
-      operation	<string>
-      subresource	<string>
-      time	<string>
-    name	<string>
-    namespace	<string>
-    ownerReferences	<[]OwnerReference>
-      apiVersion	<string> -required-
-      blockOwnerDeletion	<boolean>
-      controller	<boolean>
-      kind	<string> -required-
-      name	<string> -required-
-      uid	<string> -required-
-    resourceVersion	<string>
-    selfLink	<string>
-    uid	<string>
-  overhead	<Overhead>
-    podFixed	<map[string]Quantity>
-  scheduling	<Scheduling>
-    nodeSelector	<map[string]string>
-    tolerations	<[]Toleration>
-      effect	<string>
-      enum: NoExecute, NoSchedule, PreferNoSchedule
-      key	<string>
-      operator	<string>
-      enum: Equal, Exists
-      tolerationSeconds	<integer>
-      value	<string>
-
+apiVersion: #<string>
+handler: #<string> -required-
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+overhead: #<Overhead>
+  podFixed: #<map[string]Quantity>
+scheduling: #<Scheduling>
+  nodeSelector: #<map[string]string>
+  tolerations: #<[]Toleration>
+    effect: #<string>
+    enum: NoExecute, NoSchedule, PreferNoSchedule
+    key: #<string>
+    operator: #<string>
+    enum: Equal, Exists
+    tolerationSeconds: #<integer>
+    value: #<string>

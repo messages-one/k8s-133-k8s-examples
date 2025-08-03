@@ -1,44 +1,33 @@
-GROUP:      crd.projectcalico.org
-KIND:       GlobalNetworkSet
-VERSION:    v1
-
-DESCRIPTION:
-    GlobalNetworkSet contains a set of arbitrary IP sub-networks/CIDRs that
-    share labels to allow rules to refer to them via selectors.  The labels of
-    GlobalNetworkSet are not namespaced.
-    
-FIELDS:
-  apiVersion	<string>
-  kind	<string>
-  metadata	<ObjectMeta>
-    annotations	<map[string]string>
-    creationTimestamp	<string>
-    deletionGracePeriodSeconds	<integer>
-    deletionTimestamp	<string>
-    finalizers	<[]string>
-    generateName	<string>
-    generation	<integer>
-    labels	<map[string]string>
-    managedFields	<[]ManagedFieldsEntry>
-      apiVersion	<string>
-      fieldsType	<string>
-      fieldsV1	<FieldsV1>
-      manager	<string>
-      operation	<string>
-      subresource	<string>
-      time	<string>
-    name	<string>
-    namespace	<string>
-    ownerReferences	<[]OwnerReference>
-      apiVersion	<string> -required-
-      blockOwnerDeletion	<boolean>
-      controller	<boolean>
-      kind	<string> -required-
-      name	<string> -required-
-      uid	<string> -required-
-    resourceVersion	<string>
-    selfLink	<string>
-    uid	<string>
-  spec	<Object>
-    nets	<[]string>
-
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+spec: #<Object>
+  nets: #<[]string>

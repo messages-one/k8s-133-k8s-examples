@@ -1,52 +1,41 @@
-GROUP:      networking.k8s.io
-KIND:       ServiceCIDR
-VERSION:    v1
-
-DESCRIPTION:
-    ServiceCIDR defines a range of IP addresses using CIDR format (e.g.
-    192.168.0.0/24 or 2001:db2::/64). This range is used to allocate ClusterIPs
-    to Service objects.
-    
-FIELDS:
-  apiVersion	<string>
-  kind	<string>
-  metadata	<ObjectMeta>
-    annotations	<map[string]string>
-    creationTimestamp	<string>
-    deletionGracePeriodSeconds	<integer>
-    deletionTimestamp	<string>
-    finalizers	<[]string>
-    generateName	<string>
-    generation	<integer>
-    labels	<map[string]string>
-    managedFields	<[]ManagedFieldsEntry>
-      apiVersion	<string>
-      fieldsType	<string>
-      fieldsV1	<FieldsV1>
-      manager	<string>
-      operation	<string>
-      subresource	<string>
-      time	<string>
-    name	<string>
-    namespace	<string>
-    ownerReferences	<[]OwnerReference>
-      apiVersion	<string> -required-
-      blockOwnerDeletion	<boolean>
-      controller	<boolean>
-      kind	<string> -required-
-      name	<string> -required-
-      uid	<string> -required-
-    resourceVersion	<string>
-    selfLink	<string>
-    uid	<string>
-  spec	<ServiceCIDRSpec>
-    cidrs	<[]string>
-  status	<ServiceCIDRStatus>
-    conditions	<[]Condition>
-      lastTransitionTime	<string> -required-
-      message	<string> -required-
-      observedGeneration	<integer>
-      reason	<string> -required-
-      status	<string> -required-
-      type	<string> -required-
-
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+spec: #<ServiceCIDRSpec>
+  cidrs: #<[]string>
+status: #<ServiceCIDRStatus>
+  conditions: #<[]Condition>
+    lastTransitionTime: #<string> -required-
+    message: #<string> -required-
+    observedGeneration: #<integer>
+    reason: #<string> -required-
+    status: #<string> -required-
+    type: #<string> -required-

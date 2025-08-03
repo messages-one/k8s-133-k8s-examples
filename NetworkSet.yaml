@@ -1,42 +1,33 @@
-GROUP:      crd.projectcalico.org
-KIND:       NetworkSet
-VERSION:    v1
-
-DESCRIPTION:
-    NetworkSet is the Namespaced-equivalent of the GlobalNetworkSet.
-    
-FIELDS:
-  apiVersion	<string>
-  kind	<string>
-  metadata	<ObjectMeta>
-    annotations	<map[string]string>
-    creationTimestamp	<string>
-    deletionGracePeriodSeconds	<integer>
-    deletionTimestamp	<string>
-    finalizers	<[]string>
-    generateName	<string>
-    generation	<integer>
-    labels	<map[string]string>
-    managedFields	<[]ManagedFieldsEntry>
-      apiVersion	<string>
-      fieldsType	<string>
-      fieldsV1	<FieldsV1>
-      manager	<string>
-      operation	<string>
-      subresource	<string>
-      time	<string>
-    name	<string>
-    namespace	<string>
-    ownerReferences	<[]OwnerReference>
-      apiVersion	<string> -required-
-      blockOwnerDeletion	<boolean>
-      controller	<boolean>
-      kind	<string> -required-
-      name	<string> -required-
-      uid	<string> -required-
-    resourceVersion	<string>
-    selfLink	<string>
-    uid	<string>
-  spec	<Object>
-    nets	<[]string>
-
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+spec: #<Object>
+  nets: #<[]string>

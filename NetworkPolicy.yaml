@@ -1,92 +1,83 @@
-GROUP:      networking.k8s.io
-KIND:       NetworkPolicy
-VERSION:    v1
-
-DESCRIPTION:
-    NetworkPolicy describes what network traffic is allowed for a set of Pods
-    
-FIELDS:
-  apiVersion	<string>
-  kind	<string>
-  metadata	<ObjectMeta>
-    annotations	<map[string]string>
-    creationTimestamp	<string>
-    deletionGracePeriodSeconds	<integer>
-    deletionTimestamp	<string>
-    finalizers	<[]string>
-    generateName	<string>
-    generation	<integer>
-    labels	<map[string]string>
-    managedFields	<[]ManagedFieldsEntry>
-      apiVersion	<string>
-      fieldsType	<string>
-      fieldsV1	<FieldsV1>
-      manager	<string>
-      operation	<string>
-      subresource	<string>
-      time	<string>
-    name	<string>
-    namespace	<string>
-    ownerReferences	<[]OwnerReference>
-      apiVersion	<string> -required-
-      blockOwnerDeletion	<boolean>
-      controller	<boolean>
-      kind	<string> -required-
-      name	<string> -required-
-      uid	<string> -required-
-    resourceVersion	<string>
-    selfLink	<string>
-    uid	<string>
-  spec	<NetworkPolicySpec>
-    egress	<[]NetworkPolicyEgressRule>
-      ports	<[]NetworkPolicyPort>
-        endPort	<integer>
-        port	<IntOrString>
-        protocol	<string>
-        enum: SCTP, TCP, UDP
-      to	<[]NetworkPolicyPeer>
-        ipBlock	<IPBlock>
-          cidr	<string> -required-
-          except	<[]string>
-        namespaceSelector	<LabelSelector>
-          matchExpressions	<[]LabelSelectorRequirement>
-            key	<string> -required-
-            operator	<string> -required-
-            values	<[]string>
-          matchLabels	<map[string]string>
-        podSelector	<LabelSelector>
-          matchExpressions	<[]LabelSelectorRequirement>
-            key	<string> -required-
-            operator	<string> -required-
-            values	<[]string>
-          matchLabels	<map[string]string>
-    ingress	<[]NetworkPolicyIngressRule>
-      from	<[]NetworkPolicyPeer>
-        ipBlock	<IPBlock>
-          cidr	<string> -required-
-          except	<[]string>
-        namespaceSelector	<LabelSelector>
-          matchExpressions	<[]LabelSelectorRequirement>
-            key	<string> -required-
-            operator	<string> -required-
-            values	<[]string>
-          matchLabels	<map[string]string>
-        podSelector	<LabelSelector>
-          matchExpressions	<[]LabelSelectorRequirement>
-            key	<string> -required-
-            operator	<string> -required-
-            values	<[]string>
-          matchLabels	<map[string]string>
-      ports	<[]NetworkPolicyPort>
-        endPort	<integer>
-        port	<IntOrString>
-        protocol	<string>
-        enum: SCTP, TCP, UDP
-    podSelector	<LabelSelector> -required-
-      matchExpressions	<[]LabelSelectorRequirement>
-        key	<string> -required-
-        operator	<string> -required-
-        values	<[]string>
-      matchLabels	<map[string]string>
-    policyTypes	<[]string>
-
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+spec: #<NetworkPolicySpec>
+  egress: #<[]NetworkPolicyEgressRule>
+    ports: #<[]NetworkPolicyPort>
+      endPort: #<integer>
+      port: #<IntOrString>
+      protocol: #<string>
+      enum: SCTP, TCP, UDP
+    to: #<[]NetworkPolicyPeer>
+      ipBlock: #<IPBlock>
+        cidr: #<string> -required-
+        except: #<[]string>
+      namespaceSelector: #<LabelSelector>
+        matchExpressions: #<[]LabelSelectorRequirement>
+          key: #<string> -required-
+          operator: #<string> -required-
+          values: #<[]string>
+        matchLabels: #<map[string]string>
+      podSelector: #<LabelSelector>
+        matchExpressions: #<[]LabelSelectorRequirement>
+          key: #<string> -required-
+          operator: #<string> -required-
+          values: #<[]string>
+        matchLabels: #<map[string]string>
+  ingress: #<[]NetworkPolicyIngressRule>
+    from: #<[]NetworkPolicyPeer>
+      ipBlock: #<IPBlock>
+        cidr: #<string> -required-
+        except: #<[]string>
+      namespaceSelector: #<LabelSelector>
+        matchExpressions: #<[]LabelSelectorRequirement>
+          key: #<string> -required-
+          operator: #<string> -required-
+          values: #<[]string>
+        matchLabels: #<map[string]string>
+      podSelector: #<LabelSelector>
+        matchExpressions: #<[]LabelSelectorRequirement>
+          key: #<string> -required-
+          operator: #<string> -required-
+          values: #<[]string>
+        matchLabels: #<map[string]string>
+    ports: #<[]NetworkPolicyPort>
+      endPort: #<integer>
+      port: #<IntOrString>
+      protocol: #<string>
+      enum: SCTP, TCP, UDP
+  podSelector: #<LabelSelector> -required-
+    matchExpressions: #<[]LabelSelectorRequirement>
+      key: #<string> -required-
+      operator: #<string> -required-
+      values: #<[]string>
+    matchLabels: #<map[string]string>
+  policyTypes: #<[]string>

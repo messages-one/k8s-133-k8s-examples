@@ -1,72 +1,60 @@
-GROUP:      authorization.k8s.io
-KIND:       SelfSubjectAccessReview
-VERSION:    v1
-
-DESCRIPTION:
-    SelfSubjectAccessReview checks whether or the current user can perform an
-    action.  Not filling in a spec.namespace means "in all namespaces".  Self is
-    a special case, because users should always be able to check whether they
-    can perform an action
-    
-FIELDS:
-  apiVersion	<string>
-  kind	<string>
-  metadata	<ObjectMeta>
-    annotations	<map[string]string>
-    creationTimestamp	<string>
-    deletionGracePeriodSeconds	<integer>
-    deletionTimestamp	<string>
-    finalizers	<[]string>
-    generateName	<string>
-    generation	<integer>
-    labels	<map[string]string>
-    managedFields	<[]ManagedFieldsEntry>
-      apiVersion	<string>
-      fieldsType	<string>
-      fieldsV1	<FieldsV1>
-      manager	<string>
-      operation	<string>
-      subresource	<string>
-      time	<string>
-    name	<string>
-    namespace	<string>
-    ownerReferences	<[]OwnerReference>
-      apiVersion	<string> -required-
-      blockOwnerDeletion	<boolean>
-      controller	<boolean>
-      kind	<string> -required-
-      name	<string> -required-
-      uid	<string> -required-
-    resourceVersion	<string>
-    selfLink	<string>
-    uid	<string>
-  spec	<SelfSubjectAccessReviewSpec> -required-
-    nonResourceAttributes	<NonResourceAttributes>
-      path	<string>
-      verb	<string>
-    resourceAttributes	<ResourceAttributes>
-      fieldSelector	<FieldSelectorAttributes>
-        rawSelector	<string>
-        requirements	<[]FieldSelectorRequirement>
-          key	<string> -required-
-          operator	<string> -required-
-          values	<[]string>
-      group	<string>
-      labelSelector	<LabelSelectorAttributes>
-        rawSelector	<string>
-        requirements	<[]LabelSelectorRequirement>
-          key	<string> -required-
-          operator	<string> -required-
-          values	<[]string>
-      name	<string>
-      namespace	<string>
-      resource	<string>
-      subresource	<string>
-      verb	<string>
-      version	<string>
-  status	<SubjectAccessReviewStatus>
-    allowed	<boolean> -required-
-    denied	<boolean>
-    evaluationError	<string>
-    reason	<string>
-
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+spec: #<SelfSubjectAccessReviewSpec> -required-
+  nonResourceAttributes: #<NonResourceAttributes>
+    path: #<string>
+    verb: #<string>
+  resourceAttributes: #<ResourceAttributes>
+    fieldSelector: #<FieldSelectorAttributes>
+      rawSelector: #<string>
+      requirements: #<[]FieldSelectorRequirement>
+        key: #<string> -required-
+        operator: #<string> -required-
+        values: #<[]string>
+    group: #<string>
+    labelSelector: #<LabelSelectorAttributes>
+      rawSelector: #<string>
+      requirements: #<[]LabelSelectorRequirement>
+        key: #<string> -required-
+        operator: #<string> -required-
+        values: #<[]string>
+    name: #<string>
+    namespace: #<string>
+    resource: #<string>
+    subresource: #<string>
+    verb: #<string>
+    version: #<string>
+status: #<SubjectAccessReviewStatus>
+  allowed: #<boolean> -required-
+  denied: #<boolean>
+  evaluationError: #<string>
+  reason: #<string>

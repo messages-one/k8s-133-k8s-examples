@@ -1,57 +1,49 @@
-GROUP:      crd.projectcalico.org
-KIND:       BGPPeer
-VERSION:    v1
-
-DESCRIPTION:
-    <empty>
-FIELDS:
-  apiVersion	<string>
-  kind	<string>
-  metadata	<ObjectMeta>
-    annotations	<map[string]string>
-    creationTimestamp	<string>
-    deletionGracePeriodSeconds	<integer>
-    deletionTimestamp	<string>
-    finalizers	<[]string>
-    generateName	<string>
-    generation	<integer>
-    labels	<map[string]string>
-    managedFields	<[]ManagedFieldsEntry>
-      apiVersion	<string>
-      fieldsType	<string>
-      fieldsV1	<FieldsV1>
-      manager	<string>
-      operation	<string>
-      subresource	<string>
-      time	<string>
-    name	<string>
-    namespace	<string>
-    ownerReferences	<[]OwnerReference>
-      apiVersion	<string> -required-
-      blockOwnerDeletion	<boolean>
-      controller	<boolean>
-      kind	<string> -required-
-      name	<string> -required-
-      uid	<string> -required-
-    resourceVersion	<string>
-    selfLink	<string>
-    uid	<string>
-  spec	<Object>
-    asNumber	<integer>
-    filters	<[]string>
-    keepOriginalNextHop	<boolean>
-    maxRestartTime	<string>
-    node	<string>
-    nodeSelector	<string>
-    numAllowedLocalASNumbers	<integer>
-    password	<Object>
-      secretKeyRef	<Object>
-        key	<string> -required-
-        name	<string>
-        optional	<boolean>
-    peerIP	<string>
-    peerSelector	<string>
-    reachableBy	<string>
-    sourceAddress	<string>
-    ttlSecurity	<integer>
-
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+spec: #<Object>
+  asNumber: #<integer>
+  filters: #<[]string>
+  keepOriginalNextHop: #<boolean>
+  maxRestartTime: #<string>
+  node: #<string>
+  nodeSelector: #<string>
+  numAllowedLocalASNumbers: #<integer>
+  password: #<Object>
+    secretKeyRef: #<Object>
+      key: #<string> -required-
+      name: #<string>
+      optional: #<boolean>
+  peerIP: #<string>
+  peerSelector: #<string>
+  reachableBy: #<string>
+  sourceAddress: #<string>
+  ttlSecurity: #<integer>

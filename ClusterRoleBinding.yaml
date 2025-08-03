@@ -1,51 +1,40 @@
-GROUP:      rbac.authorization.k8s.io
-KIND:       ClusterRoleBinding
-VERSION:    v1
-
-DESCRIPTION:
-    ClusterRoleBinding references a ClusterRole, but not contain it.  It can
-    reference a ClusterRole in the global namespace, and adds who information
-    via Subject.
-    
-FIELDS:
-  apiVersion	<string>
-  kind	<string>
-  metadata	<ObjectMeta>
-    annotations	<map[string]string>
-    creationTimestamp	<string>
-    deletionGracePeriodSeconds	<integer>
-    deletionTimestamp	<string>
-    finalizers	<[]string>
-    generateName	<string>
-    generation	<integer>
-    labels	<map[string]string>
-    managedFields	<[]ManagedFieldsEntry>
-      apiVersion	<string>
-      fieldsType	<string>
-      fieldsV1	<FieldsV1>
-      manager	<string>
-      operation	<string>
-      subresource	<string>
-      time	<string>
-    name	<string>
-    namespace	<string>
-    ownerReferences	<[]OwnerReference>
-      apiVersion	<string> -required-
-      blockOwnerDeletion	<boolean>
-      controller	<boolean>
-      kind	<string> -required-
-      name	<string> -required-
-      uid	<string> -required-
-    resourceVersion	<string>
-    selfLink	<string>
-    uid	<string>
-  roleRef	<RoleRef> -required-
-    apiGroup	<string> -required-
-    kind	<string> -required-
-    name	<string> -required-
-  subjects	<[]Subject>
-    apiGroup	<string>
-    kind	<string> -required-
-    name	<string> -required-
-    namespace	<string>
-
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+roleRef: #<RoleRef> -required-
+  apiGroup: #<string> -required-
+  kind: #<string> -required-
+  name: #<string> -required-
+subjects: #<[]Subject>
+  apiGroup: #<string>
+  kind: #<string> -required-
+  name: #<string> -required-
+  namespace: #<string>

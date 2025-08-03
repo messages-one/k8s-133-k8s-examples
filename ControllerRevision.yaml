@@ -1,51 +1,33 @@
-GROUP:      apps
-KIND:       ControllerRevision
-VERSION:    v1
-
-DESCRIPTION:
-    ControllerRevision implements an immutable snapshot of state data. Clients
-    are responsible for serializing and deserializing the objects that contain
-    their internal state. Once a ControllerRevision has been successfully
-    created, it can not be updated. The API Server will fail validation of all
-    requests that attempt to mutate the Data field. ControllerRevisions may,
-    however, be deleted. Note that, due to its use by both the DaemonSet and
-    StatefulSet controllers for update and rollback, this object is beta.
-    However, it may be subject to name and representation changes in future
-    releases, and clients should not depend on its stability. It is primarily
-    for internal use by controllers.
-    
-FIELDS:
-  apiVersion	<string>
-  data	<RawExtension>
-  kind	<string>
-  metadata	<ObjectMeta>
-    annotations	<map[string]string>
-    creationTimestamp	<string>
-    deletionGracePeriodSeconds	<integer>
-    deletionTimestamp	<string>
-    finalizers	<[]string>
-    generateName	<string>
-    generation	<integer>
-    labels	<map[string]string>
-    managedFields	<[]ManagedFieldsEntry>
-      apiVersion	<string>
-      fieldsType	<string>
-      fieldsV1	<FieldsV1>
-      manager	<string>
-      operation	<string>
-      subresource	<string>
-      time	<string>
-    name	<string>
-    namespace	<string>
-    ownerReferences	<[]OwnerReference>
-      apiVersion	<string> -required-
-      blockOwnerDeletion	<boolean>
-      controller	<boolean>
-      kind	<string> -required-
-      name	<string> -required-
-      uid	<string> -required-
-    resourceVersion	<string>
-    selfLink	<string>
-    uid	<string>
-  revision	<integer> -required-
-
+apiVersion: #<string>
+data: #<RawExtension>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+revision: #<integer> -required-

@@ -1,0 +1,198 @@
+apiVersion: #<string>
+kind: #<string>
+metadata: #<ObjectMeta>
+  annotations: #<map[string]string>
+  creationTimestamp: #<string>
+  deletionGracePeriodSeconds: #<integer>
+  deletionTimestamp: #<string>
+  finalizers: #<[]string>
+  generateName: #<string>
+  generation: #<integer>
+  labels: #<map[string]string>
+  managedFields: #<[]ManagedFieldsEntry>
+    apiVersion: #<string>
+    fieldsType: #<string>
+    fieldsV1: #<FieldsV1>
+    manager: #<string>
+    operation: #<string>
+    subresource: #<string>
+    time: #<string>
+  name: #<string>
+  namespace: #<string>
+  ownerReferences: #<[]OwnerReference>
+    apiVersion: #<string> -required-
+    blockOwnerDeletion: #<boolean>
+    controller: #<boolean>
+    kind: #<string> -required-
+    name: #<string> -required-
+    uid: #<string> -required-
+  resourceVersion: #<string>
+  selfLink: #<string>
+  uid: #<string>
+spec: #<Object>
+  allowIPIPPacketsFromWorkloads: #<boolean>
+  allowVXLANPacketsFromWorkloads: #<boolean>
+  awsSrcDstCheck: #<string>
+  #enum: DoNothing, Enable, Disable
+  bpfCTLBLogFilter: #<string>
+  bpfConnectTimeLoadBalancing: #<string>
+  #enum: TCP, Enabled, Disabled
+  bpfConnectTimeLoadBalancingEnabled: #<boolean>
+  bpfDSROptoutCIDRs: #<[]string>
+  bpfDataIfacePattern: #<string>
+  bpfDisableGROForIfaces: #<string>
+  bpfDisableUnprivileged: #<boolean>
+  bpfEnabled: #<boolean>
+  bpfEnforceRPF: #<string>
+  bpfExcludeCIDRsFromNAT: #<[]string>
+  bpfExtToServiceConnmark: #<integer>
+  bpfExternalServiceMode: #<string>
+  bpfForceTrackPacketsFromIfaces: #<[]string>
+  bpfHostConntrackBypass: #<boolean>
+  bpfHostNetworkedNATWithoutCTLB: #<string>
+  #enum: Enabled, Disabled
+  bpfKubeProxyEndpointSlicesEnabled: #<boolean>
+  bpfKubeProxyIptablesCleanupEnabled: #<boolean>
+  bpfKubeProxyMinSyncPeriod: #<string>
+  bpfL3IfacePattern: #<string>
+  bpfLogFilters: #<map[string]string>
+  bpfLogLevel: #<string>
+  bpfMapSizeConntrack: #<integer>
+  bpfMapSizeIPSets: #<integer>
+  bpfMapSizeIfState: #<integer>
+  bpfMapSizeNATAffinity: #<integer>
+  bpfMapSizeNATBackend: #<integer>
+  bpfMapSizeNATFrontend: #<integer>
+  bpfMapSizeRoute: #<integer>
+  bpfPSNATPorts: #<Object>
+  bpfPolicyDebugEnabled: #<boolean>
+  bpfRedirectToPeer: #<string>
+  chainInsertMode: #<string>
+  dataplaneDriver: #<string>
+  dataplaneWatchdogTimeout: #<string>
+  debugDisableLogDropping: #<boolean>
+  debugHost: #<string>
+  debugMemoryProfilePath: #<string>
+  debugPort: #<integer>
+  debugSimulateCalcGraphHangAfter: #<string>
+  debugSimulateDataplaneApplyDelay: #<string>
+  debugSimulateDataplaneHangAfter: #<string>
+  defaultEndpointToHostAction: #<string>
+  deviceRouteProtocol: #<integer>
+  deviceRouteSourceAddress: #<string>
+  deviceRouteSourceAddressIPv6: #<string>
+  disableConntrackInvalidCheck: #<boolean>
+  endpointReportingDelay: #<string>
+  endpointReportingEnabled: #<boolean>
+  endpointStatusPathPrefix: #<string>
+  externalNodesList: #<[]string>
+  failsafeInboundHostPorts: #<[]Object>
+    net: #<string>
+    port: #<integer> -required-
+    protocol: #<string> -required-
+  failsafeOutboundHostPorts: #<[]Object>
+    net: #<string>
+    port: #<integer> -required-
+    protocol: #<string> -required-
+  featureDetectOverride: #<string>
+  featureGates: #<string>
+  floatingIPs: #<string>
+  #enum: Enabled, Disabled
+  genericXDPEnabled: #<boolean>
+  goGCThreshold: #<integer>
+  goMaxProcs: #<integer>
+  goMemoryLimitMB: #<integer>
+  healthEnabled: #<boolean>
+  healthHost: #<string>
+  healthPort: #<integer>
+  healthTimeoutOverrides: #<[]Object>
+    name: #<string> -required-
+    timeout: #<string> -required-
+  interfaceExclude: #<string>
+  interfacePrefix: #<string>
+  interfaceRefreshInterval: #<string>
+  ipForwarding: #<string>
+  #enum: Enabled, Disabled
+  ipipEnabled: #<boolean>
+  ipipMTU: #<integer>
+  ipsetsRefreshInterval: #<string>
+  iptablesBackend: #<string>
+  iptablesFilterAllowAction: #<string>
+  iptablesFilterDenyAction: #<string>
+  iptablesLockFilePath: #<string>
+  iptablesLockProbeInterval: #<string>
+  iptablesLockTimeout: #<string>
+  iptablesMangleAllowAction: #<string>
+  iptablesMarkMask: #<integer>
+  iptablesNATOutgoingInterfaceFilter: #<string>
+  iptablesPostWriteCheckInterval: #<string>
+  iptablesRefreshInterval: #<string>
+  ipv6Support: #<boolean>
+  kubeNodePortRanges: #<[]Object>
+  logDebugFilenameRegex: #<string>
+  logFilePath: #<string>
+  logPrefix: #<string>
+  logSeverityFile: #<string>
+  logSeverityScreen: #<string>
+  logSeveritySys: #<string>
+  maxIpsetSize: #<integer>
+  metadataAddr: #<string>
+  metadataPort: #<integer>
+  mtuIfacePattern: #<string>
+  natOutgoingAddress: #<string>
+  natPortRange: #<Object>
+  netlinkTimeout: #<string>
+  nftablesFilterAllowAction: #<string>
+  nftablesFilterDenyAction: #<string>
+  nftablesMangleAllowAction: #<string>
+  nftablesMarkMask: #<integer>
+  nftablesMode: #<string>
+  nftablesRefreshInterval: #<string>
+  openstackRegion: #<string>
+  policySyncPathPrefix: #<string>
+  prometheusGoMetricsEnabled: #<boolean>
+  prometheusMetricsEnabled: #<boolean>
+  prometheusMetricsHost: #<string>
+  prometheusMetricsPort: #<integer>
+  prometheusProcessMetricsEnabled: #<boolean>
+  prometheusWireGuardMetricsEnabled: #<boolean>
+  removeExternalRoutes: #<boolean>
+  reportingInterval: #<string>
+  reportingTTL: #<string>
+  routeRefreshInterval: #<string>
+  routeSource: #<string>
+  routeSyncDisabled: #<boolean>
+  routeTableRange: #<Object>
+    max: #<integer> -required-
+    min: #<integer> -required-
+  routeTableRanges: #<[]Object>
+    max: #<integer> -required-
+    min: #<integer> -required-
+  serviceLoopPrevention: #<string>
+  sidecarAccelerationEnabled: #<boolean>
+  usageReportingEnabled: #<boolean>
+  usageReportingInitialDelay: #<string>
+  usageReportingInterval: #<string>
+  useInternalDataplaneDriver: #<boolean>
+  vxlanEnabled: #<boolean>
+  vxlanMTU: #<integer>
+  vxlanMTUV6: #<integer>
+  vxlanPort: #<integer>
+  vxlanVNI: #<integer>
+  windowsManageFirewallRules: #<string>
+  #enum: Enabled, Disabled
+  wireguardEnabled: #<boolean>
+  wireguardEnabledV6: #<boolean>
+  wireguardHostEncryptionEnabled: #<boolean>
+  wireguardInterfaceName: #<string>
+  wireguardInterfaceNameV6: #<string>
+  wireguardKeepAlive: #<string>
+  wireguardListeningPort: #<integer>
+  wireguardListeningPortV6: #<integer>
+  wireguardMTU: #<integer>
+  wireguardMTUV6: #<integer>
+  wireguardRoutingRulePriority: #<integer>
+  wireguardThreadingEnabled: #<boolean>
+  workloadSourceSpoofing: #<string>
+  xdpEnabled: #<boolean>
+  xdpRefreshInterval: #<string>
